@@ -1,5 +1,6 @@
 
 import 'package:flutter/material.dart';
+import 'package:rpm_provider/verify_otp.dart';
 
 import 'Screens/SignIn/sign_in_page.dart';
 
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
 
         primarySwatch: Colors.blue,
       ),
-      home: SignInPage()
+      home: Verify_otp()
 
     );
 

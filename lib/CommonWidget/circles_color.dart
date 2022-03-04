@@ -15,10 +15,10 @@ class CircleColor extends StatelessWidget {
         ),
         Positioned(
           top: -50,
-          left: -55,
+          left: -60,
           child: Container(
-            height: 270,
-            width: 270,
+            height: 260,
+            width: 260,
 
             /* margin: EdgeInsets.only(right: 400),*/
             decoration: BoxDecoration(
