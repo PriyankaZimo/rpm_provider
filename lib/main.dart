@@ -4,7 +4,7 @@ import 'package:provider/provider.dart';
 import 'package:rpm_provider/Provider/enter_pin_provider.dart';
 import 'package:rpm_provider/Provider/verify_otp_provider.dart';
 
-import 'package:rpm_provider/Create_Pin/create_pin.dart';
+import 'package:rpm_provider/Screens/CreatePin/create_pin.dart';
 
 
 import 'Screens/SignIn/sign_in_page.dart';
