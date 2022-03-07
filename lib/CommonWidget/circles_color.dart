@@ -8,21 +8,23 @@ class CircleColor extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          height: 280,
+          height: 250,
           /* margin: EdgeInsets.only(right: 400),*/
-          decoration: BoxDecoration(
-              color: Colors.transparent, shape: BoxShape.circle),
+          decoration:
+              BoxDecoration(color: Colors.transparent, shape: BoxShape.circle),
         ),
         Positioned(
           top: -50,
           left: -60,
           child: Container(
+
             height: 260,
             width: 260,
 
+
             /* margin: EdgeInsets.only(right: 400),*/
-            decoration: BoxDecoration(
-                color: Color(0xfff58FA9), shape: BoxShape.circle),
+            decoration:
+                BoxDecoration(color: Color(0xfff58FA9), shape: BoxShape.circle),
           ),
         ),
         Positioned(
@@ -32,8 +34,8 @@ class CircleColor extends StatelessWidget {
             height: 220,
             width: 220,
             margin: EdgeInsets.only(right: 300),
-            decoration: BoxDecoration(
-                color: Color(0xffF37F6c), shape: BoxShape.circle),
+            decoration:
+                BoxDecoration(color: Color(0xffF37F6c), shape: BoxShape.circle),
           ),
         ),
         Positioned(
@@ -43,9 +45,8 @@ class CircleColor extends StatelessWidget {
             height: 80,
             width: 80,
             margin: EdgeInsets.only(right: 300),
-            decoration: BoxDecoration(
-                color: Color(0xffF06064), shape: BoxShape.circle),
-
+            decoration:
+                BoxDecoration(color: Color(0xffF06064), shape: BoxShape.circle),
           ),
         ),
         Positioned(
@@ -66,19 +67,18 @@ class CircleColor extends StatelessWidget {
           top: -25,
           left: -60,
           child: Container(
-              height: 200,
-              width: 220,
-              margin: EdgeInsets.only(right: 300),
-
-              decoration: BoxDecoration(
-                color: Colors.transparent,
-                shape: BoxShape.circle,
-                border: Border.all(
-                    width: 2.0, color: Colors.white.withOpacity(0.5)),
-              )),
+            height: 200,
+            width: 220,
+            margin: EdgeInsets.only(right: 300),
+            decoration: BoxDecoration(
+              color: Colors.transparent,
+              shape: BoxShape.circle,
+              border:
+                  Border.all(width: 2.0, color: Colors.white.withOpacity(0.5)),
+            ),
+          ),
         ),
       ],
     );
-
   }
 }

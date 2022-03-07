@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Verify_otp extends StatefulWidget {
+class CreatePin extends StatefulWidget {
+
   @override
-  State<Verify_otp> createState() => _Verify_otpState();
+  State<CreatePin> createState() => _CreatePinState();
 }
 
-class _Verify_otpState extends State<Verify_otp> {
+class _CreatePinState extends State<CreatePin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -44,13 +45,13 @@ class _Verify_otpState extends State<Verify_otp> {
                     ),
                     Padding(
                       padding:
-                          const EdgeInsets.only(left: 30, right: 30, top: 25),
+                      const EdgeInsets.only(left: 30, right: 30, top: 25),
                       child: Column(
                         children: [
                           TextFormField(
                             keyboardType: TextInputType.emailAddress,
                             autovalidateMode:
-                                AutovalidateMode.onUserInteraction,
+                            AutovalidateMode.onUserInteraction,
                             obscureText: false,
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
@@ -74,7 +75,7 @@ class _Verify_otpState extends State<Verify_otp> {
                           TextFormField(
                             keyboardType: TextInputType.emailAddress,
                             autovalidateMode:
-                                AutovalidateMode.onUserInteraction,
+                            AutovalidateMode.onUserInteraction,
                             obscureText: false,
                             decoration: InputDecoration(
                                 hintText: 'Create New PIN',
@@ -132,3 +133,5 @@ class _Verify_otpState extends State<Verify_otp> {
     );
   }
 }
+
+
