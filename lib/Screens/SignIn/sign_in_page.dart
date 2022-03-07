@@ -40,7 +40,7 @@ class SignInPage extends StatelessWidget {
                     height: 60,
                   ),
                   Padding(
-                    padding: EdgeInsets.only(top: 40, right: 10),
+                    padding: EdgeInsets.only(left: 30, right: 30, top: 25),
                     child: Row(
                       children: [
                         CountryCodePicker(
@@ -53,33 +53,39 @@ class SignInPage extends StatelessWidget {
                           color: Colors.white,
                         ),
                         Expanded(
-                          child: TextFormField(
-                            style: TextStyle(color: Colors.white),
-                            maxLength: 10,
-                            keyboardType: TextInputType.number,
-                            decoration: InputDecoration(
-                                counterText: "",
-                                suffixIcon: Icon(
-                                  Icons.call_outlined,
-                                  color: Colors.white,
-                                ),
-                                border: InputBorder.none),
-                            // validator: (val) {
-                            //   if (val.toString().isEmpty) {
-                            //     return 'Enter number';
-                            //   } else if (val.toString().length < 10) {
-                            //     return "Enter max 10 digits";
-                            //   }
-                            // },
+                          child: Padding(
+                            padding: EdgeInsets.only(left: 20, right: 20),
+                            child: TextFormField(
+                              style: TextStyle(color: Colors.white),
+                              maxLength: 10,
+                              keyboardType: TextInputType.number,
+                              decoration: InputDecoration(
+                                  counterText: "",
+                                  suffixIcon: Icon(
+                                    Icons.call_outlined,
+                                    color: Colors.white,
+                                  ),
+                                  border: InputBorder.none),
+                              // validator: (val) {
+                              //   if (val.toString().isEmpty) {
+                              //     return 'Enter number';
+                              //   } else if (val.toString().length < 10) {
+                              //     return "Enter max 10 digits";
+                              //   }
+                              // },
+                            ),
                           ),
                         ),
                       ],
                     ),
                   ),
-                  Divider(
-                    height: 1,
-                    thickness: 1,
-                    color: Colors.white,
+                  Padding(
+                    padding: EdgeInsets.only(left: 30, right: 30, top: 5),
+                    child: Divider(
+                      height: 1,
+                      thickness: 1,
+                      color: Colors.white,
+                    ),
                   ),
                   SizedBox(height: 80),
                   Center(
