@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/src/provider.dart';
 import 'package:rpm_provider/Provider/verify_otp_provider.dart';
+import 'package:rpm_provider/Create_Pin/create_pin.dart';
 
 class VerifyOtpBox extends StatelessWidget {
   int pinLength = 4;
@@ -157,19 +158,21 @@ class VerifyOtpBox extends StatelessWidget {
           SizedBox(
             height: 40,
           ),
-          Container(
-            height: 50,
-            width: 220,
-            decoration: BoxDecoration(
-                color: Colors.white, borderRadius: BorderRadius.circular(5)),
-            child: Center(
-                child: Text(
-              'Continue',
-              style: TextStyle(
-                  color: Color(0xFFEF5765),
-                  fontSize: 23,
-                  fontWeight: FontWeight.normal),
-            )),
+          GestureDetector(onTap: (){Navigator.push(context, MaterialPageRoute(builder: (context)=>CreatePin()));},
+            child: Container(
+              height: 50,
+              width: 220,
+              decoration: BoxDecoration(
+                  color: Colors.white, borderRadius: BorderRadius.circular(5)),
+              child: Center(
+                  child: Text(
+                'Continue',
+                style: TextStyle(
+                    color: Color(0xFFEF5765),
+                    fontSize: 23,
+                    fontWeight: FontWeight.normal),
+              )),
+            ),
           ),
           Padding(
             padding: EdgeInsets.only(top: 40, left: 200),
