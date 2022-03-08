@@ -44,6 +44,8 @@ class SignInPage extends StatelessWidget {
                       children: [
                         CountryCodePicker(
                           textStyle: TextStyle(color: Colors.white),
+                          initialSelection: 'IN',
+                          showCountryOnly: false,
                         ),
                         Container(
                           height: 25,

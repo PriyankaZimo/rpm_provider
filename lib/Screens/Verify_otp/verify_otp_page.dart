@@ -31,6 +31,7 @@ class VerifyOtpPage extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+
               SizedBox(
                 height: 200,
               ),
@@ -135,6 +136,7 @@ class VerifyOtpPage extends StatelessWidget {
                         width: 40,
                         height: 50,
                         child: TextFormField(
+                          maxLength: 1,
                           style: TextStyle(color: Colors.white),
                           focusNode: view.pin3FocusNode,
                           obscureText: true,
@@ -144,6 +146,7 @@ class VerifyOtpPage extends StatelessWidget {
                                 value: val, focusNode: (view.pin4FocusNode));
                           },
                           decoration: InputDecoration(
+                              counterText: "",
                               enabled: true,
                               enabledBorder: OutlineInputBorder(
                                 borderSide: BorderSide(color: Colors.white),
