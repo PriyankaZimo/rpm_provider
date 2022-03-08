@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 class CreatePin extends StatefulWidget {
-
   @override
   State<CreatePin> createState() => _CreatePinState();
 }
@@ -45,13 +44,13 @@ class _CreatePinState extends State<CreatePin> {
                     ),
                     Padding(
                       padding:
-                      const EdgeInsets.only(left: 30, right: 30, top: 25),
+                          const EdgeInsets.only(left: 30, right: 30, top: 25),
                       child: Column(
                         children: [
                           TextFormField(
                             keyboardType: TextInputType.emailAddress,
                             autovalidateMode:
-                            AutovalidateMode.onUserInteraction,
+                                AutovalidateMode.onUserInteraction,
                             obscureText: false,
                             decoration: InputDecoration(
                                 enabledBorder: UnderlineInputBorder(
@@ -75,7 +74,7 @@ class _CreatePinState extends State<CreatePin> {
                           TextFormField(
                             keyboardType: TextInputType.emailAddress,
                             autovalidateMode:
-                            AutovalidateMode.onUserInteraction,
+                                AutovalidateMode.onUserInteraction,
                             obscureText: false,
                             decoration: InputDecoration(
                                 hintText: 'Create New PIN',
@@ -133,5 +132,3 @@ class _CreatePinState extends State<CreatePin> {
     );
   }
 }
-
-

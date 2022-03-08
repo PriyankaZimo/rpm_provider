@@ -1,12 +1,9 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:rpm_provider/CommonWidget/circles_color.dart';
 import 'package:rpm_provider/Screens/Enterpin/enter_pin_page.dart';
 import 'package:rpm_provider/Screens/Verify_otp/verify_otp_page.dart';
 
 class SignInPage extends StatelessWidget {
-  const SignInPage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -14,21 +11,25 @@ class SignInPage extends StatelessWidget {
         child: Column(
           children: [
             // CircleColor(),
-
             // SignInBox(),
-
             Container(
               height: MediaQuery.of(context).size.height,
               width: MediaQuery.of(context).size.width,
               decoration: BoxDecoration(
-                  gradient: LinearGradient(
-                      begin: Alignment.topCenter,
-                      end: Alignment.bottomCenter,
-                      colors: [
-                        Color(0xFFf06771), Color(0xFFf5A57C)])),
+                gradient: LinearGradient(
+                    begin: Alignment.topLeft,
+                    end: Alignment.bottomRight,
+                    colors: [
+                      Color(0xFFee3d7e).withOpacity(0.8),
+                      Color(0xFFf99d1c).withOpacity(0.9)
+                    ]),
+              ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
+                  SizedBox(
+                    height: 200,
+                  ),
                   Text(
                     'Sign In',
                     style: TextStyle(
@@ -91,7 +92,7 @@ class SignInPage extends StatelessWidget {
                   Center(
                     child: GestureDetector(
                       onTap: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
                                 builder: (context) => EnterPin()));
@@ -114,7 +115,7 @@ class SignInPage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 40,
+                    height: 50,
                   ),
                   Text(
                     'OR',
@@ -140,7 +141,7 @@ class SignInPage extends StatelessWidget {
                   )
                 ],
               ),
-            )
+            ),
           ],
         ),
       ),
