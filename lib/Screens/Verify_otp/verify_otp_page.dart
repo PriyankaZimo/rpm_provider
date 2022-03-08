@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rpm_provider/CommonWidget/circles_color.dart';
-import 'package:rpm_provider/Create_Pin/create_pin.dart';
 import 'package:rpm_provider/Screens/CreatePin/create_pin.dart';
+
 import 'package:rpm_provider/Provider/verify_otp_provider.dart';
 
 class VerifyOtpPage extends StatelessWidget {
