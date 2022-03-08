@@ -10,32 +10,41 @@ class EnterPin extends StatelessWidget {
   Widget build(BuildContext context) {
     _enterPinProvider = context.read<EnterPinProvider>();
     return Scaffold(
-      appBar: AppBar(
-
-      ),
-
       body: Container(
           padding: EdgeInsets.only(),
           height: MediaQuery.of(context).size.height,
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(
-              gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [Color(0xFFf06771), Color(0xFFf5A57C)])),
+            gradient: LinearGradient(
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+                colors: [
+                  Color(0xFFee3d7e).withOpacity(0.8),
+                  Color(0xFFf99d1c).withOpacity(0.9)
+                ]),
+          ),
           child: SingleChildScrollView(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
-                  height: 70,
-                ),
-                Text(
-                  'Enter PIN',
-                  style: TextStyle(
+                IconButton(
+                    onPressed: () {},
+                    icon: Icon(
+                      Icons.arrow_back_ios,
                       color: Colors.white,
-                      fontSize: 50,
-                      fontWeight: FontWeight.bold),
+                    )),
+                SizedBox(
+                  height: 200,
+                ),
+                Padding(
+                  padding: EdgeInsets.all(58.0),
+                  child: Text(
+                    'Enter PIN',
+                    style: TextStyle(
+                        color: Color(0xfffffffffffffff),
+                        fontSize: 50,
+                        fontWeight: FontWeight.w600),
+                  ),
                 ),
                 SizedBox(
                   height: 40,

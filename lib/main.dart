@@ -5,6 +5,7 @@ import 'package:rpm_provider/Provider/enter_pin_provider.dart';
 import 'package:rpm_provider/Provider/verify_otp_provider.dart';
 
 import 'package:rpm_provider/Screens/CreatePin/create_pin.dart';
+import 'package:rpm_provider/notification.dart';
 
 
 import 'Screens/SignIn/sign_in_page.dart';
@@ -30,7 +31,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: SignInPage()),
+          home: NotificationPage()),
 
     );
   }

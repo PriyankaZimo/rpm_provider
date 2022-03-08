@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rpm_provider/CommonWidget/circles_color.dart';
+import 'package:rpm_provider/Create_Pin/create_pin.dart';
 import 'package:rpm_provider/Screens/CreatePin/create_pin.dart';
 import 'package:rpm_provider/Provider/verify_otp_provider.dart';
 
@@ -18,26 +19,33 @@ class VerifyOtpPage extends StatelessWidget {
         height: MediaQuery.of(context).size.height,
         width: MediaQuery.of(context).size.width,
         decoration: BoxDecoration(
-            gradient: LinearGradient(
-                begin: Alignment.topCenter,
-                end: Alignment.bottomCenter,
-                colors: [Color(0xFFf06771), Color(0xFFf5A57C)])),
+          gradient: LinearGradient(
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color(0xFFee3d7e).withOpacity(0.8),
+                Color(0xFFf99d1c).withOpacity(0.9)
+              ]),
+        ),
         child: SingleChildScrollView(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                height: 100,
+                height: 200,
               ),
-              Text(
-                'Verify OTP',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 50,
-                    fontWeight: FontWeight.bold),
+              Padding(
+                padding: EdgeInsets.all(58.0),
+                child: Text(
+                  'Verify OTP',
+                  style: TextStyle(
+                      color: Color(0xfffffffffffffff),
+                      fontSize: 50,
+                      fontWeight: FontWeight.w600),
+                ),
               ),
               SizedBox(
-                height: 60,
+                height: 40,
               ),
               Padding(
                 padding: EdgeInsets.only(top: 20),
@@ -170,30 +178,34 @@ class VerifyOtpPage extends StatelessWidget {
               SizedBox(
                 height: 40,
               ),
-              Container(
-                height: 50,
-                width: 220,
-                decoration: BoxDecoration(
-                    color: Colors.white,
-                    borderRadius: BorderRadius.circular(5)),
-                child: Center(
-                    child: Text(
-                  'Continue',
-                  style: TextStyle(
-                      color: Color(0xFFEF5765),
-                      fontSize: 23,
-                      fontWeight: FontWeight.normal),
-                )),
+              GestureDetector(
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => CreatePin()));
+                },
+                child: Container(
+                  height: 50,
+                  width: 220,
+                  decoration: BoxDecoration(
+                      color: Colors.white,
+                      borderRadius: BorderRadius.circular(5)),
+                  child: Center(
+                      child: Text(
+                    'Continue',
+                    style: TextStyle(
+                        color: Color(0xFFEF5765),
+                        fontSize: 23,
+                        fontWeight: FontWeight.normal),
+                  )),
+                ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 40, left: 200),
+                padding: EdgeInsets.only(top: 80, left: 200),
                 child: Text(
                   'Need Help?',
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
-              )
-            ],
-          ),
+              ),], ),
         ),
       ),
     );
