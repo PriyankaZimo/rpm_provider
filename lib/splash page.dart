@@ -26,7 +26,7 @@ class _SplashPageState extends State<SplashPage> {
               top: -200,
               bottom: -200,
               child: TweenAnimationBuilder(
-                duration: Duration(seconds: 5
+                duration: Duration(seconds: 4
                 ),
                 tween: Tween(begin: 100.0, end: 3000.0),
                 curve: Curves.bounceOut,
@@ -55,7 +55,7 @@ class _SplashPageState extends State<SplashPage> {
   }
 
   void nextPage(BuildContext context) {
-    Future.delayed(Duration(seconds: 10), () {  Navigator.pushReplacement(
+    Future.delayed(Duration(seconds: 4), () {  Navigator.push(
         context, MaterialPageRoute(builder: (context) => SignInPage()));});
   }
 }
