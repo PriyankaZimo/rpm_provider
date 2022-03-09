@@ -68,7 +68,6 @@ class EnterPin extends StatelessWidget {
                           child: TextFormField(
                             style: TextStyle(color: Colors.white),
                             obscureText: true,
-                            maxLength: 1,
                             onChanged: (val) {
                               view.nextField(
                                   value: val, focusNode: (view.pin1FocusNode));
