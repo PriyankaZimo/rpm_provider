@@ -4,8 +4,9 @@ import 'package:rpm_provider/Screens/Enterpin/enter_pin_page.dart';
 import 'package:rpm_provider/Screens/Verify_otp/verify_otp_page.dart';
 
 class SignInPage extends StatelessWidget {
-  TextEditingController numberController =TextEditingController();
-  GlobalKey<FormState> formKey =GlobalKey();
+  TextEditingController numberController = TextEditingController();
+  GlobalKey<FormState> formKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +24,7 @@ class SignInPage extends StatelessWidget {
         ),
         child: SingleChildScrollView(
           child: Form(
-            key:formKey ,
+            key: formKey,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -42,59 +43,57 @@ class SignInPage extends StatelessWidget {
                 ),
                 Padding(
                   padding: EdgeInsets.only(left: 30, right: 30, top: 35),
-                  child: Row(
-                    children: [
-                      CountryCodePicker(
-                        textStyle: TextStyle(color: Colors.white),
-                        initialSelection: 'IN',
-                        showCountryOnly: false,
-                      ),
-                      Container(
-                        height: 25,
-                        width: 1,
-                        margin: EdgeInsets.only(right: 10),
-                        color: Colors.white,
-                      ),
-                      Expanded(
-                        child: TextFormField(
-                          controller:numberController ,
-                          style: TextStyle(color: Colors.white),
-                          maxLength: 10,
-                          autovalidateMode: AutovalidateMode.onUserInteraction,
-                          keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
-                              counterText: "",
-                              suffixIcon: Icon(
-                                Icons.call_outlined,
-                                color: Colors.white,
-                              ),
-                              border: InputBorder.none),
-                          // validator: (val) {
-                          //   if (val!.isEmpty || RegExp("[a-z/A-Z]").hasMatch(val)) {
-                          //     return 'Enter correct num';
-                          //   }
-                          //
-                          // },
-                        ),
-                      ),
-                    ],
+                  child: Container(
+                    // child: Row(
+                    //   children: [
+                    //     CountryCodePicker(
+                    //       textStyle: TextStyle(color: Colors.white),
+                    //       initialSelection: 'IN',
+                    //       showCountryOnly: false,
+                    //     ),
+                    //     Container(
+                    //       height: 25,
+                    //       width: 1,
+                    //       margin: EdgeInsets.only(right: 10),
+                    //       color: Colors.white,
+                    //     ),
+                    //     Expanded(
+                    //       child: TextFormField(
+                    //         controller: numberController,
+                    //         style: TextStyle(color: Colors.white),
+                    //         maxLength: 10,
+                    //         autovalidateMode: AutovalidateMode.onUserInteraction,
+                    //         keyboardType: TextInputType.number,
+                    //         decoration: InputDecoration(
+                    //             counterText: "",
+                    //             suffixIcon: Icon(
+                    //               Icons.call_outlined,
+                    //               color: Colors.white,
+                    //             ),border: InputBorder.none
+                    //          ),
+                    //         validator: (val) {
+                    //           if (val!.isEmpty ||
+                    //               RegExp("[a-z/A-Z/@]").hasMatch(val)) {
+                    //             return 'Enter correct num';
+                    //           }
+                    //         },
+                    //       ),
+                    //     ),
+                    //   ],
+                    // ),
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    left: 40,
-                    right: 40
-                  ),
-                  child: Divider(
-                    height: 1,
-                    thickness: 1,
-                    color: Colors.white,
-                  ),
-                ),
-                SizedBox(height: 100),
+                // Padding(
+                //   padding: EdgeInsets.only(left: 40, right: 40),
+                //   child: Divider(
+                //     height: 1,
+                //     thickness: 1,
+                //     color: Colors.white,
+                //   ),
+                // ),
+                // SizedBox(height: 100),
                 GestureDetector(
                   onTap: () {
-
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => EnterPin()));
                   },
@@ -126,8 +125,10 @@ class SignInPage extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => VerifyOtpPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => VerifyOtpPage()));
                   },
                   child: Padding(
                     padding: EdgeInsets.only(top: 30),
