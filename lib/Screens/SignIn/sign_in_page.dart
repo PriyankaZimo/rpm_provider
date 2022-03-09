@@ -4,8 +4,9 @@ import 'package:rpm_provider/Screens/Enterpin/enter_pin_page.dart';
 import 'package:rpm_provider/Screens/Verify_otp/verify_otp_page.dart';
 
 class SignInPage extends StatelessWidget {
-  TextEditingController numberController =TextEditingController();
-  GlobalKey<FormState> formKey =GlobalKey();
+  TextEditingController numberController = TextEditingController();
+  GlobalKey<FormState> formKey = GlobalKey();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -23,7 +24,7 @@ class SignInPage extends StatelessWidget {
         ),
         child: SingleChildScrollView(
           child: Form(
-            key:formKey ,
+            key: formKey,
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
@@ -41,6 +42,40 @@ class SignInPage extends StatelessWidget {
                   height: 100,
                 ),
                 Padding(
+                  padding: const EdgeInsets.all(30.0),
+                  child: TextFormField(
+                      keyboardType: TextInputType.emailAddress,
+                      autovalidateMode: AutovalidateMode.onUserInteraction,
+                      style: TextStyle(
+                        color: Colors.white,
+                        fontFamily: 'OpenSans',
+                      ),
+                      decoration: InputDecoration(
+                       /* icon: CountryCodePicker(
+                          textStyle: TextStyle(color: Colors.white),
+                          initialSelection: 'IN',
+                          showCountryOnly: false,
+                        ),*/
+                        prefixIcon:CountryCodePicker(
+                          textStyle: TextStyle(color: Colors.white),
+                          initialSelection: 'IN',
+                          showCountryOnly: false,
+                        ) ,
+                        enabledBorder: UnderlineInputBorder(
+                          borderSide: BorderSide(color: Colors.white,),
+                        ),
+                        hintStyle: TextStyle(color: Colors.white),
+                      ),
+                      validator: (value) {
+                        if (value!.length == 0) {
+                          return 'Please enter your email-id';
+                        } else {
+                          return null;
+                        }
+                      }),
+                ),
+
+                /*Padding(
                   padding: EdgeInsets.only(left: 30, right: 30, top: 35),
                   child: Row(
                     children: [
@@ -90,11 +125,10 @@ class SignInPage extends StatelessWidget {
                     thickness: 1,
                     color: Colors.white,
                   ),
-                ),
+                ),*/
                 SizedBox(height: 100),
                 GestureDetector(
                   onTap: () {
-
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => EnterPin()));
                   },
@@ -126,8 +160,10 @@ class SignInPage extends StatelessWidget {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => VerifyOtpPage()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => VerifyOtpPage()));
                   },
                   child: Padding(
                     padding: EdgeInsets.only(top: 30),
