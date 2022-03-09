@@ -71,7 +71,7 @@ class SignInPage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.only(
                   left: 40,
-                  right: 40,
+                  right: 40
                 ),
                 child: Divider(
                   height: 1,
