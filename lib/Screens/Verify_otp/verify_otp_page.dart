@@ -29,11 +29,24 @@ class VerifyOtpPage extends StatelessWidget {
         ),
         child: SingleChildScrollView(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
-
               SizedBox(
-                height: 200,
+                height: 40,
+              ),
+              // Back Button
+              Row(
+                children: [
+                  BackButton(
+                    color: Colors.white,
+                  ),
+                  SizedBox(
+                    width: 20,
+                  )
+                ],
+              ),
+              SizedBox(
+                height: 90,
               ),
               Padding(
                 padding: EdgeInsets.all(58.0),
@@ -46,7 +59,7 @@ class VerifyOtpPage extends StatelessWidget {
                 ),
               ),
               SizedBox(
-                height: 40,
+                height: 30,
               ),
               Padding(
                 padding: EdgeInsets.only(top: 20),
@@ -203,12 +216,14 @@ class VerifyOtpPage extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 80, left: 200),
+                padding: EdgeInsets.only(top: 70, left: 200),
                 child: Text(
                   'Need Help?',
                   style: TextStyle(color: Colors.white, fontSize: 18),
                 ),
-              ),], ),
+              ),
+            ],
+          ),
         ),
       ),
     );

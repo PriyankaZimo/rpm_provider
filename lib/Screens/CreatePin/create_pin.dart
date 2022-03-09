@@ -26,7 +26,22 @@ class _CreatePinState extends State<CreatePin> {
           child: Column(
             children: [
               SizedBox(
-                height: 200,
+                height: 40,
+              ),
+              Row(
+                children: [
+                  IconButton(
+                      onPressed: () {
+                        Navigator.pop(context);
+                      },
+                      icon: Icon(
+                        Icons.arrow_back_ios,
+                        color: Colors.white,
+                      ))
+                ],
+              ),
+              SizedBox(
+                height: 150,
               ),
               Container(
                 child: Column(
@@ -38,7 +53,7 @@ class _CreatePinState extends State<CreatePin> {
                         'Create PIN',
                         style: TextStyle(
                             color: Color(0xfffffffffffffff),
-                            fontSize: 60,
+                            fontSize: 50,
                             fontWeight: FontWeight.w600),
                       ),
                     ),
@@ -48,7 +63,8 @@ class _CreatePinState extends State<CreatePin> {
                       child: Column(
                         children: [
                           TextFormField(
-                            keyboardType: TextInputType.emailAddress,
+                            style: TextStyle(color: Colors.white),
+                         keyboardType: TextInputType.emailAddress,
                             autovalidateMode:
                                 AutovalidateMode.onUserInteraction,
                             obscureText: false,
@@ -72,11 +88,13 @@ class _CreatePinState extends State<CreatePin> {
                             height: 10,
                           ),
                           TextFormField(
+                            style: TextStyle(color: Colors.white),
                             keyboardType: TextInputType.emailAddress,
                             autovalidateMode:
                                 AutovalidateMode.onUserInteraction,
                             obscureText: false,
                             decoration: InputDecoration(
+
                                 hintText: 'Create New PIN',
                                 enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(color: Colors.white),

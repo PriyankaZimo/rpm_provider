@@ -8,14 +8,18 @@ class NotificationPage extends StatelessWidget {
     'Lorem\nLorem ipsum dolor sit amet'
   ];
   List texy = [
-
     'Lorem\nLorem ipsum dolor sit amet',
     'Lorem\nLorem ipsum dolor sit amet',
   ];
   List texf = [
-
     'Lorem\nLorem ipsum dolor sit amet',
     'Lorem\nLorem ipsum dolor sit amet',
+  ];
+  List texj = [
+    'Lorem ipsum dolor sit amet',
+    'Lorem\nLorem ipsum dolor sit amet',
+    'Lorem\nLorem ipsum dolor sit amet',
+    'Lorem\nLorem ipsum dolor sit amet'
   ];
 
   @override
@@ -33,7 +37,7 @@ class NotificationPage extends StatelessWidget {
         ),
         actions: [
           Padding(
-            padding: const EdgeInsets.only(top: 20, right: 10),
+            padding: EdgeInsets.only(top: 20, right: 10),
             child: Text(
               'Mark all read',
               style: TextStyle(color: Colors.black, fontSize: 15),
@@ -41,7 +45,8 @@ class NotificationPage extends StatelessWidget {
           )
         ],
       ),
-      body: Container(
+      // Circle Containers
+      body: SizedBox(
         height: MediaQuery.of(context).size.height,
         child: Stack(
           children: [
@@ -52,7 +57,7 @@ class NotificationPage extends StatelessWidget {
                 height: 200,
                 width: 250,
                 decoration: BoxDecoration(
-                    color: Colors.orange[300],
+                    color: Colors.orange[200],
                     borderRadius:
                         BorderRadius.only(topLeft: Radius.circular(200))),
               ),
@@ -115,8 +120,7 @@ class NotificationPage extends StatelessWidget {
                           itemBuilder: (context, index) => Container(
                                 margin: EdgeInsets.all(9),
                                 height: 67,
-                                width: 100,
-                                decoration: BoxDecoration(
+                                 decoration: BoxDecoration(
                                     color: Colors.white,
                                     borderRadius: BorderRadius.circular(10),
                                     boxShadow: [
@@ -126,8 +130,7 @@ class NotificationPage extends StatelessWidget {
                                           offset: Offset(1, 3))
                                     ]),
                                 child: Row(
-                                  mainAxisAlignment:
-                                      MainAxisAlignment.spaceBetween,
+
                                   children: [
                                     Padding(
                                       padding: EdgeInsets.only(left: 20),
@@ -138,11 +141,13 @@ class NotificationPage extends StatelessWidget {
                                             shape: BoxShape.circle,
                                             color: Colors.redAccent[100]),
                                       ),
-                                    ),
+                                    ),SizedBox(width: 20,),
+
                                     Text(text[index]),
+                                    Spacer(),
                                     Padding(
                                       padding:
-                                          EdgeInsets.only(top: 20, right: 20),
+                                          EdgeInsets.only(top: 20, right: 10),
                                       child: Text('09:00AM'),
                                     )
                                   ],
@@ -154,7 +159,7 @@ class NotificationPage extends StatelessWidget {
                     height: 10,
                   ),
                   Padding(
-                    padding:  EdgeInsets.only(left: 20),
+                    padding: EdgeInsets.only(left: 20),
                     child: Text('Yesterday'),
                   ),
                   Center(
@@ -175,30 +180,29 @@ class NotificationPage extends StatelessWidget {
                                           color: Color(0xFFFFCCBC),
                                           blurRadius: 3,
                                           offset: Offset(1, 3))
-                                    ]
-                                ), child: Row(
-                            mainAxisAlignment:
-                            MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(left: 20),
-                                child: Container(
-                                  height: 5,
-                                  width: 5,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Colors.redAccent[100]),
-                                ),
-                              ),
-                              Text(texy[index]),
-                              Padding(
-                                padding:
-                                EdgeInsets.only(top: 20, right: 20),
-                                child: Text('09:00AM'),
-                              )
-                            ],
-                          ),
+                                    ]),
+                                child: Row(
 
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 20),
+                                      child: Container(
+                                        height: 5,
+                                        width: 5,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.redAccent[100]),
+                                      ),
+                                    ),SizedBox(width: 20,),
+                                    Text(texy[index]),
+                                    Spacer(),
+                                    Padding(
+                                      padding:
+                                          EdgeInsets.only(top: 20, right: 20),
+                                      child: Text('09:00AM'),
+                                    )
+                                  ],
+                                ),
                               )),
                     ),
                   ),
@@ -206,7 +210,7 @@ class NotificationPage extends StatelessWidget {
                     height: 10,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 20),
+                    padding:  EdgeInsets.only(left: 20),
                     child: Text('Feb,01,2022'),
                   ),
                   Center(
@@ -227,28 +231,30 @@ class NotificationPage extends StatelessWidget {
                                           color: Color(0xFFFFCCBC),
                                           blurRadius: 3,
                                           offset: Offset(1, 3))
-                                    ]), child: Row(
-                            mainAxisAlignment:
-                            MainAxisAlignment.spaceBetween,
-                            children: [
-                              Padding(
-                                padding: EdgeInsets.only(left: 20),
-                                child: Container(
-                                  height: 5,
-                                  width: 5,
-                                  decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: Colors.redAccent[100]),
+                                    ]),
+                                child: Row(
+
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 20),
+                                      child: Container(
+                                        height: 5,
+                                        width: 5,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.redAccent[100]),
+                                      ),
+                                    ),
+                                    SizedBox(width: 20,),
+                                    Text(texf[index]),
+                                    Spacer(),
+                                    Padding(
+                                      padding:
+                                          EdgeInsets.only(top: 20, right: 20),
+                                      child: Text('09:00AM'),
+                                    )
+                                  ],
                                 ),
-                              ),
-                              Text(texf[index]),
-                              Padding(
-                                padding:
-                                EdgeInsets.only(top: 20, right: 20),
-                                child: Text('09:00AM'),
-                              )
-                            ],
-                          ),
                               )),
                     ),
                   ),
@@ -263,7 +269,7 @@ class NotificationPage extends StatelessWidget {
                     child: SizedBox(
                       height: 320,
                       child: ListView.builder(
-                          physics: NeverScrollableScrollPhysics(),
+                          physics: const NeverScrollableScrollPhysics(),
                           itemCount: 4,
                           itemBuilder: (context, index) => Container(
                                 margin: EdgeInsets.all(9),
@@ -278,6 +284,27 @@ class NotificationPage extends StatelessWidget {
                                           blurRadius: 3,
                                           offset: Offset(1, 3))
                                     ]),
+                                child: Row(
+                                  children: [
+                                    Padding(
+                                      padding: EdgeInsets.only(left: 20),
+                                      child: Container(
+                                        height: 5,
+                                        width: 5,
+                                        decoration: BoxDecoration(
+                                            shape: BoxShape.circle,
+                                            color: Colors.redAccent[100]),
+                                      ),
+                                    ),SizedBox(width: 20,),
+                                    Text(texj[index]),
+                                    Spacer(),
+                                    Padding(
+                                      padding:
+                                      EdgeInsets.only(top: 20, right: 20),
+                                      child: Text('09:00AM'),
+                                    )
+                                  ],
+                                ),
                               )),
                     ),
                   ),

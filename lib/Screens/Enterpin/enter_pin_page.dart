@@ -9,6 +9,7 @@ class EnterPin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _enterPinProvider = context.read<EnterPinProvider>();
+
     return Scaffold(
       body: Container(
           padding: EdgeInsets.only(),
@@ -27,14 +28,23 @@ class EnterPin extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                IconButton(
-                    onPressed: () {},
-                    icon: Icon(
-                      Icons.arrow_back_ios,
-                      color: Colors.white,
-                    )),
                 SizedBox(
-                  height: 200,
+                  height: 40,
+                ),
+                Row(
+                  children: [
+                    IconButton(
+                        onPressed: () {
+                          Navigator.pop(context);
+                        },
+                        icon: Icon(
+                          Icons.arrow_back_ios,
+                          color: Colors.white,
+                        )),
+                  ],
+                ),
+                SizedBox(
+                  height: 150,
                 ),
                 Padding(
                   padding: EdgeInsets.all(58.0),
@@ -146,6 +156,8 @@ class EnterPin extends StatelessWidget {
                           width: 40,
                           height: 50,
                           child: TextFormField(
+                            obscureText: true,
+                            maxLength: 1,
                             style: TextStyle(color: Colors.white),
                             focusNode: view.pin3FocusNode,
                             onChanged: (val) {
@@ -156,6 +168,7 @@ class EnterPin extends StatelessWidget {
                                 AutovalidateMode.onUserInteraction,
                             textInputAction: TextInputAction.next,
                             decoration: InputDecoration(
+                              counterText: "",
                               enabledBorder: OutlineInputBorder(
                                   borderSide: BorderSide(color: Colors.white)),
                               border: OutlineInputBorder(
