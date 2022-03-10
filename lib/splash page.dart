@@ -32,7 +32,7 @@ class _SplashPageState extends State<SplashPage> {
               bottom: -200,
               child: TweenAnimationBuilder(
                 duration: Duration(seconds: 4),
-                tween: Tween(begin: 100.0, end: 3000.0),
+                tween: Tween(begin:100.0, end: 3000.0),
                 curve: Curves.bounceOut,
                 builder: (BuildContext context, double value, Widget? child) {
                   return Container(
