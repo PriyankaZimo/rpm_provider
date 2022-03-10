@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rpm_provider/Screens/ClientPage/components/add_client.dart';
 
 class ClientPage extends StatelessWidget {
   List text = [
@@ -94,7 +95,7 @@ class ClientPage extends StatelessWidget {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {Navigator.push(context, MaterialPageRoute(builder: (context)=>AddClient()));},
         child: Icon(
           Icons.add,
           color: Colors.black,

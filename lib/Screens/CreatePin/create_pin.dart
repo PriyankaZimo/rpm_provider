@@ -94,7 +94,6 @@ class _CreatePinState extends State<CreatePin> {
                                 AutovalidateMode.onUserInteraction,
                             obscureText: false,
                             decoration: InputDecoration(
-
                                 hintText: 'Create New PIN',
                                 enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(color: Colors.white),
@@ -113,7 +112,7 @@ class _CreatePinState extends State<CreatePin> {
                           SizedBox(
                             height: 100,
                           ),
-                          new GestureDetector(
+                         GestureDetector(
                               onTap: () {
                                 print("Container clicked");
                               },
@@ -126,7 +125,7 @@ class _CreatePinState extends State<CreatePin> {
                                 ),
                                 child: Center(
                                   child: Text(
-                                    "submit",
+                                    "Submit",
                                     style: TextStyle(
                                         color: Color(0xfff27a74),
                                         fontSize: 25,
