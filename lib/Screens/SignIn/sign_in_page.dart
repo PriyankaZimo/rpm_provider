@@ -76,7 +76,7 @@ class SignInPage extends StatelessWidget {
                     ),
                     validator: (val) {
                       if (val.toString().isEmpty) {
-                        return "* Please Enter your PIN";
+                        return "* Please Enter your number";
                       } else if (val!.isEmpty ||
                           RegExp("[a-z/A-Z/@]").hasMatch(val)) {
                         return '* Enter correct number';
