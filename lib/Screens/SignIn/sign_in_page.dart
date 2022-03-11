@@ -18,8 +18,8 @@ class SignInPage extends StatelessWidget {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                Color(0xFFee3d7e).withOpacity(0.8),
-                Color(0xFFf99d1c).withOpacity(0.9)
+                 Color(0xFFee3d7e).withOpacity(0.8),
+                 Color(0xFFf99d1c).withOpacity(0.9)
               ]),
         ),
         child: SingleChildScrollView(
@@ -28,105 +28,118 @@ class SignInPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                SizedBox(
+                 SizedBox(
                   height: 250,
                 ),
-                Text(
+             Text(
                   'Sign In',
-                  style: TextStyle(
+                  style:  TextStyle(
                       color: Colors.white,
                       fontSize: 50,
                       fontWeight: FontWeight.bold),
                 ),
-                SizedBox(
-                  height: 100,
+                 SizedBox(
+                  height: 80,
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(30.0),
+                  padding:  EdgeInsets.all(30.0),
                   child: TextFormField(
-                      keyboardType: TextInputType.emailAddress,
-                      autovalidateMode: AutovalidateMode.onUserInteraction,
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontFamily: 'OpenSans',
-                      ),
-                      decoration: InputDecoration(
-                       /* icon: CountryCodePicker(
+                    maxLength: 10,
+                    keyboardType: TextInputType.emailAddress,
+                    autovalidateMode: AutovalidateMode.onUserInteraction,
+                    style:  TextStyle(
+                      color: Colors.white,
+                      fontFamily: 'OpenSans',
+                    ),
+                    decoration: InputDecoration(
+                      counterText: "",
+                      /* icon: CountryCodePicker(
                           textStyle: TextStyle(color: Colors.white),
                           initialSelection: 'IN',
                           showCountryOnly: false,
                         ),*/
-                        prefixIcon:CountryCodePicker(
-                          textStyle: TextStyle(color: Colors.white),
-                          initialSelection: 'IN',
-                          showCountryOnly: false,
-                        ) ,
-                        enabledBorder: UnderlineInputBorder(
-                          borderSide: BorderSide(color: Colors.white,),
-                        ),
-                        hintStyle: TextStyle(color: Colors.white),
+                      prefixIcon: CountryCodePicker(
+                        textStyle:  TextStyle(color: Colors.white),
+                        initialSelection: 'IN',
+                        showCountryOnly: false,
                       ),
-                      validator: (value) {
-                        if (value!.length == 0) {
-                          return 'Please enter your email-id';
-                        } else {
-                          return null;
-                        }
-                      }),
+                      suffixIcon:  Icon(
+                        Icons.call_outlined,
+                        color: Colors.white,
+                      ),
+                      enabledBorder:  UnderlineInputBorder(
+                        borderSide: BorderSide(
+                          color: Colors.white,
+                        ),
+                      ),
+                      hintStyle:  TextStyle(color: Colors.white),
+                    ),
+                    validator: (val) {
+                      if (val.toString().isEmpty) {
+                        return "* Please Enter your PIN";
+                      } else if (val!.isEmpty ||
+                          RegExp("[a-z/A-Z/@]").hasMatch(val)) {
+                        return '* Enter correct number';
+                      }
+                    },
+                  ),
                 ),
 
                 /*Padding(
                   padding: EdgeInsets.only(left: 30, right: 30, top: 35),
-                  child: Row(
-                    children: [
-                      CountryCodePicker(
-                        textStyle: TextStyle(color: Colors.white),
-                        initialSelection: 'IN',
-                        showCountryOnly: false,
-                      ),
-                      Container(
-                        height: 25,
-                        width: 1,
-                        margin: EdgeInsets.only(right: 10),
-                        color: Colors.white,
-                      ),
-                      Expanded(
-                        child: TextFormField(
-                          controller:numberController ,
-                          style: TextStyle(color: Colors.white),
-                          maxLength: 10,
-                          autovalidateMode: AutovalidateMode.onUserInteraction,
-                          keyboardType: TextInputType.number,
-                          decoration: InputDecoration(
-                              counterText: "",
-                              suffixIcon: Icon(
-                                Icons.call_outlined,
-                                color: Colors.white,
-                              ),
-                              border: InputBorder.none),
-                          // validator: (val) {
-                          //   if (val!.isEmpty || RegExp("[a-z/A-Z]").hasMatch(val)) {
-                          //     return 'Enter correct num';
-                          //   }
-                          //
-                          // },
-                        ),
-                      ),
-                    ],
+                  child: Container(
+                    // child: Row(
+                    //   children: [
+                    //     CountryCodePicker(
+                    //       textStyle: TextStyle(color: Colors.white),
+                    //       initialSelection: 'IN',
+                    //       showCountryOnly: false,
+                    //     ),
+                    //     Container(
+                    //       height: 25,
+                    //       width: 1,
+                    //       margin: EdgeInsets.only(right: 10),
+                    //       color: Colors.white,
+                    //     ),
+                    //     Expanded(
+                    //       child: TextFormField(
+                    //         controller: numberController,
+                    //         style: TextStyle(color: Colors.white),
+                    //         maxLength: 10,
+                    //         autovalidateMode: AutovalidateMode.onUserInteraction,
+                    //         keyboardType: TextInputType.number,
+                    //         decoration: InputDecoration(
+                    //             counterText: "",
+                    //             suffixIcon: Icon(
+                    //               Icons.call_outlined,
+                    //               color: Colors.white,
+                    //             ),border: InputBorder.none
+                    //          ),
+                    //         validator: (val) {
+                    //           if (val!.isEmpty ||
+                    //               RegExp("[a-z/A-Z/@]").hasMatch(val)) {
+                    //             return 'Enter correct num';
+                    //           }
+                    //         },
+                    //       ),
+                    //     ),
+                    //   ],
+                    // ),
                   ),
+<<<<<<< HEAD
                 ),
-                Padding(
-                  padding: EdgeInsets.only(
-                    left: 40,
-                    right: 40
-                  ),
-                  child: Divider(
-                    height: 1,
-                    thickness: 1,
-                    color: Colors.white,
-                  ),
+                // Padding(
+                //   padding: EdgeInsets.only(left: 40, right: 40),
+                //   child: Divider(
+                //     height: 1,
+                //     thickness: 1,
+                //     color: Colors.white,
+                //   ),
+                // ),
+                // SizedBox(height: 100),
+=======
                 ),*/
-                SizedBox(height: 100),
+                 SizedBox(height: 100),
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
@@ -148,14 +161,14 @@ class SignInPage extends StatelessWidget {
                     )),
                   ),
                 ),
-                SizedBox(
+                 SizedBox(
                   height: 50,
                 ),
-                Text(
+                 Text(
                   'OR',
-                  style: TextStyle(color: Colors.white, fontSize: 20),
+                  style:  TextStyle(color: Colors.white, fontSize: 20),
                 ),
-                SizedBox(
+                 SizedBox(
                   height: 20,
                 ),
                 GestureDetector(
@@ -165,11 +178,11 @@ class SignInPage extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => VerifyOtpPage()));
                   },
-                  child: Padding(
-                    padding: EdgeInsets.only(top: 30),
+                  child:  Padding(
+                    padding:  EdgeInsets.only(top: 30),
                     child: Text(
                       'Forgot PIN?',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
+                      style:  TextStyle(color: Colors.white, fontSize: 20),
                     ),
                   ),
                 )

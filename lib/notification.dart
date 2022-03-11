@@ -40,7 +40,7 @@ class NotificationPage extends StatelessWidget {
             padding: EdgeInsets.only(top: 20, right: 10),
             child: Text(
               'Mark all read',
-              style: TextStyle(color: Colors.black, fontSize: 15),
+              style: TextStyle(color: Colors.black, fontSize: 16),
             ),
           )
         ],
@@ -130,11 +130,10 @@ class NotificationPage extends StatelessWidget {
                                           offset: Offset(1, 3))
                                     ]),
                                 child: Row(
-
-                                  children: [
-                                    Padding(
-                                      padding: EdgeInsets.only(left: 20),
-                                      child: Container(
+                                       children: [
+                                        Padding(
+                                        padding: EdgeInsets.only(left: 20),
+                                         child: Container(
                                         height: 5,
                                         width: 5,
                                         decoration: BoxDecoration(
@@ -262,14 +261,14 @@ class NotificationPage extends StatelessWidget {
                     height: 10,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 20),
+                    padding:EdgeInsets.only(left: 20),
                     child: Text('Jan,31,2022'),
                   ),
                   Center(
                     child: SizedBox(
                       height: 320,
                       child: ListView.builder(
-                          physics: const NeverScrollableScrollPhysics(),
+                          physics:NeverScrollableScrollPhysics(),
                           itemCount: 4,
                           itemBuilder: (context, index) => Container(
                                 margin: EdgeInsets.all(9),
