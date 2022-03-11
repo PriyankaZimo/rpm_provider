@@ -61,8 +61,7 @@ class BasicDetails extends StatelessWidget {
                 ),
                 Row(
                   children: [
-                    Text('India(+91)|8976-8765',
-                        style: TextStyle(fontWeight: FontWeight.bold)),
+                    Text('India(+91)|8976-8765',style: TextStyle(fontWeight: FontWeight.bold)),
                     Spacer(),
                     Icon(Icons.call_outlined)
                   ],
@@ -72,7 +71,7 @@ class BasicDetails extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 100,
+          height: 130,
         ),
         GestureDetector(
           onTap: () {
@@ -82,7 +81,7 @@ class BasicDetails extends StatelessWidget {
           child: Container(
               child: Image.asset(
             'assets//qrcode.png',
-            height: 60,
+            height: 50,
           )),
         ),
         Text('Scan QR',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),)
