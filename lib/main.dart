@@ -3,12 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rpm_provider/Provider/enter_pin_provider.dart';
 import 'package:rpm_provider/Provider/verify_otp_provider.dart';
-import 'package:rpm_provider/Screens/ClientPage/client_page.dart';
+import 'package:rpm_provider/Screens/Home/Provider/drawer_provider.dart';
+import 'package:rpm_provider/Screens/Home/home_page.dart';
 import 'package:rpm_provider/Screens/Profile/Provider/profile_provider.dart';
-import 'package:rpm_provider/Screens/Profile/profile_page.dart';
-import 'package:rpm_provider/notification.dart';
-import 'package:rpm_provider/splash%20page.dart';
-import 'Screens/SignIn/sign_in_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -24,7 +21,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(create: (_) => EnterPinProvider()),
         ChangeNotifierProvider(create: (_) => VerifyOtpProvider()),
-        ChangeNotifierProvider(create: (_) => ProfileProvider())
+        ChangeNotifierProvider(create: (_) => ProfileProvider()),
+        ChangeNotifierProvider(create: (_) => DrawerProvider()),
+
       ],
       child: MaterialApp(
           title: 'Flutter Demo',
@@ -33,7 +32,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
           ),
 
-          home: ProfilePage()));
+          home:HomePage()));
 
 
   }
