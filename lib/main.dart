@@ -7,6 +7,7 @@ import 'package:rpm_provider/Screens/Home/Provider/drawer_provider.dart';
 import 'package:rpm_provider/Screens/Home/home_page.dart';
 import 'package:rpm_provider/Screens/Profile/Provider/profile_provider.dart';
 import 'package:rpm_provider/change_password.dart';
+import 'package:rpm_provider/splash%20page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -36,7 +37,7 @@ class MyApp extends StatelessWidget {
 
 
 
-          home:HomePage()),
+          home:SplashPage()),
 
     );
 

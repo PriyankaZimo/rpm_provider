@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'Screens/Home/home_page.dart';
 import 'Screens/SignIn/sign_in_page.dart';
 
 class SplashPage extends StatelessWidget {
@@ -68,8 +69,8 @@ bottom: 130,top:220,
 
   void nextPage(BuildContext context) {
     Future.delayed(Duration(seconds: 6), () {
-      /*Navigator.push(
-          context, MaterialPageRoute(builder: (context) => SignInPage()));*/
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => HomePage()));
     });
   }
 }

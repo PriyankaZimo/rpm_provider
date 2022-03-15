@@ -126,6 +126,13 @@ class _ClientPageState extends State<ClientPage> {
           )
         ]),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        backgroundColor: Color(0xfff27a74),
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
