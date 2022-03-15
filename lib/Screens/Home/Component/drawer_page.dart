@@ -57,7 +57,7 @@ class DrawerPage extends StatelessWidget {
                                             width: 4)),
                                     child: Container(
                                       padding:
-                                          EdgeInsets.all(index == 0 ? 0 : 8),
+                                          EdgeInsets.all(index == 0 ? 0 : 10),
                                       height: 50,
                                       width: 50,
                                       clipBehavior: Clip.antiAlias,

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rpm_provider/Util/constants.dart';
 
 class TeamPage extends StatelessWidget {
   final items = List<String>.generate(20, (i) => 'Item ${i + 1}');
@@ -83,13 +84,46 @@ class TeamPage extends StatelessWidget {
                     child: Stack(
                       children: [
                         ListTile(
-                          title: Text(
-                            " Thomas AndrewShelby",
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              fontSize: 18,
-                              color: Colors.black,
-                              fontWeight: FontWeight.w500,
+                          title: Padding(
+                            padding: EdgeInsets.only(left: 60),
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  'Jane Copper',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 18,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                  ),
+                                ),
+                                Row(
+                                  children: [
+                                    Text(
+                                      'Blow Dry',
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        fontSize: 15,
+                                        color: Colors.black,
+                                        fontWeight: FontWeight.w500,
+                                      ),
+                                    ),
+                                    Spacer(),
+                                    Container(
+                                      height: 10,
+                                      width: 10,
+                                      decoration: BoxDecoration(
+                                          shape: BoxShape.circle,
+                                          color: Colors.orange),
+                                    ),
+                                    SizedBox(
+                                      width: 10,
+                                    ),
+                                    Text('Inactive'),
+                                  ],
+                                ),
+                              ],
                             ),
                           ),
                         ),
@@ -112,6 +146,8 @@ class TeamPage extends StatelessWidget {
           )
         ]),
       ),
+      floatingActionButton: FloatingActionButton(backgroundColor: Colors.orange[700],
+        onPressed: () {  },child: Icon(Icons.add),),
     );
   }
 }

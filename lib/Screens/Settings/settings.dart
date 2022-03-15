@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Setting extends StatefulWidget {
-  const Setting({Key? key}) : super(key: key);
-
   @override
   State<Setting> createState() => _SettingState();
 }
@@ -14,11 +12,7 @@ class _SettingState extends State<Setting> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Icon(
-          Icons.arrow_back_ios_outlined,
-          color: Colors.black,
-          size: 24.0,
-        ),
+        leading: BackButton(color: Colors.black,),
         centerTitle: true,
         title: Text(
           'Settings',
@@ -30,7 +24,7 @@ class _SettingState extends State<Setting> {
         child: Column(
           children: [
             Container(
-              margin: EdgeInsets.only( top: 10),
+              margin: EdgeInsets.only(top: 10),
               width: MediaQuery.of(context).size.width,
               height: 50,
               decoration: new BoxDecoration(
@@ -40,7 +34,8 @@ class _SettingState extends State<Setting> {
               ),
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "Appointment Booking",
@@ -50,17 +45,18 @@ class _SettingState extends State<Setting> {
                         color: Colors.black,
                         fontWeight: FontWeight.w400,
                       ),
-                    ), Icon(
+                    ),
+                    Icon(
                       Icons.arrow_forward_ios_sharp,
                       color: Colors.black,
                       size: 20.0,
-
                     ),
                   ],
                 ),
               ),
-            ),Container(
-              margin: EdgeInsets.only( top: 10 ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
               width: MediaQuery.of(context).size.width,
               height: 50,
               decoration: new BoxDecoration(
@@ -70,7 +66,8 @@ class _SettingState extends State<Setting> {
               ),
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "Cancellation",
@@ -80,17 +77,18 @@ class _SettingState extends State<Setting> {
                         color: Colors.black,
                         fontWeight: FontWeight.w400,
                       ),
-                    ), Icon(
+                    ),
+                    Icon(
                       Icons.arrow_forward_ios_sharp,
                       color: Colors.black,
                       size: 20.0,
-
                     ),
                   ],
                 ),
               ),
-            ),Container(
-              margin: EdgeInsets.only( top: 10 ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
               width: MediaQuery.of(context).size.width,
               height: 50,
               decoration: new BoxDecoration(
@@ -100,7 +98,8 @@ class _SettingState extends State<Setting> {
               ),
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "Rescheduling",
@@ -110,17 +109,18 @@ class _SettingState extends State<Setting> {
                         color: Colors.black,
                         fontWeight: FontWeight.w400,
                       ),
-                    ), Icon(
+                    ),
+                    Icon(
                       Icons.arrow_forward_ios_sharp,
                       color: Colors.black,
                       size: 20.0,
-
                     ),
                   ],
                 ),
               ),
-            ),Container(
-              margin: EdgeInsets.only(top: 10 ),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
               width: MediaQuery.of(context).size.width,
               height: 50,
               decoration: new BoxDecoration(
@@ -130,7 +130,8 @@ class _SettingState extends State<Setting> {
               ),
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "Refund Policy",
@@ -140,17 +141,18 @@ class _SettingState extends State<Setting> {
                         color: Colors.black,
                         fontWeight: FontWeight.w400,
                       ),
-                    ), Icon(
+                    ),
+                    Icon(
                       Icons.arrow_forward_ios_sharp,
                       color: Colors.black,
                       size: 20.0,
-
                     ),
                   ],
                 ),
               ),
-            ),Container(
-              margin: EdgeInsets.only( top: 10),
+            ),
+            Container(
+              margin: EdgeInsets.only(top: 10),
               width: MediaQuery.of(context).size.width,
               height: 50,
               decoration: new BoxDecoration(
@@ -160,7 +162,8 @@ class _SettingState extends State<Setting> {
               ),
               child: Padding(
                 padding: const EdgeInsets.all(15.0),
-                child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
                       "Change Password",
@@ -170,11 +173,11 @@ class _SettingState extends State<Setting> {
                         color: Colors.black,
                         fontWeight: FontWeight.w400,
                       ),
-                    ), Icon(
+                    ),
+                    Icon(
                       Icons.arrow_forward_ios_sharp,
                       color: Colors.black,
                       size: 20.0,
-
                     ),
                   ],
                 ),

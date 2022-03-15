@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 
 class Add_offers extends StatefulWidget {
-  const Add_offers({Key? key}) : super(key: key);
-
   @override
   State<Add_offers> createState() => _Add_offersState();
 }
@@ -118,8 +116,7 @@ class _Add_offersState extends State<Add_offers> {
                       'from',
                       style: TextStyle(fontSize: 15.0, color: Colors.black),
                     ),
-                    Container(
-                      width: 125,
+                    Expanded(
                       child: TextFormField(
                         decoration: InputDecoration(
                           /*hintText: "Enter your Contact No",*/
@@ -148,8 +145,7 @@ class _Add_offersState extends State<Add_offers> {
                       'To',
                       style: TextStyle(fontSize: 15.0, color: Colors.black),
                     ),
-                    Container(
-                      width: 125,
+                    Expanded(
                       child: TextFormField(
                         decoration: InputDecoration(
                           /*hintText: "Enter your Contact No",*/
@@ -169,7 +165,6 @@ class _Add_offersState extends State<Add_offers> {
                       Icons.calendar_today,
                       color: Colors.black,
                       size: 24.0,
-                      semanticLabel: 'Text to announce in accessibility modes',
                     ),
                   ],
                 ),

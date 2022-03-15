@@ -8,7 +8,9 @@ class Change_password extends StatefulWidget {
 }
 
 class _Change_passwordState extends State<Change_password> {
-  bool _isObscure = true;bool _isObscure2 = true;
+  bool _isObscure = true;
+  bool _isObscure2 = true;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -51,18 +53,18 @@ class _Change_passwordState extends State<Change_password> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(58.0),
+                      padding: const EdgeInsets.all(30.0),
                       child: Text(
-                        'Create PIN',
+                        'Change Password',
                         style: TextStyle(
                             color: Color(0xfffffffffffffff),
-                            fontSize: 50,
-                            fontWeight: FontWeight.w600),
+                            fontSize: 35,
+                            fontWeight: FontWeight.w700),
                       ),
                     ),
                     Padding(
                       padding:
-                      const EdgeInsets.only(left: 30, right: 30, top: 25),
+                          const EdgeInsets.only(left: 30, right: 30, top: 25),
                       child: Column(
                         children: [
                           TextField(
@@ -93,29 +95,35 @@ class _Change_passwordState extends State<Change_password> {
                           ),
                           TextField(
                             obscureText: _isObscure2,
-                            decoration:  InputDecoration(
+                            decoration: InputDecoration(
                                 hintText: 'Enter New Password',
                                 enabledBorder: UnderlineInputBorder(
                                   borderSide: BorderSide(color: Colors.white),
-                                ), suffixIcon: IconButton(
-                              icon: Icon(
-                                _isObscure2 ? Icons.visibility : Icons.visibility_off,color: Colors.white,
-                              ),
-                              onPressed: () {
-                                setState(() {
-                                  _isObscure2 = !_isObscure2;
-                                });
-                              },
-                            ),
+                                ),
+                                suffixIcon: IconButton(
+                                  icon: Icon(
+                                    _isObscure2
+                                        ? Icons.visibility
+                                        : Icons.visibility_off,
+                                    color: Colors.white,
+                                  ),
+                                  onPressed: () {
+                                    setState(() {
+                                      _isObscure2 = !_isObscure2;
+                                    });
+                                  },
+                                ),
                                 hintStyle: TextStyle(
                                     color: Colors.white, fontSize: 20.0)),
-                          ),SizedBox(
+                          ),
+                          SizedBox(
                             height: 10,
-                          ), TextFormField(
+                          ),
+                          TextFormField(
                             style: TextStyle(color: Colors.white),
                             keyboardType: TextInputType.emailAddress,
                             autovalidateMode:
-                            AutovalidateMode.onUserInteraction,
+                                AutovalidateMode.onUserInteraction,
                             obscureText: false,
                             decoration: InputDecoration(
                                 hintText: 'Confirm Password',
@@ -173,4 +181,3 @@ class _Change_passwordState extends State<Change_password> {
     );
   }
 }
-

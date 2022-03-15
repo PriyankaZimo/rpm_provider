@@ -37,6 +37,6 @@ List texj = [
   {'txt': 'Lorem\nLorem ipsum dolor sit amet'}
 ];
 // Team Page List
-List text1 = [
+List texts = [
   {'txt':'Jane Copper'}
 ];
