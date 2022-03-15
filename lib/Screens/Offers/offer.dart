@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
+
+import 'package:rpm_provider/Screens/Offers/Components/add_new_offer.dart';
 class Offer extends StatefulWidget {
   const Offer({Key? key}) : super(key: key);
 
@@ -14,11 +16,7 @@ class _OfferState extends State<Offer> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Icon(
-          Icons.arrow_back_ios_outlined,
-          color: Colors.black,
-          size: 24.0,
-        ),
+        leading: BackButton(color: Colors.black,),
         centerTitle: true,
         title: Text(
           'Offers',
@@ -116,7 +114,9 @@ class _OfferState extends State<Offer> {
             elevation: 0.0,
             child: new Icon(Icons.add),
             backgroundColor: new Color(0xFFE57373),
-            onPressed: (){}
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context)=>Add_offers()));
+            }
         )
     );
   }

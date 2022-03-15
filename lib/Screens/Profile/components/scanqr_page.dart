@@ -22,7 +22,8 @@ class ScanQrPage extends StatelessWidget {
                       },
                       icon: Icon(
                         Icons.close,
-                        color: Colors.white,
+                       color: Colors.white,
+                        size: 30,
                       )),
                 ),
               ],
@@ -68,7 +69,7 @@ class ScanQrPage extends StatelessWidget {
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(10)),
                         child: Image.asset(
-                          'assets//scanner.png',
+                          'assets//qrcode.png',
                           scale: 3.1,
                         )),
                     SizedBox(

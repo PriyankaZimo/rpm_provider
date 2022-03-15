@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 class BusinessDetail extends StatelessWidget {
   var addressController = TextEditingController();
-  var flatController = TextEditingController();
+  var countryController = TextEditingController();
   var sectorController = TextEditingController();
   var cityController = TextEditingController();
   var stateController = TextEditingController();
@@ -54,6 +54,7 @@ class BusinessDetail extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
+                /// Address
                 Container(
                   height: 30,
                   child: TextFormField(
@@ -84,6 +85,7 @@ class BusinessDetail extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
+                ///Select Country
                 Row(
                   children: [
                     Text(
@@ -105,7 +107,7 @@ class BusinessDetail extends StatelessWidget {
                 Container(
                   height: 30,
                   child: TextFormField(
-                    controller: flatController,
+                    controller: countryController,
                     autovalidateMode: AutovalidateMode.onUserInteraction,
                     decoration: InputDecoration(
                         hintText: "Flat,House No.Apartement",
@@ -121,6 +123,7 @@ class BusinessDetail extends StatelessWidget {
                 SizedBox(
                   height: 30,
                 ),
+                /// Sector
                 Container(
                   height: 30,
                   child: TextFormField(
@@ -137,6 +140,7 @@ class BusinessDetail extends StatelessWidget {
                     },
                   ),
                 ),
+
                 Row(
                   children: [
                     Text(
@@ -214,8 +218,9 @@ class BusinessDetail extends StatelessWidget {
           ),
         ),
         Container(
-            height: 45,
+            height: 50,
             width: 250,
+            decoration: BoxDecoration(boxShadow: [BoxShadow(color: Colors.black12,blurRadius: 3,offset: Offset(3,3))]),
             child: ElevatedButton(
               onPressed: () {},
               child: Text(

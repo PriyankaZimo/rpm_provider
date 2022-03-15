@@ -1,13 +1,6 @@
 import 'package:flutter/material.dart';
 
-class ClientPage extends StatefulWidget {
-  const ClientPage({Key? key}) : super(key: key);
-
-  @override
-  State<ClientPage> createState() => _ClientPageState();
-}
-
-class _ClientPageState extends State<ClientPage> {
+class TeamPage extends StatelessWidget {
   final items = List<String>.generate(20, (i) => 'Item ${i + 1}');
 
   @override
@@ -16,15 +9,12 @@ class _ClientPageState extends State<ClientPage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Icon(
-          Icons.arrow_back_ios_outlined,
+        leading: BackButton(
           color: Colors.black,
-          size: 24.0,
         ),
-        centerTitle: true,
         title: Text(
-          'Client',
-          style: TextStyle(color: Colors.black),
+          'Team',
+          style: TextStyle(color: Colors.black, fontSize: 25),
         ),
       ),
       body: Padding(
@@ -65,10 +55,6 @@ class _ClientPageState extends State<ClientPage> {
                       : DismissDirection.none,
                   key: Key(item),
                   onDismissed: (direction) {
-                    setState(() {
-                      items.removeAt(index);
-                    });
-
                     ScaffoldMessenger.of(context)
                         .showSnackBar(SnackBar(content: Text(' Deleted')));
                   },

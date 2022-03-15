@@ -21,6 +21,7 @@ class ProfilePage extends StatelessWidget {
               Stack(
                 clipBehavior: Clip.none,
                 children: [
+                  ///Clipper
                   ClipPath(
                     clipper: MyClipper(),
                     child: Container(
@@ -40,27 +41,31 @@ class ProfilePage extends StatelessWidget {
                         child: Column(
                           children: [
                             Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 BackButton(
                                   color: Colors.black,
                                 ),
-                                SizedBox(width: 120,),
-                                Center(
-                                  child: Text(
-                                    'Profile',
-                                    style: TextStyle(fontSize: 20),
-                                  ),
+                                Text(
+                                  'Profile',
+                                  style: TextStyle(
+                                      fontSize: 23,
+                                      fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  width: 40,
                                 )
                               ],
                             ),
-                            //// List Text
+
+                            /// Basic and Business details Text
                             Center(
-                              child: Container(
-                                height:50,
-                                width: 350,
+                              child: SizedBox(
+                                height: 70,
+                                width: 400,
                                 child: ListView.builder(
                                     physics: NeverScrollableScrollPhysics(),
-                                    itemCount: 2,
+                                    itemCount: text.length,
                                     scrollDirection: Axis.horizontal,
                                     itemBuilder: (context, index) =>
                                         GestureDetector(
@@ -72,43 +77,45 @@ class ProfilePage extends StatelessWidget {
                                                 CrossAxisAlignment.center,
                                             children: [
                                               Container(
-                                                padding: EdgeInsets.only(right: 10, left: 20),
-                                                margin:
-                                                    EdgeInsets.only(left: 10),
-                                                width: 160,
+                                                height:20,
+                                                margin: EdgeInsets.only(left: 40,right: 30),
                                                 color: Colors.transparent,
-                                                child: Text(
-                                                  text[index],
-                                                  style: TextStyle(
-                                                      fontSize: 16,
-                                                      color: _profileProvider
-                                                                  .select ==
-                                                              index
-                                                          ? Colors.black
-                                                          : Colors.black54),
+                                                child: Center(
+                                                  child: Text(
+                                                    text[index],
+                                                    style: TextStyle(
+                                                        fontSize: 16,
+                                                        color: _profileProvider
+                                                                    .select ==
+                                                                index
+                                                            ? Colors.black
+                                                            : Colors.black54),
+                                                  ),
                                                 ),
                                               ),
                                               _profileProvider.select == index
-                                                  ? Container(
-                                                      margin: EdgeInsets.only(
-                                                          left: 10),
-                                                      height: 7,
-                                                      width: 130,
-                                                      decoration: BoxDecoration(
-                                                          color: Colors
-                                                              .orange[700],
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(10),
-                                                          boxShadow: [
-                                                            BoxShadow(
-                                                                color: Colors
-                                                                    .black12,
-                                                                offset: Offset(
-                                                                    5, 5),
-                                                                blurRadius: 2)
-                                                          ]),
-                                                    )
+                                                  ? Padding(
+                                                    padding:  EdgeInsets.only(left: 10),
+                                                    child: Container(
+
+                                                        height: 6,
+                                                        width: 130,
+                                                        decoration: BoxDecoration(
+                                                            color: Colors
+                                                                .orange[700],
+                                                            borderRadius:
+                                                                BorderRadius
+                                                                    .circular(10),
+                                                            boxShadow: [
+                                                              BoxShadow(
+                                                                  color: Colors
+                                                                      .black12,
+                                                                  offset: Offset(
+                                                                      5, 5),
+                                                                  blurRadius: 2)
+                                                            ]),
+                                                      ),
+                                                  )
                                                   : Container(),
                                             ],
                                           ),
@@ -120,7 +127,7 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                   ),
-                  ////Profile Image
+                  ///Profile Image
                   _profileProvider.select == 0
                       ? Stack(
                           children: [

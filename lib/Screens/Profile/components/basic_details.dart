@@ -8,7 +8,6 @@ class BasicDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-
       children: [
         Text(
           "JaneCopper",
@@ -26,7 +25,10 @@ class BasicDetails extends StatelessWidget {
               children: [
                 Row(
                   children: [
-                    Text('FirstName'),
+                    Text(
+                      'FirstName',
+                      style: TextStyle(fontSize: 16),
+                    ),
                     Spacer(),
                     Icon(Icons.border_color_outlined)
                   ],
@@ -38,7 +40,7 @@ class BasicDetails extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                Text('LastName'),
+                Text('LastName', style: TextStyle(fontSize: 16)),
                 SizedBox(
                   height: 10,
                 ),
@@ -46,7 +48,7 @@ class BasicDetails extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                Text('Email'),
+                Text('Email', style: TextStyle(fontSize: 16)),
                 SizedBox(
                   height: 10,
                 ),
@@ -55,7 +57,7 @@ class BasicDetails extends StatelessWidget {
                 SizedBox(
                   height: 20,
                 ),
-                Text('MobileNumber'),
+                Text('MobileNumber', style: TextStyle(fontSize: 16)),
                 SizedBox(
                   height: 10,
                 ),
@@ -72,7 +74,7 @@ class BasicDetails extends StatelessWidget {
           ),
         ),
         SizedBox(
-          height: 100,
+          height: 130,
         ),
         GestureDetector(
           onTap: () {
@@ -82,10 +84,13 @@ class BasicDetails extends StatelessWidget {
           child: Container(
               child: Image.asset(
             'assets//qrcode.png',
-            height: 60,
+            height: 50,
           )),
         ),
-        Text('Scan QR',style: TextStyle(fontSize: 12,fontWeight: FontWeight.bold),)
+        Text(
+          'Scan QR',
+          style: TextStyle(fontSize: 12, fontWeight: FontWeight.bold),
+        )
       ],
     );
   }
