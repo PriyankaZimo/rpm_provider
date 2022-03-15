@@ -10,7 +10,6 @@ class Add_offers extends StatefulWidget {
 var val;
 
 class _Add_offersState extends State<Add_offers> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,9 +111,13 @@ class _Add_offersState extends State<Add_offers> {
               Container(
                 width: MediaQuery.of(context).size.width,
                 height: 20,
-                child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    Text('from',style: TextStyle(fontSize: 15.0, color: Colors.black),),
+                    Text(
+                      'from',
+                      style: TextStyle(fontSize: 15.0, color: Colors.black),
+                    ),
                     Container(
                       width: 125,
                       child: TextFormField(
@@ -141,7 +144,10 @@ class _Add_offersState extends State<Add_offers> {
                     SizedBox(
                       width: 5,
                     ),
-                    Text('To',style: TextStyle(fontSize: 15.0, color: Colors.black),),
+                    Text(
+                      'To',
+                      style: TextStyle(fontSize: 15.0, color: Colors.black),
+                    ),
                     Container(
                       width: 125,
                       child: TextFormField(
@@ -172,24 +178,27 @@ class _Add_offersState extends State<Add_offers> {
                 child: Container(
                     margin: EdgeInsets.only(top: 60),
                     height: 50,
-                    width: 220,decoration: BoxDecoration(
-                    boxShadow: <BoxShadow>[
+                    width: 220,
+                    decoration: BoxDecoration(boxShadow: <BoxShadow>[
                       BoxShadow(
                         color: Colors.black.withOpacity(0.1),
                         blurRadius: 3,
                         offset: Offset(0, 3),
-                      ),]),
+                      ),
+                    ]),
                     child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
                           primary: Color(0xffF47D3A),
                           shape: new RoundedRectangleBorder(
                             borderRadius: new BorderRadius.circular(5.0),
-
                           ),
                         ),
-                        child: Text('Save',style: TextStyle(fontSize: 20),))),),
-
+                        child: Text(
+                          'Save',
+                          style: TextStyle(fontSize: 20),
+                        ))),
+              ),
             ],
           ),
         ),
