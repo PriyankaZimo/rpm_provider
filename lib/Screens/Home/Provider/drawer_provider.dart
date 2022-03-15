@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rpm_provider/Screens/ClientPage/client_page.dart';
+import 'package:rpm_provider/Screens/Offers/offer.dart';
 import 'package:rpm_provider/Screens/Profile/profile_page.dart';
 import 'package:rpm_provider/Screens/Services/service_page.dart';
+import 'package:rpm_provider/Screens/Team/team_page.dart';
 import 'package:rpm_provider/team_page.dart';
 
 class DrawerProvider extends ChangeNotifier {
@@ -23,12 +25,14 @@ class DrawerProvider extends ChangeNotifier {
         return Navigator.push(
             context, MaterialPageRoute(builder: (context) =>ClientPage()));
       case 4:
-        return Container();
+        return Navigator.push(
+            context, MaterialPageRoute(builder: (context) =>TeamPage()));
       case 5:
         return Navigator.push(
             context, MaterialPageRoute(builder: (context) => ServicePage()));
       case 6:
-        return Container();
+        return Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Offer()));
       case 7:
         return Container();
       case 8:

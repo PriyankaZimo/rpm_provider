@@ -6,6 +6,7 @@ import 'package:rpm_provider/Provider/verify_otp_provider.dart';
 import 'package:rpm_provider/Screens/Home/Provider/drawer_provider.dart';
 import 'package:rpm_provider/Screens/Home/home_page.dart';
 import 'package:rpm_provider/Screens/Profile/Provider/profile_provider.dart';
+import 'package:rpm_provider/change_password.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,7 +33,9 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
           ),
 
-          home:HomePage()));
+          home:HomePage()),
+    );
+
 
 
   }

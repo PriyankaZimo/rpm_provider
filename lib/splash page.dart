@@ -50,13 +50,16 @@ class SplashPage extends StatelessWidget {
             ),
           ),
           Positioned(
-              bottom: 400,
-              child: Text(
-                'Iskeedo',
-                style: TextStyle(
-                    color: Colors.white,
-                    fontWeight: FontWeight.w700,
-                    fontSize: 50),
+
+bottom: 130,top:220,
+              child: Center(
+                child: Text(
+                  'Iskedo',
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w700,
+                      fontSize: 50),
+                ),
               ))
         ]),
       ),
@@ -65,8 +68,8 @@ class SplashPage extends StatelessWidget {
 
   void nextPage(BuildContext context) {
     Future.delayed(Duration(seconds: 6), () {
-      Navigator.push(
-          context, MaterialPageRoute(builder: (context) => SignInPage()));
+      /*Navigator.push(
+          context, MaterialPageRoute(builder: (context) => SignInPage()));*/
     });
   }
 }
