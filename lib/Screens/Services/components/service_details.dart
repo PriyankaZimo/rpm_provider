@@ -135,7 +135,7 @@ class ServiceDetails extends StatelessWidget {
                       },
                       child: Text(
                         'Save',
-                        style: TextStyle(color: Colors.black, fontSize: 20),
+                        style: TextStyle(color: Colors.white, fontSize: 20),
                       ),
                       style:
                           ElevatedButton.styleFrom(primary: Color(0xFFF57C00)),

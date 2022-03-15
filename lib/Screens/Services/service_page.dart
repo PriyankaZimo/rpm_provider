@@ -114,9 +114,9 @@ class ServicePage extends StatelessWidget {
               context, MaterialPageRoute(builder: (context) => AddService()));
         },
         backgroundColor: Colors.orange[700],
-        child: const Icon(
+        child: Icon(
           Icons.add,
-          color: Colors.black,
+          color: Colors.white,
         ),
       ), //
     );

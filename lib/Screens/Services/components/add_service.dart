@@ -94,15 +94,14 @@ class AddService extends StatelessWidget {
                     height: 50,
                     width: 250,
                     child: ElevatedButton(
-                        onPressed: () {
-
-                        },
-                        child: Text(
-                          'Save',
-                          style: TextStyle(color: Colors.black, fontSize: 20),
-                        ) , style: ElevatedButton.styleFrom(primary:  Color(0xFFF57C00)),
-                    )
-                ),
+                      onPressed: () {},
+                      child: Text(
+                        'Save',
+                        style: TextStyle(color: Colors.white, fontSize: 20),
+                      ),
+                      style:
+                          ElevatedButton.styleFrom(primary: Color(0xFFF57C00)),
+                    )),
               )
             ],
           ),

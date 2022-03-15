@@ -15,14 +15,14 @@ class DrawerPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
-            padding: EdgeInsets.only(left: 20, top: 50),
-            child: Text(
-              'ISKEEDO',
-              style: TextStyle(color: Color(0xFFFF8A80), fontSize: 18),
+          const Padding(
+            padding: const EdgeInsets.only(left: 20, top: 50),
+            child: const Text(
+              'ISKEDO',
+              style: const TextStyle(color: const Color(0xFFFF8A80), fontSize: 18),
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 20, right: 20),
             child: Divider(
               color: Color(0xFFFF8A80),
@@ -38,9 +38,9 @@ class DrawerPage extends StatelessWidget {
                 scrollDirection: Axis.vertical,
                 itemBuilder: (context, index) => Consumer<DrawerProvider>(
                       builder: (context, val, child) => Container(
-                        margin: EdgeInsets.only(top: 5),
-                        padding: EdgeInsets.only(left: 20, right: 20),
-                        decoration: BoxDecoration(color: Colors.white),
+                        margin: const EdgeInsets.only(top: 5),
+                        padding: const EdgeInsets.only(left: 20, right: 20),
+                        decoration: const BoxDecoration(color: Colors.white),
                         child: Column(
                           children: [
                             GestureDetector(
@@ -53,7 +53,7 @@ class DrawerPage extends StatelessWidget {
                                     decoration: BoxDecoration(
                                         shape: BoxShape.circle,
                                         border: Border.all(
-                                            color: Color(0xFFFF8A80),
+                                            color: const Color(0xFFFF8A80),
                                             width: 4)),
                                     child: Container(
                                       padding:
@@ -61,7 +61,7 @@ class DrawerPage extends StatelessWidget {
                                       height: 50,
                                       width: 50,
                                       clipBehavior: Clip.antiAlias,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                         color: Colors.white,
                                         shape: BoxShape.circle,
                                         boxShadow: [
@@ -82,7 +82,7 @@ class DrawerPage extends StatelessWidget {
                                       ),
                                     ),
                                   ),
-                                  SizedBox(
+                                  const SizedBox(
                                     width: 20,
                                   ),
 
@@ -90,13 +90,13 @@ class DrawerPage extends StatelessWidget {
                                   Container(
                                     child: Text(
                                       type[index]['txt'],
-                                      style: TextStyle(fontSize: 17),
+                                      style: const TextStyle(fontSize: 17),
                                     ),
                                   ),
                                 ],
                               ),
                             ),
-                            Divider(
+                            const Divider(
                               color: Color(0xFFFF8A80),
                               thickness: 1,
                             )

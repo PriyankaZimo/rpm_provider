@@ -5,8 +5,6 @@ import 'package:rpm_provider/Screens/Profile/profile_page.dart';
 import 'package:rpm_provider/Screens/Services/service_page.dart';
 import 'package:rpm_provider/team_page.dart';
 
-
-
 class DrawerProvider extends ChangeNotifier {
   int select = 0;
 
@@ -23,10 +21,9 @@ class DrawerProvider extends ChangeNotifier {
         return Container();
       case 3:
         return Navigator.push(
-            context, MaterialPageRoute(builder: (context) => ClientPage()));
+            context, MaterialPageRoute(builder: (context) =>ClientPage()));
       case 4:
-        return Navigator.push(
-            context, MaterialPageRoute(builder: (context) => TeamPage()));
+        return Container();
       case 5:
         return Navigator.push(
             context, MaterialPageRoute(builder: (context) => ServicePage()));

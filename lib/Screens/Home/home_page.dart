@@ -37,7 +37,8 @@ class HomePage extends StatelessWidget {
               )),
         ],
       ),
-      drawer: DrawerPage(),
+      drawer:
+      DrawerPage(),
       body: Container(
         color: Colors.white,
       ),
