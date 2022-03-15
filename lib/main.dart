@@ -8,9 +8,13 @@ import 'package:rpm_provider/Screens/Profile/Provider/profile_provider.dart';
 import 'package:rpm_provider/Screens/Profile/profile_page.dart';
 import 'package:rpm_provider/notification.dart';
 import 'package:rpm_provider/select_role.dart';
+import 'package:rpm_provider/settings.dart';
 import 'package:rpm_provider/splash%20page.dart';
 import 'Screens/ClientPage/components/add_client.dart';
 import 'Screens/SignIn/sign_in_page.dart';
+import 'add_new_offer.dart';
+import 'change_password.dart';
+import 'offer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,7 +39,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
           ),
 
-          home:Role ()),
+          home:Change_password()),
     );
 
 

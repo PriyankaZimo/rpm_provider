@@ -88,7 +88,7 @@ class AddClient extends StatelessWidget {
                   decoration: InputDecoration(
                     prefixIcon: CountryCodePicker(
                       textStyle: TextStyle(color: Colors.black45),
-                      initialSelection: 'IN',
+                      /*initialSelection: 'IN',*/
                       showCountryOnly: false,
                     ),
                     hintText: "",
@@ -105,8 +105,8 @@ class AddClient extends StatelessWidget {
               ),
               Container(
                   margin: EdgeInsets.only(top: 60),
-                  height: 60,
-                  width: 280,decoration: BoxDecoration(
+                  height: 50,
+                  width: 220,decoration: BoxDecoration(
                   boxShadow: <BoxShadow>[
               BoxShadow(
               color: Colors.black.withOpacity(0.1),

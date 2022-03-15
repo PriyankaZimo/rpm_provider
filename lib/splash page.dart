@@ -54,7 +54,7 @@ class SplashPage extends StatelessWidget {
 bottom: 130,top:220,
               child: Center(
                 child: Text(
-                  'Iskeedo',
+                  'Iskedo',
                   style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w700,

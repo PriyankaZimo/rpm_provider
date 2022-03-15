@@ -20,7 +20,7 @@ class _ClientPageState extends State<ClientPage> {
           Icons.arrow_back_ios_outlined,
           color: Colors.black,
           size: 24.0,
-          semanticLabel: 'Text to announce in accessibility modes',
+
         ),
         centerTitle: true,
         title: Text(
@@ -71,7 +71,7 @@ class _ClientPageState extends State<ClientPage> {
                     });
 
                     ScaffoldMessenger.of(context)
-                        .showSnackBar(SnackBar(content: Text(' dismissed')));
+                        .showSnackBar(SnackBar(content: Text(' Deleted')));
                   },
                   background: Container(
                     margin: EdgeInsets.only(top: 10, left: 5, right: 5),
