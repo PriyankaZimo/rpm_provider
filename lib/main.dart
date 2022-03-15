@@ -39,7 +39,7 @@ class MyApp extends StatelessWidget {
             primarySwatch: Colors.blue,
           ),
 
-          home:Change_password()),
+          home: Add_offers ()),
     );
 
 

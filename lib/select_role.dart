@@ -8,7 +8,7 @@ class Role extends StatefulWidget {
 }
 
 class _RoleState extends State<Role> {
-  bool _Button1 = false;bool _Button2 = false;
+  bool _Button1 = false;bool _Button2 = false;bool _Color1 = false;bool _Color2 = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,7 +29,7 @@ class _RoleState extends State<Role> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               SizedBox(
-                height: 350,
+                height: 300,
               ),
               Text(
                 'Iskeedo',textAlign: TextAlign.center,
@@ -46,6 +46,7 @@ class _RoleState extends State<Role> {
                 onTap: () { setState(() {
                   // Toggle light when tapped.
                   _Button1 = !_Button1;
+                  _Color1 = !_Color1;
                 });},
                 child: Container(
                   height: 55,
@@ -56,10 +57,10 @@ class _RoleState extends State<Role> {
                   child: Center(
                       child: Text(
                     'Admin',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 25,
-                        fontWeight: FontWeight.normal),
+                        style: TextStyle(
+                            color: _Color1 ? Colors.black :  Color(0xfff27a74),
+                            fontSize: 25,
+                            fontWeight: FontWeight.w600),
                   )),
                 ),
               ),SizedBox(height: 50,),
@@ -77,10 +78,10 @@ class _RoleState extends State<Role> {
                   child: Center(
                       child: Text(
                     'Staff',
-                    style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 25,
-                        fontWeight: FontWeight.normal),
+                        style: TextStyle(
+                            color: Color(0xfff27a74),
+                            fontSize: 25,
+                            fontWeight: FontWeight.w600),
                   )),
                 ),
               ),

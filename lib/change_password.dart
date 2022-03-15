@@ -51,13 +51,13 @@ class _Change_passwordState extends State<Change_password> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     Padding(
-                      padding: const EdgeInsets.all(58.0),
+                      padding: const EdgeInsets.all(30.0),
                       child: Text(
-                        'Create PIN',
+                        'Change Password',
                         style: TextStyle(
                             color: Color(0xfffffffffffffff),
-                            fontSize: 50,
-                            fontWeight: FontWeight.w600),
+                            fontSize: 35,
+                            fontWeight: FontWeight.w700),
                       ),
                     ),
                     Padding(

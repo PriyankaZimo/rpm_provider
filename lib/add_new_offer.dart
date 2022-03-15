@@ -115,8 +115,7 @@ class _Add_offersState extends State<Add_offers> {
                 child: Row(mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     Text('from',style: TextStyle(fontSize: 15.0, color: Colors.black),),
-                    Container(
-                      width: 125,
+                    Expanded(
                       child: TextFormField(
                         decoration: InputDecoration(
                           /*hintText: "Enter your Contact No",*/
@@ -142,8 +141,7 @@ class _Add_offersState extends State<Add_offers> {
                       width: 5,
                     ),
                     Text('To',style: TextStyle(fontSize: 15.0, color: Colors.black),),
-                    Container(
-                      width: 125,
+                    Expanded(
                       child: TextFormField(
                         decoration: InputDecoration(
                           /*hintText: "Enter your Contact No",*/
@@ -163,7 +161,7 @@ class _Add_offersState extends State<Add_offers> {
                       Icons.calendar_today,
                       color: Colors.black,
                       size: 24.0,
-                      semanticLabel: 'Text to announce in accessibility modes',
+
                     ),
                   ],
                 ),
