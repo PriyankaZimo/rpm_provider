@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rpm_provider/Screens/Services/components/add_service.dart';
 
+import 'components/service_details.dart';
+
 class ServicePage extends StatelessWidget {
   List text = ['Hair Service', 'Nail Service'];
   List serv = ['Blow Dry', 'Manicures'];
@@ -12,7 +14,7 @@ class ServicePage extends StatelessWidget {
         backgroundColor: Colors.transparent,
         elevation: 0,
         leading: GestureDetector(
-          onTap: (){
+          onTap: () {
             Navigator.pop(context);
           },
           child: Icon(
@@ -29,7 +31,7 @@ class ServicePage extends StatelessWidget {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(10.0),
+        padding: EdgeInsets.all(10.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
           Container(
               decoration: BoxDecoration(boxShadow: [
@@ -58,42 +60,49 @@ class ServicePage extends StatelessWidget {
           SizedBox(
             height: 10,
           ),
-          Container(
-            height: 200,
+          Expanded(
             child: ListView.builder(
                 itemCount: text.length,
                 physics: NeverScrollableScrollPhysics(),
-                itemBuilder: (context, index) => Container(
-                      padding: EdgeInsets.only(left: 20, top: 10, right: 20),
-                      margin: EdgeInsets.all(10),
-                      height: 80,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(5),
-                          border: Border.all(
-                            color: Color(0xFFFFCCBC),
-                          )),
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            text[index],
-                            style: TextStyle(
-                                fontSize: 20, fontWeight: FontWeight.bold),
-                          ),
-                          SizedBox(
-                            height: 10,
-                          ),
-                          Row(
-                            children: [
-                              Text(
-                                serv[index],
-                                style: TextStyle(fontSize: 16),
-                              ),
-                              Spacer(),
-                              Text('\$20')
-                            ],
-                          )
-                        ],
+                itemBuilder: (context, index) => GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => ServiceDetails()));
+                      },
+                      child: Container(
+                        padding: EdgeInsets.only(left: 20, top: 10, right: 20),
+                        margin: EdgeInsets.all(10),
+                        height: 70,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(50),
+                            border: Border.all(
+                              color: Color(0xFFFFCCBC),
+                            )),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              text[index],
+                              style: TextStyle(
+                                  fontSize: 17, fontWeight: FontWeight.bold),
+                            ),
+                            SizedBox(
+                              height: 10,
+                            ),
+                            Row(
+                              children: [
+                                Text(
+                                  serv[index],
+                                  style: TextStyle(fontSize: 16),
+                                ),
+                                Spacer(),
+                                Text('\$20')
+                              ],
+                            )
+                          ],
+                        ),
                       ),
                     )),
           ),

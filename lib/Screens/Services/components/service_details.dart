@@ -128,10 +128,10 @@ class ServiceDetails extends StatelessWidget {
                     width: 250,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ServiceDetails()));
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) => ServiceDetails()));
                       },
                       child: Text(
                         'Save',

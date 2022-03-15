@@ -5,9 +5,10 @@ import 'package:rpm_provider/Util/constants.dart';
 
 class DrawerPage extends StatelessWidget {
   late DrawerProvider _drawerProvider;
+
   @override
   Widget build(BuildContext context) {
-    _drawerProvider=context.read<DrawerProvider>();
+    _drawerProvider = context.read<DrawerProvider>();
     return Container(
       width: 270,
       color: Colors.white,
@@ -15,69 +16,80 @@ class DrawerPage extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Padding(
-            padding: EdgeInsets.only(left: 20, top: 40),
+            padding: EdgeInsets.only(left: 20, top: 50),
             child: Text(
               'ISKEEDO',
-              style: TextStyle(color: Colors.orange[700], fontSize: 20),
+              style: TextStyle(color: Color(0xFFFF8A80), fontSize: 18),
             ),
           ),
           Padding(
             padding: EdgeInsets.only(left: 20, right: 20),
             child: Divider(
-              color: Color(0xFFFFCCBC),
+              color: Color(0xFFFF8A80),
               thickness: 1,
             ),
           ),
+
           /// List View
           Expanded(
             child: ListView.builder(
                 padding: EdgeInsets.zero,
-                itemCount: tex.length,
+                itemCount: type.length,
                 scrollDirection: Axis.vertical,
                 itemBuilder: (context, index) => Consumer<DrawerProvider>(
-                  builder: (context, val,child)=>
-                  Container(
+                      builder: (context, val, child) => Container(
+                        margin: EdgeInsets.only(top: 5),
                         padding: EdgeInsets.only(left: 20, right: 20),
                         decoration: BoxDecoration(color: Colors.white),
                         child: Column(
                           children: [
-                            GestureDetector(onTap: (){
-                              val.selText(index, context);
-                            },
+                            GestureDetector(
+                              onTap: () {
+                                val.selText(index, context);
+                              },
                               child: Row(
                                 children: [
                                   Container(
-                                    margin: EdgeInsets.only(
-                                      left: 10,
-                                      top: 10,
-                                    ),
-                                    height: 50,
-                                    width: 50,
                                     decoration: BoxDecoration(
-                                        image: DecorationImage(
-                                          image: AssetImage(imag[index]),
-                                          fit: BoxFit.fitHeight,
-                                        ),
+                                        shape: BoxShape.circle,
+                                        border: Border.all(
+                                            color: Color(0xFFFF8A80),
+                                            width: 4)),
+                                    child: Container(
+                                      padding:
+                                          EdgeInsets.all(index == 0 ? 0 : 8),
+                                      height: 50,
+                                      width: 50,
+                                      clipBehavior: Clip.antiAlias,
+                                      decoration: BoxDecoration(
                                         color: Colors.white,
                                         shape: BoxShape.circle,
                                         boxShadow: [
                                           BoxShadow(
                                               color: Colors.black12,
-                                              offset: Offset(2, 2),
-                                              blurRadius: 2)
+                                              offset: Offset(3, 3),
+                                              blurRadius: 3),
+                                          BoxShadow(
+                                              color: Colors.black12,
+                                              offset: Offset(5, 5),
+                                              blurRadius: 5)
                                         ],
-                                        border: Border.all(
-                                            color: Colors.redAccent, width: 3)),
+                                      ),
+                                      child: Image.asset(
+                                        type[index]['img'],
+                                        height: type[index]['size'],
+                                        fit: BoxFit.cover,
+                                      ),
+                                    ),
                                   ),
                                   SizedBox(
-                                    width: 8,
+                                    width: 20,
                                   ),
 
                                   /// List Text
                                   Container(
-                                    padding: EdgeInsets.only(top: 10),
                                     child: Text(
-                                      tex[index],
+                                      type[index]['txt'],
                                       style: TextStyle(fontSize: 17),
                                     ),
                                   ),
@@ -85,82 +97,14 @@ class DrawerPage extends StatelessWidget {
                               ),
                             ),
                             Divider(
-                              color: Colors.orange,
+                              color: Color(0xFFFF8A80),
+                              thickness: 1,
                             )
                           ],
                         ),
                       ),
-                )),
+                    )),
           )
-          // Consumer<DrawerProvider>(
-          //   builder: (context, val, child) => Container(
-          //     padding: EdgeInsets.only(
-          //       left: 10,
-          //       right: 10,
-          //     ),
-          //     child: Expanded(
-          //       child: ListView.builder(
-          //         padding: EdgeInsets.zero,
-          //         physics: NeverScrollableScrollPhysics(),
-          //         itemCount: tex.length,
-          //         itemBuilder: (context, index) => Column(
-          //           children: [
-          //             GestureDetector(
-          //               onTap: () {
-          //                 val.selText(index, context);
-          //               },
-          //               child: Row(
-          //                 children: [
-          //                   Container(
-          //                     margin: EdgeInsets.only(
-          //                       left: 10,
-          //                       top: 10,
-          //                     ),
-          //                     height: 50,
-          //                     width: 50,
-          //                     decoration: BoxDecoration(
-          //                         image: DecorationImage(
-          //                           image: AssetImage(imag[index]),
-          //                           fit: BoxFit.fill,
-          //                         ),
-          //                         color: Colors.white,
-          //                         shape: BoxShape.circle,
-          //                         boxShadow: [
-          //                           BoxShadow(
-          //                               color: Colors.black12,
-          //                               offset: Offset(2, 2),
-          //                               blurRadius: 2)
-          //                         ],
-          //                         border: Border.all(
-          //                             color: Colors.redAccent, width: 3)
-          //                     ),
-          //                   ),
-          //                   SizedBox(
-          //                     width: 8,
-          //                   ),
-          //
-          //                   /// List Text
-          //                   Container(
-          //                     padding: EdgeInsets.only(top: 10),
-          //                     margin: EdgeInsets.all(10),
-          //                     child: Text(
-          //                       tex[index],
-          //                       style: TextStyle(fontSize: 17),
-          //                     ),
-          //                   ),
-          //                 ],
-          //               ),
-          //             ),
-          //             Divider(
-          //               color: Color(0xFFFFCCBC),
-          //               thickness: 1,
-          //             )
-          //           ],
-          //         ),
-          //       ),
-          //     ),
-          //   ),
-          // ),
         ],
       ),
     );

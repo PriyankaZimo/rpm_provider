@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import 'package:rpm_provider/Screens/ClientPage/client_page.dart';
 import 'package:rpm_provider/Screens/Profile/profile_page.dart';
 import 'package:rpm_provider/Screens/Services/service_page.dart';
+import 'package:rpm_provider/team_page.dart';
+
+
 
 class DrawerProvider extends ChangeNotifier {
   int select = 0;
@@ -22,7 +25,8 @@ class DrawerProvider extends ChangeNotifier {
         return Navigator.push(
             context, MaterialPageRoute(builder: (context) => ClientPage()));
       case 4:
-        return Container();
+        return Navigator.push(
+            context, MaterialPageRoute(builder: (context) => TeamPage()));
       case 5:
         return Navigator.push(
             context, MaterialPageRoute(builder: (context) => ServicePage()));

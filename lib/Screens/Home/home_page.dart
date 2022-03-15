@@ -30,8 +30,11 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(
                         builder: (context) => NotificationPage()));
               },
-              child: Icon(Icons.notifications_outlined,size: 35,color: Colors.black,)
-          ),
+              child: Icon(
+                Icons.notifications_outlined,
+                size: 35,
+                color: Colors.black,
+              )),
         ],
       ),
       drawer: DrawerPage(),
