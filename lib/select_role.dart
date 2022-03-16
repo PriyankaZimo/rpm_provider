@@ -8,7 +8,7 @@ class Role extends StatefulWidget {
 }
 
 class _RoleState extends State<Role> {
-  bool _Button1 = false;bool _Button2 = false;bool _Color1 = false;bool _Color2 = false;
+/*  bool _Button1 = false;bool _Button2 = false;bool _Color1 = false;bool _Color2 = false;*/
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,7 +32,8 @@ class _RoleState extends State<Role> {
                 height: 300,
               ),
               Text(
-                'Iskeedo',textAlign: TextAlign.center,
+                'Iskeedo',
+                textAlign: TextAlign.center,
                 style: TextStyle(
                     color: Colors.white,
                     fontSize: 50,
@@ -41,47 +42,54 @@ class _RoleState extends State<Role> {
               SizedBox(
                 height: 50,
               ),
-
               GestureDetector(
-                onTap: () { setState(() {
-                  // Toggle light when tapped.
-                  _Button1 = !_Button1;
-                  _Color1 = !_Color1;
-                });},
+                onTap: () {
+                  setState(() {
+                    // Toggle light when tapped.
+                    /* _Button1 = !_Button1;
+                  _Color1 = !_Color1;*/
+                  });
+                },
                 child: Container(
                   height: 55,
                   width: 220,
                   decoration: BoxDecoration(
-                      color: _Button1 ? Colors.white70 : Colors.white,
+                      color: /*_Button1 ? Colors.white70 : */ Colors.white,
                       borderRadius: BorderRadius.circular(5)),
                   child: Center(
                       child: Text(
                     'Admin',
-                        style: TextStyle(
-                            color: _Color1 ? Colors.black :  Color(0xfff27a74),
-                            fontSize: 25,
-                            fontWeight: FontWeight.w600),
+                    style: TextStyle(
+                        color: /*_Color1 ? Colors.black :*/ Color(0xfff27a74),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w600),
                   )),
                 ),
-              ),SizedBox(height: 50,),
+              ),
+              SizedBox(
+                height: 50,
+              ),
               GestureDetector(
-                onTap: () {setState(() {
-                  // Toggle light when tapped.
-                  _Button2 = !_Button2;
-                });print('hlo i am clicked');},
+                onTap: () {
+                  setState(() {
+                    // Toggle light when tapped.
+                    /*  _Button2 = !_Button2;*/
+                  });
+                  print('hlo i am clicked');
+                },
                 child: Container(
                   height: 55,
                   width: 220,
                   decoration: BoxDecoration(
-                      color: _Button2 ? Colors.white70 : Colors.white,
+                      color: /*_Button2 ? Colors.white70 :*/ Colors.white,
                       borderRadius: BorderRadius.circular(5)),
                   child: Center(
                       child: Text(
                     'Staff',
-                        style: TextStyle(
-                            color: Color(0xfff27a74),
-                            fontSize: 25,
-                            fontWeight: FontWeight.w600),
+                    style: TextStyle(
+                        color: Color(0xfff27a74),
+                        fontSize: 25,
+                        fontWeight: FontWeight.w600),
                   )),
                 ),
               ),

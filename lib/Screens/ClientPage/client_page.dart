@@ -14,11 +14,7 @@ class _ClientPageState extends State<ClientPage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Icon(
-          Icons.arrow_back_ios_outlined,
-          color: Colors.black,
-          size: 24.0,
-        ),
+        leading:BackButton(color: Colors.black,),
         centerTitle: true,
         title: Text(
           'Client',
@@ -123,6 +119,13 @@ class _ClientPageState extends State<ClientPage> {
             height: 2,
           )
         ]),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          // Add your onPressed code here!
+        },
+        backgroundColor: Color(0xfff27a74),
+        child: Icon(Icons.add),
       ),
     );
   }

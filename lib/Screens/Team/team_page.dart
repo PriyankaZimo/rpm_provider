@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:rpm_provider/Util/constants.dart';
+import 'package:rpm_provider/Screens/Team/Components/add_member.dart';
+
 
 class TeamPage extends StatelessWidget {
   final items = List<String>.generate(20, (i) => 'Item ${i + 1}');
@@ -74,7 +75,7 @@ class TeamPage extends StatelessWidget {
                   child: Container(
                     margin:
                         EdgeInsets.only(top: 10, bottom: 5, left: 5, right: 5),
-                    decoration: new BoxDecoration(
+                    decoration:BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(30),
                       boxShadow: [
@@ -115,7 +116,7 @@ class TeamPage extends StatelessWidget {
                                       width: 10,
                                       decoration: BoxDecoration(
                                           shape: BoxShape.circle,
-                                          color: Colors.orange),
+                                          color: Colors.red),
                                     ),
                                     SizedBox(
                                       width: 10,
@@ -147,7 +148,9 @@ class TeamPage extends StatelessWidget {
         ]),
       ),
       floatingActionButton: FloatingActionButton(backgroundColor: Colors.orange[700],
-        onPressed: () {  },child: Icon(Icons.add),),
+        onPressed: () {
+        Navigator.push(context,MaterialPageRoute(builder: (context)=>AddMembers()));
+        },child: Icon(Icons.add),),
     );
   }
 }
