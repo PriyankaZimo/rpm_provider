@@ -13,6 +13,7 @@ class ProfilePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     _profileProvider = context.watch<ProfileProvider>();
+
     return Scaffold(
         backgroundColor: Colors.white,
         body: SingleChildScrollView(
@@ -77,8 +78,9 @@ class ProfilePage extends StatelessWidget {
                                                 CrossAxisAlignment.center,
                                             children: [
                                               Container(
-                                                height:20,
-                                                margin: EdgeInsets.only(left: 40,right: 30),
+                                                height: 20,
+                                                margin: EdgeInsets.only(
+                                                    left: 40, right: 30),
                                                 color: Colors.transparent,
                                                 child: Center(
                                                   child: Text(
@@ -95,9 +97,9 @@ class ProfilePage extends StatelessWidget {
                                               ),
                                               _profileProvider.select == index
                                                   ? Padding(
-                                                    padding:  EdgeInsets.only(left: 10),
-                                                    child: Container(
-
+                                                      padding: EdgeInsets.only(
+                                                          left: 10),
+                                                      child: Container(
                                                         height: 6,
                                                         width: 130,
                                                         decoration: BoxDecoration(
@@ -105,17 +107,19 @@ class ProfilePage extends StatelessWidget {
                                                                 .orange[700],
                                                             borderRadius:
                                                                 BorderRadius
-                                                                    .circular(10),
+                                                                    .circular(
+                                                                        10),
                                                             boxShadow: [
                                                               BoxShadow(
                                                                   color: Colors
                                                                       .black12,
-                                                                  offset: Offset(
-                                                                      5, 5),
+                                                                  offset:
+                                                                      Offset(
+                                                                          5, 5),
                                                                   blurRadius: 2)
                                                             ]),
                                                       ),
-                                                  )
+                                                    )
                                                   : Container(),
                                             ],
                                           ),
@@ -127,6 +131,7 @@ class ProfilePage extends StatelessWidget {
                       ),
                     ),
                   ),
+
                   ///Profile Image
                   _profileProvider.select == 0
                       ? Stack(

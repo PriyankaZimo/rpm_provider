@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
-class Change_password extends StatefulWidget {
-  const Change_password({Key? key}) : super(key: key);
+class ChangePassword extends StatefulWidget {
 
   @override
-  State<Change_password> createState() => _Change_passwordState();
+  State<ChangePassword> createState() => _ChangePasswordState();
 }
 
-class _Change_passwordState extends State<Change_password> {
+class _ChangePasswordState extends State<ChangePassword> {
   bool _isObscure = true;
   bool _isObscure2 = true;
 

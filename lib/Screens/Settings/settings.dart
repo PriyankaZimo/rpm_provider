@@ -38,7 +38,7 @@ class _SettingState extends State<Setting> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Appointment Booking",
+                      'Policies',
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 15,
@@ -70,7 +70,7 @@ class _SettingState extends State<Setting> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Text(
-                      "Cancellation",
+                      "Change Password",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         fontSize: 15,

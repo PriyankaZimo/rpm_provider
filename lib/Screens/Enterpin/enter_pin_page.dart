@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import 'package:rpm_provider/Provider/enter_pin_provider.dart';
+import 'package:rpm_provider/Screens/Home/home_page.dart';
 
 class EnterPin extends StatelessWidget {
   late EnterPinProvider _enterPinProvider;
@@ -180,10 +181,14 @@ class EnterPin extends StatelessWidget {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: EdgeInsets.only(top: 100),
+                GestureDetector(
+                  onTap: () {
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => HomePage()));
+                  },
                   child: Center(
                     child: Container(
+                      margin: EdgeInsets.only(top: 100),
                       height: 50,
                       width: 220,
                       decoration: BoxDecoration(

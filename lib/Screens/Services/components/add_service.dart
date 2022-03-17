@@ -88,21 +88,19 @@ class AddService extends StatelessWidget {
                   Expanded(child: TextFormField())
                 ],
               ),
-              Center(
-                child: Container(
-                    margin: EdgeInsets.only(top: 100, left: 20),
-                    height: 50,
-                    width: 250,
-                    child: ElevatedButton(
-                      onPressed: () {},
-                      child: Text(
-                        'Save',
-                        style: TextStyle(color: Colors.white, fontSize: 20),
-                      ),
-                      style:
-                          ElevatedButton.styleFrom(primary: Color(0xFFF57C00)),
-                    )),
-              )
+              SizedBox(height: 350,),
+              Container(
+                  height: 50,
+                  width: MediaQuery.of(context).size.width,
+                  child: ElevatedButton(
+                    onPressed: () {},
+                    child: Text(
+                      'Save',
+                      style: TextStyle(color: Colors.white, fontSize: 20),
+                    ),
+                    style:
+                        ElevatedButton.styleFrom(primary: Color(0xFFF57C00)),
+                  ))
             ],
           ),
         ),

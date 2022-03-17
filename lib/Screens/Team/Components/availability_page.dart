@@ -6,6 +6,10 @@ class AvailabilityPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.blue,);
+    return Column(
+      children: [
+        Text('Set working Hours',style: TextStyle(fontSize: 17),)
+      ],
+    );
   }
 }
