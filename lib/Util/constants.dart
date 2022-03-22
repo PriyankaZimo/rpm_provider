@@ -1,7 +1,10 @@
 final String BASE_URL = 'http://192.168.1.127:5000/';
 List type = [
   //DrawerPage
-  {'txt': 'Profile', 'img': 'assets/profile.png',},
+  {
+    'txt': 'Profile',
+    'img': 'assets/profile.png',
+  },
   {'txt': 'Appointments', 'img': 'assets/appoint.png'},
   {'txt': 'Availability', 'img': 'assets/avail.png'},
   {'txt': 'Client', 'img': 'assets/client.png'},
@@ -38,5 +41,24 @@ List texj = [
 ];
 // Team Page List
 List texts = [
-  {'txt':'Jane Copper'}
+  {'txt': 'Jane Copper'}
+];
+List settext = [
+  //Settings
+  {'txt': 'Policies'},
+  {'txt': 'ChangePassword'},
+  {'txt': 'Currency'},
+  {'txt': 'Help & Support'}
+];
+List tex = [
+  //Setting Policy
+  {'txt': 'Booking Policy'},
+  {'txt': 'Cancellation Policy'},
+  {'txt': 'Rescheduling Policy'},
+  {'txt': 'Refund Policy'}
+];
+List texh = [
+  //Setting Help
+  {'txt': 'Share your feedback'},
+  {'txt': ''},
 ];

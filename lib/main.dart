@@ -8,8 +8,9 @@ import 'package:rpm_provider/Screens/Home/Provider/drawer_provider.dart';
 import 'package:rpm_provider/Screens/Home/home_page.dart';
 import 'package:rpm_provider/Screens/Profile/Provider/profile_provider.dart';
 import 'package:rpm_provider/Screens/Team/Provider/add_provider.dart';
+
 import 'package:rpm_provider/Screens/Team/team_page.dart';
-import 'package:rpm_provider/change_password.dart';
+
 import 'package:rpm_provider/splash%20page.dart';
 
 import 'Screens/ClientPage/client_page.dart';
@@ -30,9 +31,7 @@ class MyApp extends StatelessWidget {
         ChangeNotifierProvider(create: (_) => EnterPinProvider()),
         ChangeNotifierProvider(create: (_) => VerifyOtpProvider()),
         ChangeNotifierProvider(create: (_) => ProfileProvider()),
-        ChangeNotifierProvider(create: (_) => DrawerProvider()),
         ChangeNotifierProvider(create: (_) => AddProvider()),
-
       ],
       child: MaterialApp(
           title: 'Flutter Demo',
@@ -40,15 +39,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-
-
-
-
           home: AddMembers()),
-
     );
-
-
-
   }
 }

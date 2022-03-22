@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+
 import '../../notification.dart';
 import 'Component/drawer_page.dart';
 
@@ -21,7 +22,7 @@ class HomePage extends StatelessWidget {
             color: Colors.black,
           ),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.transparent,
         actions: [
           GestureDetector(
               onTap: () {
@@ -39,8 +40,9 @@ class HomePage extends StatelessWidget {
       ),
       drawer:
       DrawerPage(),
-      body: Container(
-        color: Colors.white,
+      body: Column(
+        children: [
+        ],
       ),
     );
   }

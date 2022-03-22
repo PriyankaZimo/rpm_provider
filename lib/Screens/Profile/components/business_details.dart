@@ -218,8 +218,9 @@ class BusinessDetail extends StatelessWidget {
           ),
         ),
         Container(
+          margin: EdgeInsets.all(10),
             height: 50,
-            width: 250,
+            width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(boxShadow: [BoxShadow(color: Colors.black12,blurRadius: 3,offset: Offset(3,3))]),
             child: ElevatedButton(
               onPressed: () {},
