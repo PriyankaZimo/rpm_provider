@@ -12,6 +12,9 @@ import 'package:rpm_provider/Screens/Team/team_page.dart';
 import 'package:rpm_provider/change_password.dart';
 import 'package:rpm_provider/splash%20page.dart';
 
+import 'Screens/ClientPage/client_page.dart';
+import 'Screens/Team/Components/add_member.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -41,7 +44,7 @@ class MyApp extends StatelessWidget {
 
 
 
-          home:TeamPage()),
+          home: AddMembers()),
 
     );
 
