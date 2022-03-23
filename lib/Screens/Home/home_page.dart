@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:rpm_provider/notification.dart';
 
-
-import '../../notification.dart';
-import 'Component/drawer_page.dart';
+import 'Component/drawer.dart';
 
 class HomePage extends StatelessWidget {
   var scaffKey = GlobalKey<ScaffoldState>();
@@ -31,17 +30,22 @@ class HomePage extends StatelessWidget {
                     MaterialPageRoute(
                         builder: (context) => NotificationPage()));
               },
-              child: Icon(
-                Icons.notifications_outlined,
-                size: 35,
-                color: Colors.black,
+              child: Padding(
+                padding: const EdgeInsets.only(right: 10),
+                child: Icon(
+                  Icons.notifications_outlined,
+                  size: 35,
+                  color: Colors.black,
+                ),
               )),
         ],
       ),
-      drawer:
-      DrawerPage(),
+
+      ///Drawer Class
+      drawer: DrawerPage(),
       body: Column(
         children: [
+
         ],
       ),
     );

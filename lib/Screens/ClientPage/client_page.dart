@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rpm_provider/Screens/ClientPage/components/add_client.dart';
 
 class ClientPage extends StatefulWidget {
   @override
@@ -48,6 +49,7 @@ class _ClientPageState extends State<ClientPage> {
                   border: InputBorder.none,
                 ),
               )),
+          ///LIST VIEW
           Expanded(
             child: ListView.builder(
               itemCount: items.length,
@@ -122,6 +124,7 @@ class _ClientPageState extends State<ClientPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>AddClient()));
           // Add your onPressed code here!
         },
         backgroundColor: Color(0xfff27a74),

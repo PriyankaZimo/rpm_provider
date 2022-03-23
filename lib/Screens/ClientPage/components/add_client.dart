@@ -8,11 +8,8 @@ class AddClient extends StatelessWidget {
     return Scaffold(backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
-        leading: Icon(
-          Icons.arrow_back_ios,
-          color: Colors.black,
-          size: 25.0,
-        ),elevation: 0,
+        leading: BackButton(color: Colors.black,),
+        elevation: 0,
         title: Text(
           'Add Client',
           style: TextStyle(
@@ -24,7 +21,7 @@ class AddClient extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Padding(
-          padding: const EdgeInsets.all(30.0),
+          padding: EdgeInsets.all(30.0),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [

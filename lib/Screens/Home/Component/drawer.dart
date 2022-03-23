@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import 'package:rpm_provider/Screens/ClientPage/client_page.dart';
-import 'package:rpm_provider/Screens/Home/Provider/drawer_provider.dart';
 import 'package:rpm_provider/Screens/Offers/offer.dart';
 import 'package:rpm_provider/Screens/Profile/profile_page.dart';
 import 'package:rpm_provider/Screens/Services/service_page.dart';
@@ -44,7 +42,9 @@ class DrawerPage extends StatelessWidget {
             scrollDirection: Axis.vertical,
             itemBuilder: (context, index) => GestureDetector(
               onTap: () {
+                print(index);
                 switch (index) {
+
                   case 0:
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => ProfilePage()));
@@ -69,7 +69,7 @@ class DrawerPage extends StatelessWidget {
                     break;
                   case 6:
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Offer()));
+                        MaterialPageRoute(builder: (context) => OfferPage()));
                     break;
                   case 7:
                     Container();
@@ -83,7 +83,6 @@ class DrawerPage extends StatelessWidget {
                 }
               },
               child: Container(
-                margin: EdgeInsets.only(top: 5),
                 padding: EdgeInsets.only(left: 20, right: 20),
                 decoration: BoxDecoration(color: Colors.white),
                 child: Column(
@@ -96,9 +95,10 @@ class DrawerPage extends StatelessWidget {
                               border: Border.all(
                                   color: Color(0xFFFF8A80), width: 4)),
                           child: Container(
-                            padding: EdgeInsets.all(index == 0 ? 0 : 10),
-                            height: 50,
-                            width: 50,
+
+                          padding: EdgeInsets.all(index==0?0:10),
+                            height: 48,
+                            width: 48,
                             clipBehavior: Clip.antiAlias,
                             decoration: BoxDecoration(
                               color: Colors.white,
@@ -121,9 +121,7 @@ class DrawerPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(
-                          width: 20,
-                        ),
+                        SizedBox(width: 20,),
 
                         /// List Text
                         Container(

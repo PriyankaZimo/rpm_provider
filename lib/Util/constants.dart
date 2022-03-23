@@ -1,3 +1,6 @@
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+
 final String BASE_URL = 'http://192.168.1.127:5000/';
 List type = [
   //DrawerPage
@@ -61,4 +64,8 @@ List texh = [
   //Setting Help
   {'txt': 'Share your feedback'},
   {'txt': ''},
+];
+List text = [
+  {'txt': 'Share your feedback','icon':Icons.message},
+  {'txt': 'Call 5465','icon':Icons.call}
 ];

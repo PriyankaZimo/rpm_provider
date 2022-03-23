@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:rpm_provider/Screens/Team/Components/add_member.dart';
 
-
 class TeamPage extends StatelessWidget {
-  final items = List<String>.generate(20, (i) => 'Item ${i + 1}');
+  final items = ['', '', '', '', '', '', '', ''];
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +18,36 @@ class TeamPage extends StatelessWidget {
           style: TextStyle(color: Colors.black, fontSize: 25),
         ),
       ),
+      // body: ListView.builder(
+      //     itemCount: items.length,
+      //     itemBuilder: (context, index) {
+      //       return Container(
+      //         margin: EdgeInsets.all(10),
+      //         decoration: BoxDecoration(
+      //
+      //           borderRadius: BorderRadius.circular(40),
+      //           border: Border.all(color: Color(0xFFFFCCBC))
+      //         ),
+      //         child: Dismissible(
+      //             key: Key(items[index]),
+      //             onDismissed: (direction) {
+      //               items.removeAt(index);
+      //               Scaffold.of(context).showSnackBar(SnackBar(
+      //                 content: Text('Item dismissed.'),
+      //               ));
+      //             },
+      //             background: Container(
+      //               alignment: Alignment.topRight,
+      //               child: Icon(
+      //                 Icons.delete,
+      //                 color: Colors.red,
+      //               ),
+      //             ),
+      //             child: ListTile(
+      //               title: Text("${items[index]}"),
+      //             )),
+      //       );
+      //     }),
       body: Padding(
         padding: EdgeInsets.all(10.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
@@ -75,7 +104,7 @@ class TeamPage extends StatelessWidget {
                   child: Container(
                     margin:
                         EdgeInsets.only(top: 10, bottom: 5, left: 5, right: 5),
-                    decoration:BoxDecoration(
+                    decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(30),
                       boxShadow: [
@@ -147,10 +176,14 @@ class TeamPage extends StatelessWidget {
           )
         ]),
       ),
-      floatingActionButton: FloatingActionButton(backgroundColor: Colors.orange[700],
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Colors.orange[700],
         onPressed: () {
-        Navigator.push(context,MaterialPageRoute(builder: (context)=>AddMembers()));
-        },child: Icon(Icons.add),),
+          // Navigator.push(
+          //     context, MaterialPageRoute(builder: (context) => AddMembers()));
+        },
+        child: Icon(Icons.add),
+      ),
     );
   }
 }

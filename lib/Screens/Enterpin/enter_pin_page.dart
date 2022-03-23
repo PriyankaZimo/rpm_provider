@@ -3,10 +3,10 @@ import 'package:provider/provider.dart';
 
 import 'package:rpm_provider/Provider/enter_pin_provider.dart';
 import 'package:rpm_provider/Screens/Home/home_page.dart';
+import 'package:rpm_provider/Screens/Offers/Components/add_new_offer.dart';
 
 class EnterPin extends StatelessWidget {
   late EnterPinProvider _enterPinProvider;
-
   @override
   Widget build(BuildContext context) {
     _enterPinProvider = context.read<EnterPinProvider>();
@@ -76,11 +76,11 @@ class EnterPin extends StatelessWidget {
                           width: 40,
                           height: 50,
                           child: TextFormField(
+                            keyboardType: TextInputType.number,
                             style: TextStyle(color: Colors.white),
                             obscureText: true,
-                            onChanged: (val) {
-                              view.nextField(
-                                  value: val, focusNode: (view.pin1FocusNode));
+                            onChanged: (val){
+                              view.nextField(value: val, focusNode: view.pin1FocusNode);
                             },
                             textInputAction: TextInputAction.next,
                             decoration: InputDecoration(
@@ -101,6 +101,7 @@ class EnterPin extends StatelessWidget {
                           width: 40,
                           height: 50,
                           child: TextFormField(
+                            keyboardType: TextInputType.number,
                             style: TextStyle(color: Colors.white),
                             focusNode: view.pin1FocusNode,
                             obscureText: true,
@@ -128,6 +129,7 @@ class EnterPin extends StatelessWidget {
                           width: 40,
                           height: 50,
                           child: TextFormField(
+                            keyboardType: TextInputType.number,
                             style: TextStyle(color: Colors.white),
                             textAlign: TextAlign.center,
                             focusNode: view.pin2FocusNode,
@@ -157,6 +159,7 @@ class EnterPin extends StatelessWidget {
                           width: 40,
                           height: 50,
                           child: TextFormField(
+                            keyboardType: TextInputType.number,
                             obscureText: true,
                             maxLength: 1,
                             style: TextStyle(color: Colors.white),

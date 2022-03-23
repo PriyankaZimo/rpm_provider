@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:rpm_provider/Util/constants.dart';
 
 class HelpPage extends StatelessWidget {
-  const HelpPage({Key? key}) : super(key: key);
+List icn=[Icon(Icons.message),Icon(Icons.call_outlined)];
 
   @override
   Widget build(BuildContext context) {
@@ -24,17 +25,27 @@ class HelpPage extends StatelessWidget {
                   scrollDirection: Axis.vertical,
                   itemCount: 2,
                   itemBuilder: (context, index) => Container(
-                    padding: EdgeInsets.only(left: 20),
-                    margin: EdgeInsets.all(10),
+                        padding: EdgeInsets.only(left: 20),
+                        margin: EdgeInsets.all(10),
                         height: 50,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(50),
                             border: Border.all(color: Color(0xFFFFCCBC))),
                         child: Row(
                           children: [
-                            Text('data',style: TextStyle(fontSize: 20),),
+                         Icon(text[index]['icon'],color: Colors.black,size: 20,),
+                            SizedBox(width: 10,),
+                            Text(
+                              text[index]['txt'],
+                              style: TextStyle(fontSize: 20),
+                            ),
                             Spacer(),
-                            IconButton(onPressed: (){}, icon: Icon(Icons.arrow_forward_ios_outlined,size: 20,))
+                            IconButton(
+                                onPressed: () {},
+                                icon: Icon(
+                                  Icons.arrow_forward_ios_outlined,
+                                  size: 20,
+                                ))
                           ],
                         ),
                       )),

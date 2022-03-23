@@ -38,7 +38,7 @@ class ProfilePage extends StatelessWidget {
                             ]),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.only(top: 30),
+                        padding: EdgeInsets.only(top: 40,),
                         child: Column(
                           children: [
                             Row(
@@ -60,71 +60,70 @@ class ProfilePage extends StatelessWidget {
                             ),
 
                             /// Basic and Business details Text
-                            Center(
-                              child: SizedBox(
-                                height: 70,
-                                width: 400,
-                                child: ListView.builder(
-                                    physics: NeverScrollableScrollPhysics(),
-                                    itemCount: text.length,
-                                    scrollDirection: Axis.horizontal,
-                                    itemBuilder: (context, index) =>
-                                        GestureDetector(
-                                          onTap: () {
-                                            _profileProvider.selectTab(index);
-                                          },
-                                          child: Column(
-                                            crossAxisAlignment:
-                                                CrossAxisAlignment.center,
-                                            children: [
-                                              Container(
-                                                height: 20,
-                                                margin: EdgeInsets.only(
-                                                    left: 40, right: 30),
-                                                color: Colors.transparent,
-                                                child: Center(
-                                                  child: Text(
-                                                    text[index],
-                                                    style: TextStyle(
-                                                        fontSize: 16,
-                                                        color: _profileProvider
-                                                                    .select ==
-                                                                index
-                                                            ? Colors.black
-                                                            : Colors.black54),
-                                                  ),
+                            SizedBox(
+
+                              height: 70,
+                              width: 400,
+                              child: ListView.builder(
+                                  physics: NeverScrollableScrollPhysics(),
+                                  itemCount: text.length,
+                                  scrollDirection: Axis.horizontal,
+                                  itemBuilder: (context, index) =>
+                                      GestureDetector(
+                                        onTap: () {
+                                          _profileProvider.selectTab(index);
+                                        },
+                                        child: Column(
+                                          crossAxisAlignment:
+                                              CrossAxisAlignment.center,
+                                          children: [
+                                            Container(
+                                              height: 20,
+                                              margin: EdgeInsets.only(
+                                                  left: 40, right:40),
+                                              color: Colors.transparent,
+                                              child: Center(
+                                                child: Text(
+                                                  text[index],
+                                                  style: TextStyle(
+                                                      fontSize: 16,
+                                                      color: _profileProvider
+                                                                  .select ==
+                                                              index
+                                                          ? Colors.black
+                                                          : Colors.black54),
                                                 ),
                                               ),
-                                              _profileProvider.select == index
-                                                  ? Padding(
-                                                      padding: EdgeInsets.only(
-                                                          left: 10),
-                                                      child: Container(
-                                                        height: 6,
-                                                        width: 130,
-                                                        decoration: BoxDecoration(
-                                                            color: Colors
-                                                                .orange[700],
-                                                            borderRadius:
-                                                                BorderRadius
-                                                                    .circular(
-                                                                        10),
-                                                            boxShadow: [
-                                                              BoxShadow(
-                                                                  color: Colors
-                                                                      .black12,
-                                                                  offset:
-                                                                      Offset(
-                                                                          5, 5),
-                                                                  blurRadius: 2)
-                                                            ]),
-                                                      ),
-                                                    )
-                                                  : Container(),
-                                            ],
-                                          ),
-                                        )),
-                              ),
+                                            ),
+                                            _profileProvider.select == index
+                                                ? Padding(
+                                                    padding: EdgeInsets.only(
+                                                        left: 10),
+                                                    child: Container(
+                                                      height: 6,
+                                                      width: 130,
+                                                      decoration: BoxDecoration(
+                                                          color: Colors
+                                                              .orange[700],
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      10),
+                                                          boxShadow: [
+                                                            BoxShadow(
+                                                                color: Colors
+                                                                    .black12,
+                                                                offset:
+                                                                    Offset(
+                                                                        5, 5),
+                                                                blurRadius: 2)
+                                                          ]),
+                                                    ),
+                                                  )
+                                                : Container(),
+                                          ],
+                                        ),
+                                      )),
                             ),
                           ],
                         ),

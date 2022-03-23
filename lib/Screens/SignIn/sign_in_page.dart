@@ -84,61 +84,6 @@ class SignInPage extends StatelessWidget {
                     },
                   ),
                 ),
-
-                /*Padding(
-                  padding: EdgeInsets.only(left: 30, right: 30, top: 35),
-                  child: Container(
-                    // child: Row(
-                    //   children: [
-                    //     CountryCodePicker(
-                    //       textStyle: TextStyle(color: Colors.white),
-                    //       initialSelection: 'IN',
-                    //       showCountryOnly: false,
-                    //     ),
-                    //     Container(
-                    //       height: 25,
-                    //       width: 1,
-                    //       margin: EdgeInsets.only(right: 10),
-                    //       color: Colors.white,
-                    //     ),
-                    //     Expanded(
-                    //       child: TextFormField(
-                    //         controller: numberController,
-                    //         style: TextStyle(color: Colors.white),
-                    //         maxLength: 10,
-                    //         autovalidateMode: AutovalidateMode.onUserInteraction,
-                    //         keyboardType: TextInputType.number,
-                    //         decoration: InputDecoration(
-                    //             counterText: "",
-                    //             suffixIcon: Icon(
-                    //               Icons.call_outlined,
-                    //               color: Colors.white,
-                    //             ),border: InputBorder.none
-                    //          ),
-                    //         validator: (val) {
-                    //           if (val!.isEmpty ||
-                    //               RegExp("[a-z/A-Z/@]").hasMatch(val)) {
-                    //             return 'Enter correct num';
-                    //           }
-                    //         },
-                    //       ),
-                    //     ),
-                    //   ],
-                    // ),
-                  ),
-<<<<<<< HEAD
-                ),
-                // Padding(
-                //   padding: EdgeInsets.only(left: 40, right: 40),
-                //   child: Divider(
-                //     height: 1,
-                //     thickness: 1,
-                //     color: Colors.white,
-                //   ),
-                // ),
-                // SizedBox(height: 100),
-=======
-                ),*/
                  SizedBox(height: 100),
                 GestureDetector(
                   onTap: () {

@@ -2,14 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 
 import 'package:rpm_provider/Screens/Offers/Components/add_new_offer.dart';
-class Offer extends StatefulWidget {
-  const Offer({Key? key}) : super(key: key);
-
-  @override
-  State<Offer> createState() => _OfferState();
-}
-
-class _OfferState extends State<Offer> {
+class OfferPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

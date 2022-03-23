@@ -14,11 +14,7 @@ class _Add_offersState extends State<Add_offers> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading: Icon(
-          Icons.arrow_back_ios_outlined,
-          color: Colors.black,
-          size: 24.0,
-        ),
+        leading: BackButton(color: Colors.black,),
         centerTitle: true,
         title: Text(
           'Add New Offers',

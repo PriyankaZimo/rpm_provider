@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rpm_provider/Screens/Home/home_page.dart';
 
 class CreatePin extends StatefulWidget {
   @override
@@ -114,7 +115,7 @@ class _CreatePinState extends State<CreatePin> {
                           ),
                          GestureDetector(
                               onTap: () {
-                                print("Container clicked");
+                               Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
                               },
                               child: Container(
                                 height: 50,

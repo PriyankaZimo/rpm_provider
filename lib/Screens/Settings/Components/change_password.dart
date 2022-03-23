@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:provider/src/provider.dart';
+import 'package:rpm_provider/Screens/Settings/Provider/change_pass_provider.dart';
 
-class ChangePassword extends StatefulWidget {
-
-  @override
-  State<ChangePassword> createState() => _ChangePasswordState();
-}
-
-class _ChangePasswordState extends State<ChangePassword> {
-  bool _isObscure = true;
-  bool _isObscure2 = true;
+class ChangePassword extends StatelessWidget {
+  var hidePassword = TextEditingController();
+  var hidePassword1 = TextEditingController();
+  late PasswordProvider _passwordProvider;
 
   @override
   Widget build(BuildContext context) {
+    _passwordProvider = context.watch<PasswordProvider>();
     return Scaffold(
       backgroundColor: Color(0xFFEEF1F3),
       body: Container(
@@ -62,38 +60,48 @@ class _ChangePasswordState extends State<ChangePassword> {
                       ),
                     ),
                     Padding(
-                      padding:
-                          const EdgeInsets.only(left: 30, right: 30, top: 25),
+                      padding: EdgeInsets.only(left: 30, right: 30, top: 25),
                       child: Column(
                         children: [
-                          TextField(
-                            obscureText: _isObscure,
+                          TextFormField(
+                            style: TextStyle(color: Colors.white),
+                            controller: hidePassword,
+                            autovalidateMode:
+                                AutovalidateMode.onUserInteraction,
+                            obscureText: _passwordProvider.hidePass,
                             decoration: InputDecoration(
-                                hintText: 'Enter Current Password',
-                                enabledBorder: UnderlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.white),
+                              hintText: 'Enter Current Password',
+                              enabledBorder: UnderlineInputBorder(
+                                borderSide: BorderSide(color: Colors.white),
+                              ),
+                              suffixIcon: IconButton(
+                                icon: Icon(
+                                  _passwordProvider.hidePass
+                                      ? Icons.visibility_off
+                                      : Icons.visibility,
+                                  color: Colors.white,
                                 ),
-                                suffixIcon: IconButton(
-                                  icon: Icon(
-                                    _isObscure
-                                        ? Icons.visibility
-                                        : Icons.visibility_off,
-                                    color: Colors.white,
-                                  ),
-                                  onPressed: () {
-                                    setState(() {
-                                      _isObscure = !_isObscure;
-                                    });
-                                  },
-                                ),
-                                hintStyle: TextStyle(
-                                    color: Colors.white, fontSize: 20.0)),
+                                onPressed: () {
+                                  _passwordProvider.currentPass();
+                                },
+                              ),
+                              hintStyle: TextStyle(
+                                  color: Colors.white, fontSize: 20.0),
+                            ),
+                            validator: (val) {
+                              if (val.toString().isEmpty)
+                                return '*Please Enter your Password';
+                            },
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 20,
                           ),
-                          TextField(
-                            obscureText: _isObscure2,
+                          TextFormField(
+                            style: TextStyle(color: Colors.white),
+                            autovalidateMode:
+                                AutovalidateMode.onUserInteraction,
+                            controller: hidePassword1,
+                            obscureText: _passwordProvider.hidePass1,
                             decoration: InputDecoration(
                                 hintText: 'Enter New Password',
                                 enabledBorder: UnderlineInputBorder(
@@ -101,26 +109,27 @@ class _ChangePasswordState extends State<ChangePassword> {
                                 ),
                                 suffixIcon: IconButton(
                                   icon: Icon(
-                                    _isObscure2
-                                        ? Icons.visibility
-                                        : Icons.visibility_off,
+                                    _passwordProvider.hidePass1
+                                        ? Icons.visibility_off
+                                        : Icons.visibility,
                                     color: Colors.white,
                                   ),
                                   onPressed: () {
-                                    setState(() {
-                                      _isObscure2 = !_isObscure2;
-                                    });
+                                    _passwordProvider.newPass();
                                   },
                                 ),
                                 hintStyle: TextStyle(
                                     color: Colors.white, fontSize: 20.0)),
+                            validator: (val) {
+                              if (val.toString().isEmpty)
+                                return '*Please Enter your Password';
+                            },
                           ),
                           SizedBox(
-                            height: 10,
+                            height: 20,
                           ),
                           TextFormField(
                             style: TextStyle(color: Colors.white),
-                            keyboardType: TextInputType.emailAddress,
                             autovalidateMode:
                                 AutovalidateMode.onUserInteraction,
                             obscureText: false,
@@ -133,7 +142,7 @@ class _ChangePasswordState extends State<ChangePassword> {
                                     color: Colors.white, fontSize: 20.0)),
                             validator: (value) {
                               if (value!.length == 0) {
-                                return "* Required PIn";
+                                return "* Confirm your Password";
                               } else if (value.length < 6) {
                                 return "Password should be atleast 6 characters";
                               } else

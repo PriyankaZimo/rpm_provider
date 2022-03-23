@@ -4,6 +4,7 @@ import 'package:rpm_provider/Screens/Services/components/add_service.dart';
 import 'components/service_details.dart';
 
 class ServicePage extends StatelessWidget {
+  final items = List<String>.generate(20, (i) => 'Item ${i + 1}');
   List text = ['Hair Service', 'Nail Service'];
   List serv = ['Blow Dry', 'Manicures'];
 
@@ -42,7 +43,7 @@ class ServicePage extends StatelessWidget {
               ]),
               height: 50,
               child: TextFormField(
-                keyboardType: TextInputType.number,
+                keyboardType: TextInputType.text,
                 decoration: InputDecoration(
                   hintText: 'Search...',
                   hintStyle: TextStyle(color: Colors.grey),
@@ -53,17 +54,17 @@ class ServicePage extends StatelessWidget {
                   ),
                   fillColor: Colors.white,
                   filled: true,
-                  enabled: true,
                   border: InputBorder.none,
                 ),
               )),
           SizedBox(
             height: 10,
           ),
+
+          /// List View
           Expanded(
             child: ListView.builder(
-                itemCount: text.length,
-                physics: NeverScrollableScrollPhysics(),
+                itemCount: items.length,
                 itemBuilder: (context, index) => GestureDetector(
                       onTap: () {
                         Navigator.push(
@@ -84,7 +85,7 @@ class ServicePage extends StatelessWidget {
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              text[index],
+                              'Hair Service',
                               style: TextStyle(
                                   fontSize: 17, fontWeight: FontWeight.bold),
                             ),
@@ -94,7 +95,7 @@ class ServicePage extends StatelessWidget {
                             Row(
                               children: [
                                 Text(
-                                  serv[index],
+                                  'Blow Dry ',
                                   style: TextStyle(fontSize: 16),
                                 ),
                                 Spacer(),
