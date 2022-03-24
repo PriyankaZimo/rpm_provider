@@ -22,7 +22,7 @@ class ScanQrPage extends StatelessWidget {
                       },
                       icon: Icon(
                         Icons.close,
-                       color: Colors.white,
+                        color: Colors.white,
                         size: 30,
                       )),
                 ),
@@ -60,7 +60,11 @@ class ScanQrPage extends StatelessWidget {
                     SizedBox(
                       height: 10,
                     ),
-                    Text('Jane Cooper',style: TextStyle(fontWeight: FontWeight.bold,fontSize: 18),),
+                    Text(
+                      'Jane Cooper',
+                      style:
+                          TextStyle(fontWeight: FontWeight.bold, fontSize: 18),
+                    ),
                     SizedBox(
                       height: 20,
                     ),
@@ -97,10 +101,10 @@ class ScanQrPage extends StatelessWidget {
                   onPressed: () {},
                   child: Text(
                     "Scan",
-                    style: TextStyle(color: Colors.black, fontSize: 18),
+                    style: TextStyle(color: Colors.white, fontSize: 20,fontWeight: FontWeight.bold),
                   ),
                   style: ElevatedButton.styleFrom(
-                    primary  : Color(0xFFF57C00), // background
+                    primary: Color(0xFFF57C00), // background
                     // foreground
                   ),
                 ))

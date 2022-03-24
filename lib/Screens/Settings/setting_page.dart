@@ -45,7 +45,9 @@ class SettingPage extends StatelessWidget {
                       Spacer(),
                       IconButton(
                           onPressed: () {
+                            print(index);
                             switch (index) {
+
                               case 0:
                                 Navigator.push(
                                     context,

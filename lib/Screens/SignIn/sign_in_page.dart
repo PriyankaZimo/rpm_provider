@@ -53,11 +53,6 @@ class SignInPage extends StatelessWidget {
                     ),
                     decoration: InputDecoration(
                       counterText: "",
-                      /* icon: CountryCodePicker(
-                          textStyle: TextStyle(color: Colors.white),
-                          initialSelection: 'IN',
-                          showCountryOnly: false,
-                        ),*/
                       prefixIcon: CountryCodePicker(
                         textStyle:  TextStyle(color: Colors.white),
                         initialSelection: 'IN',

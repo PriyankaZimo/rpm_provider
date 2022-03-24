@@ -127,7 +127,7 @@ class _ClientPageState extends State<ClientPage> {
           Navigator.push(context, MaterialPageRoute(builder: (context)=>AddClient()));
           // Add your onPressed code here!
         },
-        backgroundColor: Color(0xfff27a74),
+        backgroundColor: Color(0xffF47D3A),
         child: Icon(Icons.add),
       ),
     );

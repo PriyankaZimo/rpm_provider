@@ -44,7 +44,6 @@ class DrawerPage extends StatelessWidget {
               onTap: () {
                 print(index);
                 switch (index) {
-
                   case 0:
                     Navigator.push(context,
                         MaterialPageRoute(builder: (context) => ProfilePage()));
@@ -95,8 +94,7 @@ class DrawerPage extends StatelessWidget {
                               border: Border.all(
                                   color: Color(0xFFFF8A80), width: 4)),
                           child: Container(
-
-                          padding: EdgeInsets.all(index==0?0:10),
+                            padding: EdgeInsets.all(index == 0 ? 0 : 10),
                             height: 48,
                             width: 48,
                             clipBehavior: Clip.antiAlias,
@@ -121,7 +119,9 @@ class DrawerPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        SizedBox(width: 20,),
+                        SizedBox(
+                          width: 20,
+                        ),
 
                         /// List Text
                         Container(

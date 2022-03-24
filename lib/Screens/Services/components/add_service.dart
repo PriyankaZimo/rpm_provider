@@ -37,6 +37,10 @@ class AddService extends StatelessWidget {
                     hintText: 'Services',
                     enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: Colors.black12))),
+                validator: (val) {
+                  if (val.toString().isEmpty)
+                    return ('Please Enter your Service');
+                },
               ),
               SizedBox(
                 height: 20,
@@ -74,7 +78,12 @@ class AddService extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Expanded(child: TextFormField()),
+                  Expanded(
+                      child: TextFormField(
+                    decoration: InputDecoration(
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.black12))),
+                  )),
                   SizedBox(
                     width: 30,
                   ),
@@ -85,22 +94,41 @@ class AddService extends StatelessWidget {
                   SizedBox(
                     width: 10,
                   ),
-                  Expanded(child: TextFormField())
+                  Expanded(
+                      child: TextFormField(
+                    decoration: InputDecoration(
+                        enabledBorder: UnderlineInputBorder(
+                            borderSide: BorderSide(color: Colors.black12))),
+                  ))
                 ],
               ),
-              SizedBox(height: 350,),
-              Container(
-                  height: 50,
-                  width: MediaQuery.of(context).size.width,
-                  child: ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      'Save',
-                      style: TextStyle(color: Colors.white, fontSize: 20),
-                    ),
-                    style:
-                        ElevatedButton.styleFrom(primary: Color(0xFFF57C00)),
-                  ))
+              SizedBox(
+                height: 100,
+              ),
+              Center(
+                child: Container(
+                    height: 50,
+                    width: 220,
+                    decoration: BoxDecoration(boxShadow: <BoxShadow>[
+                      BoxShadow(
+                        color: Colors.black.withOpacity(0.1),
+                        blurRadius: 3,
+                        offset: Offset(0, 3),
+                      ),
+                    ]),
+                    child: ElevatedButton(
+                        onPressed: () {},
+                        style: ElevatedButton.styleFrom(
+                          primary: Color(0xffF47D3A),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.circular(5.0),
+                          ),
+                        ),
+                        child: Text(
+                          'Save',
+                          style: TextStyle(fontSize: 20),
+                        ))),
+              ),
             ],
           ),
         ),

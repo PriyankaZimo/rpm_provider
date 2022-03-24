@@ -2,13 +2,14 @@ import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 
 class AddClient extends StatelessWidget {
+  const AddClient({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return Scaffold(backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
-        leading: BackButton(color: Colors.black,),
+        leading: const BackButton(color: Colors.black,),
         elevation: 0,
         title: Text(
           'Add Client',
@@ -26,12 +27,12 @@ class AddClient extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 5),
+                padding: EdgeInsets.only(top: 5),
                 child: TextFormField(
                   decoration: InputDecoration(
                     prefixIconConstraints:
                         BoxConstraints(minHeight: 10, minWidth: 50),
-                    hintText: "",
+                    hintText:"",
                     labelText: 'First Name',
                     hintStyle:
                         TextStyle(fontSize: 20.0, color: Color(0xffB9B9B9)),
@@ -44,7 +45,7 @@ class AddClient extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 20),
+                padding: EdgeInsets.only(top: 20),
                 child: TextFormField(
                   decoration: InputDecoration(
                     prefixIconConstraints:
@@ -62,7 +63,7 @@ class AddClient extends StatelessWidget {
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 20),
+                padding:EdgeInsets.only(top: 20),
                 child: TextFormField(
                   decoration: InputDecoration(
                     prefixIconConstraints:
@@ -114,12 +115,15 @@ class AddClient extends StatelessWidget {
                       onPressed: () {},
                       style: ElevatedButton.styleFrom(
                         primary: Color(0xffF47D3A),
-                        shape: new RoundedRectangleBorder(
-                          borderRadius: new BorderRadius.circular(5.0),
+                        shape: RoundedRectangleBorder(
+                          borderRadius: BorderRadius.circular(5.0),
 
                         ),
                       ),
-                      child: Text('Save',style: TextStyle(fontSize: 20),))),
+                      child: Text('Save',style: TextStyle(fontSize: 20),
+                      ),
+                  ),
+              ),
             ],
           ),
         ),

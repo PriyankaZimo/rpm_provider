@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:rpm_provider/Screens/Team/Components/add_member.dart';
-
 class TeamPage extends StatelessWidget {
   final items = ['', '', '', '', '', '', '', ''];
 
@@ -179,8 +178,8 @@ class TeamPage extends StatelessWidget {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Colors.orange[700],
         onPressed: () {
-          // Navigator.push(
-          //     context, MaterialPageRoute(builder: (context) => AddMembers()));
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => AddMembers()));
         },
         child: Icon(Icons.add),
       ),

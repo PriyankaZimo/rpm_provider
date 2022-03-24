@@ -79,8 +79,8 @@ class _CreatePinState extends State<CreatePin> {
                             validator: (value) {
                               if (value!.length == 0) {
                                 return "* Required PIN";
-                              } else if (value.length < 6) {
-                                return "Password should be atleast 6 characters";
+                              } else if (value.length < 8) {
+                                return "Password should be atleast 8 characters";
                               } else
                                 return null;
                             },
@@ -89,6 +89,7 @@ class _CreatePinState extends State<CreatePin> {
                             height: 10,
                           ),
                           TextFormField(
+
                             style: TextStyle(color: Colors.white),
                             keyboardType: TextInputType.emailAddress,
                             autovalidateMode:
@@ -104,8 +105,8 @@ class _CreatePinState extends State<CreatePin> {
                             validator: (value) {
                               if (value!.length == 0) {
                                 return "* Required PIn";
-                              } else if (value.length < 6) {
-                                return "Password should be atleast 6 characters";
+                              } else if (value.length < 8) {
+                                return "Password should be atleast 8 characters";
                               } else
                                 return null;
                             },

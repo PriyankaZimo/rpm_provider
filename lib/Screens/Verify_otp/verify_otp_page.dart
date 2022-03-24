@@ -2,7 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:rpm_provider/Screens/CreatePin/create_pin.dart';
-import 'package:rpm_provider/Provider/verify_otp_provider.dart';
+import 'package:rpm_provider/Screens/Verify_otp/Provider/verify_otp_provider.dart';
 
 class VerifyOtpPage extends StatelessWidget {
   int pinLength = 4;
@@ -78,6 +78,7 @@ class VerifyOtpPage extends StatelessWidget {
                         width: 40,
                         height: 50,
                         child: TextFormField(
+                          autofocus: true,
                           style: TextStyle(color: Colors.white),
                           obscureText: true,
                           onChanged: (val) {
@@ -152,10 +153,6 @@ class VerifyOtpPage extends StatelessWidget {
                           focusNode: view.pin3FocusNode,
                           obscureText: true,
                           textInputAction: TextInputAction.next,
-                          onChanged: (val) {
-                            view.nextField(
-                                value: val, focusNode: (view.pin4FocusNode));
-                          },
                           decoration: InputDecoration(
                               counterText: "",
                               enabled: true,

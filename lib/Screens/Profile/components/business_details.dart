@@ -223,10 +223,12 @@ class BusinessDetail extends StatelessWidget {
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(boxShadow: [BoxShadow(color: Colors.black12,blurRadius: 3,offset: Offset(3,3))]),
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+
+              },
               child: Text(
                 "Save",
-                style: TextStyle(color: Colors.black, fontSize: 18),
+                style: TextStyle(color: Colors.white, fontSize: 20,fontWeight: FontWeight.bold),
               ),
               style: ElevatedButton.styleFrom(
                 primary: Colors.orange[700], // background

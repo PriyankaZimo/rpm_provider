@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'package:rpm_provider/Provider/enter_pin_provider.dart';
+import 'package:rpm_provider/Screens/Enterpin/Provider/enter_pin_provider.dart';
 import 'package:rpm_provider/Screens/Home/home_page.dart';
-import 'package:rpm_provider/Screens/Offers/Components/add_new_offer.dart';
 
 class EnterPin extends StatelessWidget {
   late EnterPinProvider _enterPinProvider;
+
   @override
   Widget build(BuildContext context) {
     _enterPinProvider = context.read<EnterPinProvider>();
@@ -76,11 +75,13 @@ class EnterPin extends StatelessWidget {
                           width: 40,
                           height: 50,
                           child: TextFormField(
+                            autofocus: true,
                             keyboardType: TextInputType.number,
                             style: TextStyle(color: Colors.white),
                             obscureText: true,
-                            onChanged: (val){
-                              view.nextField(value: val, focusNode: view.pin1FocusNode);
+                            onChanged: (val) {
+                              view.nextField(
+                                  value: val, focusNode: view.pin1FocusNode);
                             },
                             textInputAction: TextInputAction.next,
                             decoration: InputDecoration(
@@ -164,10 +165,6 @@ class EnterPin extends StatelessWidget {
                             maxLength: 1,
                             style: TextStyle(color: Colors.white),
                             focusNode: view.pin3FocusNode,
-                            onChanged: (val) {
-                              view.nextField(
-                                  value: val, focusNode: (view.pin4FocusNode));
-                            },
                             autovalidateMode:
                                 AutovalidateMode.onUserInteraction,
                             textInputAction: TextInputAction.next,
