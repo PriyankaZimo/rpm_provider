@@ -8,6 +8,7 @@ class AddClient extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(backgroundColor: Colors.white,
       appBar: AppBar(
+
         centerTitle: true,
         leading: const BackButton(color: Colors.black,),
         elevation: 0,

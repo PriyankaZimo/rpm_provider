@@ -105,7 +105,7 @@ class TeamPage extends StatelessWidget {
                         EdgeInsets.only(top: 10, bottom: 5, left: 5, right: 5),
                     decoration: BoxDecoration(
                       color: Colors.white,
-                      borderRadius: BorderRadius.circular(30),
+                      borderRadius: BorderRadius.circular(10),
                       boxShadow: [
                         BoxShadow(color: Color(0xffF47D3A), blurRadius: 1)
                       ],

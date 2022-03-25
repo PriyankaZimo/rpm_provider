@@ -29,9 +29,9 @@ class SettingPage extends StatelessWidget {
                     left: 20,
                   ),
                   margin: EdgeInsets.all(10),
-                  height: 50,
+                  height: 60,
                   decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(50),
+                      borderRadius: BorderRadius.circular(10),
                       border: Border.all(color: Color(0xFFFFCCBC))),
                   child: Row(
                     children: [
@@ -75,7 +75,7 @@ class SettingPage extends StatelessWidget {
                                 break;
                             }
                           },
-                          icon: Icon(Icons.arrow_forward_ios_outlined))
+                          icon: Icon(Icons.arrow_forward_ios_outlined,size: 20,))
                     ],
                   ),
                 )));

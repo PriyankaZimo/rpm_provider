@@ -23,11 +23,11 @@ class PoliciesPage extends StatelessWidget {
               child: ListView.builder(
                   itemCount: 4,
                   itemBuilder: (context, index) => Container(
-                        padding: EdgeInsets.only(left: 20, right: 20),
-                        height: 50,
+                        padding: EdgeInsets.only(left: 20, right: 10),
+                        height: 60,
                         margin: EdgeInsets.all(10),
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
+                            borderRadius: BorderRadius.circular(10),
                             border: Border.all(color: Color(0xFFFFCCBC))),
                         child: Row(
                           children: [

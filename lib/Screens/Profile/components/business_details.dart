@@ -146,6 +146,8 @@ class BusinessDetail extends StatelessWidget {
                     Text(
                       'City',
                       style: TextStyle(color: Colors.black12),
+                    ), SizedBox(
+                      width: 10,
                     ),
                     Expanded(
                       child: TextFormField(
@@ -163,18 +165,21 @@ class BusinessDetail extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 4,
+                      width: 10,
                     ),
                     Text(
                       'State',
                       style: TextStyle(color: Colors.black12),
+                    ),
+                    SizedBox(
+                      width: 10,
                     ),
                     Expanded(
                       child: TextFormField(
                         autovalidateMode: AutovalidateMode.onUserInteraction,
                         controller: stateController,
                         decoration: InputDecoration(
-                            suffixIcon: Icon(Icons.keyboard_arrow_down),
+                            suffixIcon: IconButton(onPressed: (){}, icon: Icon(Icons.keyboard_arrow_down)),
                             enabledBorder: UnderlineInputBorder(
                                 borderSide: BorderSide(color: Colors.black12))),
                         validator: (val) {
@@ -218,10 +223,15 @@ class BusinessDetail extends StatelessWidget {
           ),
         ),
         Container(
-          margin: EdgeInsets.all(10),
+         margin: EdgeInsets.only(left: 10,right: 10),
             height: 50,
             width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(boxShadow: [BoxShadow(color: Colors.black12,blurRadius: 3,offset: Offset(3,3))]),
+            decoration: BoxDecoration(
+
+                boxShadow: [
+              BoxShadow(color: Colors.black12,blurRadius: 3,offset: Offset(3,3),
+              ),
+            ]),
             child: ElevatedButton(
               onPressed: () {
 

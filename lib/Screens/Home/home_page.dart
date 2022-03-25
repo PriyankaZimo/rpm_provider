@@ -45,7 +45,6 @@ class HomePage extends StatelessWidget {
       drawer: DrawerPage(),
       body: Column(
         children: [
-
         ],
       ),
     );

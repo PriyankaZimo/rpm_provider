@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/src/provider.dart';
 import 'package:rpm_provider/Screens/Profile/Provider/profile_provider.dart';
+import 'package:rpm_provider/Screens/Profile/components/business_details.dart';
 
 import 'components/my_clipper.dart';
 import 'components/scanqr_page.dart';
@@ -38,7 +39,9 @@ class ProfilePage extends StatelessWidget {
                             ]),
                       ),
                       child: Padding(
-                        padding: EdgeInsets.only(top: 40,),
+                        padding: EdgeInsets.only(
+                          top: 40,
+                        ),
                         child: Column(
                           children: [
                             Row(
@@ -58,73 +61,140 @@ class ProfilePage extends StatelessWidget {
                                 )
                               ],
                             ),
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                              children: [
+                                GestureDetector(
+                                  onTap: () {
+                                    _profileProvider.selectTab(0);
+                                  },
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        'Basic Details',
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: _profileProvider.select == 0 ? Colors.black : Colors.black54),
+                                      ),
+                                      Container(
+                                        height: 7,
+                                        width: 110,
+                                        decoration: BoxDecoration(
+                                            boxShadow: [
+                                              BoxShadow(
+                                                  color:
+                                                      _profileProvider.select == 0? Colors.black12 : Colors.transparent,
+                                                  offset: Offset(5, 3),
+                                                  blurRadius: 3)
+                                            ],
+                                            color: _profileProvider.select == 0 ? Color(0xFFF57C00) : Colors.transparent,
+                                            borderRadius:
+                                                BorderRadius.circular(30)),
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                                GestureDetector(
+                                  onTap: () {
+                                    _profileProvider.selectTab(1);
+                                  },
+                                  child: Column(
+                                    children: [
+                                      Text(
+                                        'Business Details',
+                                        style: TextStyle(
+                                            fontSize: 16,
+                                            color: _profileProvider.select == 1 ? Colors.black : Colors.black54),
+                                      ),
+                                      Container(
+                                        height: 7,
+                                        width: 135,
+                                        decoration: BoxDecoration(
+                                            boxShadow: [
+                                              BoxShadow(
+                                                  color:
+                                                      _profileProvider.select ==1 ? Colors.black12 : Colors.transparent,
+                                                  offset: Offset(5, 3),
+                                                  blurRadius: 3)
+                                            ],
+                                            color: _profileProvider.select == 1
+                                                ? Color(0xFFF57C00)
+                                                : Colors.transparent,
+                                            borderRadius:
+                                                BorderRadius.circular(30)),
+                                      )
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
 
                             /// Basic and Business details Text
-                            SizedBox(
-
-                              height: 70,
-                              width: 400,
-                              child: ListView.builder(
-                                  physics: NeverScrollableScrollPhysics(),
-                                  itemCount: text.length,
-                                  scrollDirection: Axis.horizontal,
-                                  itemBuilder: (context, index) =>
-                                      GestureDetector(
-                                        onTap: () {
-                                          _profileProvider.selectTab(index);
-                                        },
-                                        child: Column(
-                                          crossAxisAlignment:
-                                              CrossAxisAlignment.center,
-                                          children: [
-                                            Container(
-                                              height: 20,
-                                              margin: EdgeInsets.only(
-                                                  left: 40, right:40),
-                                              color: Colors.transparent,
-                                              child: Center(
-                                                child: Text(
-                                                  text[index],
-                                                  style: TextStyle(
-                                                      fontSize: 16,
-                                                      color: _profileProvider
-                                                                  .select ==
-                                                              index
-                                                          ? Colors.black
-                                                          : Colors.black54),
-                                                ),
-                                              ),
-                                            ),
-                                            _profileProvider.select == index
-                                                ? Padding(
-                                                    padding: EdgeInsets.only(
-                                                        left: 10),
-                                                    child: Container(
-                                                      height: 6,
-                                                      width: 130,
-                                                      decoration: BoxDecoration(
-                                                          color: Colors
-                                                              .orange[700],
-                                                          borderRadius:
-                                                              BorderRadius
-                                                                  .circular(
-                                                                      10),
-                                                          boxShadow: [
-                                                            BoxShadow(
-                                                                color: Colors
-                                                                    .black12,
-                                                                offset:
-                                                                    Offset(
-                                                                        5, 5),
-                                                                blurRadius: 2)
-                                                          ]),
-                                                    ),
-                                                  )
-                                                : Container(),
-                                          ],
-                                        ),
-                                      )),
-                            ),
+                            // SizedBox(
+                            //
+                            //   height: 70,
+                            //   width: 400,
+                            //   child: ListView.builder(
+                            //       physics: NeverScrollableScrollPhysics(),
+                            //       itemCount: text.length,
+                            //       scrollDirection: Axis.horizontal,
+                            //       itemBuilder: (context, index) =>
+                            //           GestureDetector(
+                            //             onTap: () {
+                            //               _profileProvider.selectTab(index);
+                            //             },
+                            //             child: Column(
+                            //               crossAxisAlignment:
+                            //                   CrossAxisAlignment.center,
+                            //               children: [
+                            //                 Container(
+                            //                   height: 20,
+                            //                   margin: EdgeInsets.only(
+                            //                       left: 40, right:40),
+                            //                   color: Colors.transparent,
+                            //                   child: Center(
+                            //                     child: Text(
+                            //                       text[index],
+                            //                       style: TextStyle(
+                            //                           fontSize: 16,
+                            //                           color: _profileProvider
+                            //                                       .select ==
+                            //                                   index
+                            //                               ? Colors.black
+                            //                               : Colors.black54),
+                            //                     ),
+                            //                   ),
+                            //                 ),
+                            //                 _profileProvider.select == index
+                            //                     ? Padding(
+                            //                         padding: EdgeInsets.only(
+                            //                             left: 10),
+                            //                         child: Container(
+                            //                           height: 6,
+                            //                           width: 130,
+                            //                           decoration: BoxDecoration(
+                            //                               color: Colors
+                            //                                   .orange[700],
+                            //                               borderRadius:
+                            //                                   BorderRadius
+                            //                                       .circular(
+                            //                                           10),
+                            //                               boxShadow: [
+                            //                                 BoxShadow(
+                            //                                     color: Colors
+                            //                                         .black12,
+                            //                                     offset:
+                            //                                         Offset(
+                            //                                             5, 5),
+                            //                                     blurRadius: 2)
+                            //                               ]),
+                            //                         ),
+                            //                       )
+                            //                     : Container(),
+                            //               ],
+                            //             ),
+                            //           )),
+                            // ),
                           ],
                         ),
                       ),

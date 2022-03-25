@@ -24,7 +24,9 @@ class CurrencyPage extends StatelessWidget {
             child: TextFormField(
               decoration: InputDecoration(
                   suffixIcon: IconButton(
-                      onPressed: () {},
+                      onPressed: () {
+
+                      },
                       icon: Icon(
                         Icons.keyboard_arrow_down,
                         size: 30,

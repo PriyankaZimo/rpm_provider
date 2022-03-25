@@ -77,7 +77,7 @@ class ServicePage extends StatelessWidget {
                         margin: EdgeInsets.all(10),
                         height: 70,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
+                            borderRadius: BorderRadius.circular(10),
                             border: Border.all(
                               color: Color(0xFFFFCCBC),
                             )),
@@ -101,7 +101,7 @@ class ServicePage extends StatelessWidget {
                                 Spacer(),
                                 Text('\$20')
                               ],
-                            )
+                            ),
                           ],
                         ),
                       ),
@@ -109,6 +109,7 @@ class ServicePage extends StatelessWidget {
           ),
         ]),
       ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(

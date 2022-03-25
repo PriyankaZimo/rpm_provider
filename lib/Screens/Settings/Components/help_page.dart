@@ -27,9 +27,9 @@ List icn=[Icon(Icons.message),Icon(Icons.call_outlined)];
                   itemBuilder: (context, index) => Container(
                         padding: EdgeInsets.only(left: 20),
                         margin: EdgeInsets.all(10),
-                        height: 50,
+                        height: 60,
                         decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(50),
+                            borderRadius: BorderRadius.circular(10),
                             border: Border.all(color: Color(0xFFFFCCBC))),
                         child: Row(
                           children: [
