@@ -4,8 +4,10 @@ import 'package:provider/provider.dart';
 import 'package:rpm_provider/CommonWidget/notification_circle.dart';
 import 'package:rpm_provider/Provider/enter_pin_provider.dart';
 import 'package:rpm_provider/Provider/verify_otp_provider.dart';
+import 'package:rpm_provider/Screens/CreatePin/create_pin.dart';
 import 'package:rpm_provider/Screens/Home/Provider/drawer_provider.dart';
 import 'package:rpm_provider/Screens/Home/home_page.dart';
+import 'package:rpm_provider/Screens/Offers/Components/add_new_offer.dart';
 import 'package:rpm_provider/Screens/Profile/Provider/profile_provider.dart';
 import 'package:rpm_provider/Screens/Team/Provider/add_provider.dart';
 
@@ -14,6 +16,8 @@ import 'package:rpm_provider/Screens/Team/team_page.dart';
 import 'package:rpm_provider/splash%20page.dart';
 
 import 'Screens/ClientPage/client_page.dart';
+import 'Screens/ClientPage/components/add_client.dart';
+import 'Screens/Offers/offer.dart';
 import 'Screens/Team/Components/add_member.dart';
 
 void main() {
@@ -39,7 +43,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: AddMembers()),
+          home: SplashPage ()),
     );
   }
 }

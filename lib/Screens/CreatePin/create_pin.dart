@@ -114,7 +114,7 @@ class _CreatePinState extends State<CreatePin> {
                           ),
                          GestureDetector(
                               onTap: () {
-                                print("Container clicked");
+
                               },
                               child: Container(
                                 height: 50,
