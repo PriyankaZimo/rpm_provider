@@ -1,7 +1,9 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
+import 'package:rpm_provider/Screens/Home/home_page.dart';
 import 'dart:math' as math;
 
+import '../team_page.dart';
 import 'availability_page.dart';
 
 class AddMembers extends StatefulWidget {
@@ -34,7 +36,11 @@ class _AddMembersState extends State<AddMembers>
       backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
-        leading: GestureDetector(onTap: (){ Navigator.pop(context, MaterialPageRoute(builder: (context)=>()));},
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(
+                context, MaterialPageRoute(builder: (context) => TeamPage()));
+          },
           child: Icon(
             Icons.arrow_back_ios,
             color: Colors.black,
@@ -299,7 +305,48 @@ class _AddMembersState extends State<AddMembers>
                                             onChanged: (value) {
                                               setState(() {
                                                 isSwitched = value;
-                                                print(isSwitched);
+
+                                                isSwitched==true?   showGeneralDialog(
+                                                  context: context,
+                                                  barrierLabel: "Barrier",
+                                                  barrierDismissible: true,
+                                                  barrierColor: Colors.black
+                                                      .withOpacity(0.5),
+                                                  transitionDuration: Duration(
+                                                      milliseconds: 700),
+                                                  pageBuilder: (_, __, ___) {
+                                                    return Center(
+                                                      child: Container(
+                                                        height: 240,
+
+                                                    ),
+                                                    );
+                                                  },
+                                                  transitionBuilder:
+                                                      (_, anim, __, child) {
+                                                    Tween<Offset> tween;
+                                                    if (anim.status ==
+                                                        AnimationStatus
+                                                            .reverse) {
+                                                      tween = Tween(
+                                                          begin: Offset(-1, 0),
+                                                          end: Offset.zero);
+                                                    } else {
+                                                      tween = Tween(
+                                                          begin: Offset(1, 0),
+                                                          end: Offset.zero);
+                                                    }
+
+                                                    return SlideTransition(
+                                                      position:
+                                                          tween.animate(anim),
+                                                      child: FadeTransition(
+                                                        opacity: anim,
+                                                        child: child,
+                                                      ),
+                                                    );
+                                                  },
+                                                ):SizedBox();
                                               });
                                             },
                                             activeTrackColor:

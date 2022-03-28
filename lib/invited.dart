@@ -5,6 +5,16 @@ class Invited extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return  Container(
+        child: Center(
+          child: RaisedButton(
+            onPressed: () {
+
+            },
+            child: Text("Show alert Dialog box"),
+          ),
+        ),
+
+    );
   }
 }

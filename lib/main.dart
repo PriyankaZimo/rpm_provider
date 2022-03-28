@@ -19,6 +19,7 @@ import 'Screens/ClientPage/client_page.dart';
 import 'Screens/ClientPage/components/add_client.dart';
 import 'Screens/Offers/offer.dart';
 import 'Screens/Team/Components/add_member.dart';
+import 'invited.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
           theme: ThemeData(
             primarySwatch: Colors.blue,
           ),
-          home: SplashPage ()),
+          home: AddMembers ()),
     );
   }
 }
