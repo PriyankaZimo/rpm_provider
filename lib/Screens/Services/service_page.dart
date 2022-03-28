@@ -1,12 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:rpm_provider/Screens/Services/components/add_service.dart';
-
-import 'components/service_details.dart';
+import 'package:rpm_provider/Screens/Services/components/service_details.dart';
 
 class ServicePage extends StatelessWidget {
-  final items = List<String>.generate(20, (i) => 'Item ${i + 1}');
-  List text = ['Hair Service', 'Nail Service'];
-  List serv = ['Blow Dry', 'Manicures'];
+  final items = ['', '', '', '', '', '', '', '', '', ''];
 
   @override
   Widget build(BuildContext context) {
@@ -63,53 +60,87 @@ class ServicePage extends StatelessWidget {
 
           /// List View
           Expanded(
-            child: ListView.builder(
+            child: GestureDetector(
+              onTap: () {
+                Navigator.push(context,
+                    MaterialPageRoute(builder: (context) => ServiceDetails()));
+              },
+              child: ListView.builder(
                 itemCount: items.length,
-                itemBuilder: (context, index) => GestureDetector(
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ServiceDetails()));
-                      },
-                      child: Container(
-                        padding: EdgeInsets.only(left: 20, top: 10, right: 20),
-                        margin: EdgeInsets.all(10),
-                        height: 70,
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10),
-                            border: Border.all(
-                              color: Color(0xFFFFCCBC),
-                            )),
-                        child: Column(
+                itemBuilder: (BuildContext context, int index) {
+                  final item = items[index];
+                  return Dismissible(
+                    direction: items.length > 1
+                        ? DismissDirection.endToStart
+                        : DismissDirection.none,
+                    key: Key(item),
+                    onDismissed: (direction) {
+                      ScaffoldMessenger.of(context)
+                          .showSnackBar(SnackBar(content: Text(' Deleted')));
+                    },
+                    background: Container(
+                      margin: EdgeInsets.only(top: 10, left: 5, right: 5),
+                      width: MediaQuery.of(context).size.width,
+                      child: Align(
+                        alignment: Alignment.centerRight,
+                        child: Icon(
+                          Icons.delete_forever,
+                          color: Colors.red,
+                          size: 36.0,
+                        ),
+                      ),
+                    ),
+                    child: Container(
+                      margin: EdgeInsets.only(
+                          top: 10, bottom: 5, left: 5, right: 5),
+                      decoration: BoxDecoration(
+                        color: Colors.white,
+                        borderRadius: BorderRadius.circular(10),
+                        boxShadow: [
+                          BoxShadow(color: Color(0xffF47D3A), blurRadius: 1)
+                        ],
+                      ),
+                      child: ListTile(
+                        title: Column(
                           crossAxisAlignment: CrossAxisAlignment.start,
                           children: [
                             Text(
-                              'Hair Service',
+                              'Hair Services',
+                              textAlign: TextAlign.center,
                               style: TextStyle(
-                                  fontSize: 17, fontWeight: FontWeight.bold),
-                            ),
-                            SizedBox(
-                              height: 10,
+                                fontSize: 18,
+                                color: Colors.black,
+                                fontWeight: FontWeight.w500,
+                              ),
                             ),
                             Row(
                               children: [
                                 Text(
-                                  'Blow Dry ',
-                                  style: TextStyle(fontSize: 16),
+                                  'Blow Dry',
+                                  textAlign: TextAlign.center,
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Colors.black,
+                                    fontWeight: FontWeight.w500,
+                                  ),
                                 ),
                                 Spacer(),
-                                Text('\$20')
+                                Text('20\$')
                               ],
                             ),
                           ],
                         ),
                       ),
-                    )),
+                    ),
+                  );
+                },
+              ),
+            ),
           ),
         ]),
       ),
 
+      /// Float Button
       floatingActionButton: FloatingActionButton(
         onPressed: () {
           Navigator.push(

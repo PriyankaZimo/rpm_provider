@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:rpm_provider/Screens/Profile/components/scanqr_page.dart';
 

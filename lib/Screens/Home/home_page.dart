@@ -23,29 +23,28 @@ class HomePage extends StatelessWidget {
         ),
         backgroundColor: Colors.transparent,
         actions: [
-          GestureDetector(
-              onTap: () {
-                Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => NotificationPage()));
-              },
-              child: Padding(
-                padding: const EdgeInsets.only(right: 10),
-                child: Icon(
+          Padding(
+            padding: const EdgeInsets.only(right: 10),
+            child: IconButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => NotificationPage()));
+                },
+                icon: const Icon(
                   Icons.notifications_outlined,
-                  size: 35,
                   color: Colors.black,
-                ),
-              )),
+                  size: 35,
+                )),
+          ),
         ],
       ),
 
       ///Drawer Class
       drawer: DrawerPage(),
       body: Column(
-        children: [
-        ],
+        children: [],
       ),
     );
   }

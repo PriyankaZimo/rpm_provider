@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rpm_provider/Screens/Availability/availability_page.dart';
 import 'package:rpm_provider/Screens/ClientPage/client_page.dart';
 import 'package:rpm_provider/Screens/Offers/offer.dart';
 import 'package:rpm_provider/Screens/Profile/profile_page.dart';
@@ -19,14 +20,14 @@ class DrawerPage extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 20, top: 50),
             child: Text(
               'ISKEDO',
               style: TextStyle(color: Color(0xFFFF8A80), fontSize: 18),
             ),
           ),
-          Padding(
+          const Padding(
             padding: EdgeInsets.only(left: 20, right: 20),
             child: Divider(
               color: Color(0xFFFF8A80),
@@ -52,7 +53,8 @@ class DrawerPage extends StatelessWidget {
                     Container();
                     break;
                   case 2:
-                    Container();
+                    Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => AvailabilityPage()));
                     break;
                   case 3:
                     Navigator.push(context,
@@ -83,7 +85,7 @@ class DrawerPage extends StatelessWidget {
               },
               child: Container(
                 padding: EdgeInsets.only(left: 20, right: 20),
-                decoration: BoxDecoration(color: Colors.white),
+
                 child: Column(
                   children: [
                     Row(
@@ -98,7 +100,7 @@ class DrawerPage extends StatelessWidget {
                             height: 48,
                             width: 48,
                             clipBehavior: Clip.antiAlias,
-                            decoration: BoxDecoration(
+                            decoration: const BoxDecoration(
                               color: Colors.white,
                               shape: BoxShape.circle,
                               boxShadow: [
@@ -132,9 +134,9 @@ class DrawerPage extends StatelessWidget {
                         ),
                       ],
                     ),
-                    Divider(
+                    const Divider(
                       color: Color(0xFFFF8A80),
-                      thickness: 1,
+                      thickness: 0.6,
                     )
                   ],
                 ),

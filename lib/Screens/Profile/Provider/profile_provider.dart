@@ -9,7 +9,7 @@ class ProfileProvider extends ChangeNotifier{
 
     switch(select){
       case 0:
-        return BasicDetails();
+        return const BasicDetails();
       case 1:
         return BusinessDetail();
     }

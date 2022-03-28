@@ -4,8 +4,6 @@ import 'package:rpm_provider/CommonWidget/notification_circle.dart';
 import 'Util/constants.dart';
 
 class NotificationPage extends StatelessWidget {
-
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -34,7 +32,7 @@ class NotificationPage extends StatelessWidget {
         // height: MediaQuery.of(context).size.height,
         child: Stack(
           children: [
-         NotificationCircle(),
+            NotificationCircle(),
             //COLUMN LIST
             Positioned(
                 child: SingleChildScrollView(

@@ -54,6 +54,7 @@ class SignInPage extends StatelessWidget {
                     decoration: InputDecoration(
                       counterText: "",
                       prefixIcon: CountryCodePicker(
+                        favorite: ["+91","india"],
                         textStyle:  TextStyle(color: Colors.white),
                         initialSelection: 'IN',
                         showCountryOnly: false,
@@ -80,6 +81,7 @@ class SignInPage extends StatelessWidget {
                   ),
                 ),
                  SizedBox(height: 100),
+                /// Navigate EnterPIN Page
                 GestureDetector(
                   onTap: () {
                     Navigator.push(context,
@@ -111,6 +113,7 @@ class SignInPage extends StatelessWidget {
                  SizedBox(
                   height: 20,
                 ),
+                /// Navigate VerifyOtp page
                 GestureDetector(
                   onTap: () {
                     Navigator.push(

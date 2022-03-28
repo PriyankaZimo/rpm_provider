@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:rpm_provider/Screens/ClientPage/components/add_client.dart';
 
@@ -15,7 +17,9 @@ class _ClientPageState extends State<ClientPage> {
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        leading:BackButton(color: Colors.black,),
+        leading: BackButton(
+          color: Colors.black,
+        ),
         centerTitle: true,
         title: Text(
           'Client',
@@ -26,7 +30,7 @@ class _ClientPageState extends State<ClientPage> {
         padding: EdgeInsets.all(10.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
           Container(
-              decoration: BoxDecoration(boxShadow: [
+              decoration: BoxDecoration(boxShadow: const [
                 BoxShadow(
                   color: Color(0xFFFFCCBC),
                   blurRadius: 3,
@@ -49,6 +53,7 @@ class _ClientPageState extends State<ClientPage> {
                   border: InputBorder.none,
                 ),
               )),
+
           ///LIST VIEW
           Expanded(
             child: ListView.builder(
@@ -83,10 +88,10 @@ class _ClientPageState extends State<ClientPage> {
                   child: Container(
                     margin:
                         EdgeInsets.only(top: 10, bottom: 5, left: 5, right: 5),
-                    decoration: new BoxDecoration(
+                    decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(30),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(color: Color(0xffF47D3A), blurRadius: 1)
                       ],
                     ),
@@ -124,7 +129,8 @@ class _ClientPageState extends State<ClientPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(context, MaterialPageRoute(builder: (context)=>AddClient()));
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => AddClient()));
           // Add your onPressed code here!
         },
         backgroundColor: Color(0xffF47D3A),

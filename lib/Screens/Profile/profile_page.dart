@@ -46,7 +46,7 @@ class ProfilePage extends StatelessWidget {
                           children: [
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                              children: [
+                              children: const [
                                 BackButton(
                                   color: Colors.black,
                                 ),
@@ -64,6 +64,7 @@ class ProfilePage extends StatelessWidget {
                             Row(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               children: [
+                                /// Basic details
                                 GestureDetector(
                                   onTap: () {
                                     _profileProvider.selectTab(0);
@@ -74,26 +75,35 @@ class ProfilePage extends StatelessWidget {
                                         'Basic Details',
                                         style: TextStyle(
                                             fontSize: 16,
-                                            color: _profileProvider.select == 0 ? Colors.black : Colors.black54),
+                                            color: _profileProvider.select == 0
+                                                ? Colors.black
+                                                : Colors.black54),
                                       ),
                                       Container(
                                         height: 7,
-                                        width: 110,
+                                        width: 130,
                                         decoration: BoxDecoration(
                                             boxShadow: [
                                               BoxShadow(
                                                   color:
-                                                      _profileProvider.select == 0? Colors.black12 : Colors.transparent,
+                                                      _profileProvider.select ==
+                                                              0
+                                                          ? Colors.black12
+                                                          : Colors.transparent,
                                                   offset: Offset(5, 3),
                                                   blurRadius: 3)
                                             ],
-                                            color: _profileProvider.select == 0 ? Color(0xFFF57C00) : Colors.transparent,
+                                            color: _profileProvider.select == 0
+                                                ? Color(0xFFF57C00)
+                                                : Colors.transparent,
                                             borderRadius:
                                                 BorderRadius.circular(30)),
                                       ),
                                     ],
                                   ),
                                 ),
+
+                                /// Business details
                                 GestureDetector(
                                   onTap: () {
                                     _profileProvider.selectTab(1);
@@ -104,7 +114,9 @@ class ProfilePage extends StatelessWidget {
                                         'Business Details',
                                         style: TextStyle(
                                             fontSize: 16,
-                                            color: _profileProvider.select == 1 ? Colors.black : Colors.black54),
+                                            color: _profileProvider.select == 1
+                                                ? Colors.black
+                                                : Colors.black54),
                                       ),
                                       Container(
                                         height: 7,
@@ -113,7 +125,10 @@ class ProfilePage extends StatelessWidget {
                                             boxShadow: [
                                               BoxShadow(
                                                   color:
-                                                      _profileProvider.select ==1 ? Colors.black12 : Colors.transparent,
+                                                      _profileProvider.select ==
+                                                              1
+                                                          ? Colors.black12
+                                                          : Colors.transparent,
                                                   offset: Offset(5, 3),
                                                   blurRadius: 3)
                                             ],
@@ -129,7 +144,7 @@ class ProfilePage extends StatelessWidget {
                               ],
                             ),
 
-                            /// Basic and Business details Text
+                            /// Basic and Business details Text in list
                             // SizedBox(
                             //
                             //   height: 70,
@@ -218,7 +233,7 @@ class ProfilePage extends StatelessWidget {
                                     border: Border.all(
                                         color: Color(0xFFF57C00), width: 3),
                                     shape: BoxShape.circle,
-                                    image: DecorationImage(
+                                    image: const DecorationImage(
                                         image: NetworkImage(
                                             'https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max'),
                                         fit: BoxFit.fill),
@@ -237,12 +252,12 @@ class ProfilePage extends StatelessWidget {
                                     border: Border.all(
                                         color: Color(0xFFF57C00), width: 1.4),
                                     color: Colors.white),
-                                child: Icon(
+                                child: const Icon(
                                   Icons.camera_alt_outlined,
                                   size: 30,
                                 ),
                               ),
-                            )
+                            ),
                           ],
                         )
                       : Container(),

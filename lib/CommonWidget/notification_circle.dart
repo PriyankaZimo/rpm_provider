@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, duplicate_ignore
+
 import 'package:flutter/material.dart';
 
 class NotificationCircle extends StatelessWidget {
@@ -13,8 +15,10 @@ class NotificationCircle extends StatelessWidget {
           child: Container(
             height: 200,
             width: 250,
+            // ignore: duplicate_ignore, duplicate_ignore
             decoration: BoxDecoration(
                 color: Colors.orange[200],
+                // ignore: prefer_const_constructors
                 borderRadius: BorderRadius.only(topLeft: Radius.circular(200))),
           ),
         ),

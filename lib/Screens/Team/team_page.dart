@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:rpm_provider/Screens/Team/Components/add_member.dart';
+
 class TeamPage extends StatelessWidget {
   final items = ['', '', '', '', '', '', '', ''];
 
@@ -17,36 +18,6 @@ class TeamPage extends StatelessWidget {
           style: TextStyle(color: Colors.black, fontSize: 25),
         ),
       ),
-      // body: ListView.builder(
-      //     itemCount: items.length,
-      //     itemBuilder: (context, index) {
-      //       return Container(
-      //         margin: EdgeInsets.all(10),
-      //         decoration: BoxDecoration(
-      //
-      //           borderRadius: BorderRadius.circular(40),
-      //           border: Border.all(color: Color(0xFFFFCCBC))
-      //         ),
-      //         child: Dismissible(
-      //             key: Key(items[index]),
-      //             onDismissed: (direction) {
-      //               items.removeAt(index);
-      //               Scaffold.of(context).showSnackBar(SnackBar(
-      //                 content: Text('Item dismissed.'),
-      //               ));
-      //             },
-      //             background: Container(
-      //               alignment: Alignment.topRight,
-      //               child: Icon(
-      //                 Icons.delete,
-      //                 color: Colors.red,
-      //               ),
-      //             ),
-      //             child: ListTile(
-      //               title: Text("${items[index]}"),
-      //             )),
-      //       );
-      //     }),
       body: Padding(
         padding: EdgeInsets.all(10.0),
         child: Column(crossAxisAlignment: CrossAxisAlignment.center, children: [
@@ -74,6 +45,8 @@ class TeamPage extends StatelessWidget {
                   border: InputBorder.none,
                 ),
               )),
+
+          /// List View
           Expanded(
             child: ListView.builder(
               itemCount: items.length,
@@ -91,7 +64,7 @@ class TeamPage extends StatelessWidget {
                   background: Container(
                     margin: EdgeInsets.only(top: 10, left: 5, right: 5),
                     width: MediaQuery.of(context).size.width,
-                    child: Align(
+                    child: const Align(
                       alignment: Alignment.centerRight,
                       child: Icon(
                         Icons.delete_forever,
@@ -106,7 +79,7 @@ class TeamPage extends StatelessWidget {
                     decoration: BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.circular(10),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(color: Color(0xffF47D3A), blurRadius: 1)
                       ],
                     ),
@@ -118,7 +91,7 @@ class TeamPage extends StatelessWidget {
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Text(
+                                const Text(
                                   'Jane Copper',
                                   textAlign: TextAlign.center,
                                   style: TextStyle(
@@ -129,7 +102,7 @@ class TeamPage extends StatelessWidget {
                                 ),
                                 Row(
                                   children: [
-                                    Text(
+                                    const Text(
                                       'Blow Dry',
                                       textAlign: TextAlign.center,
                                       style: TextStyle(
@@ -142,11 +115,11 @@ class TeamPage extends StatelessWidget {
                                     Container(
                                       height: 10,
                                       width: 10,
-                                      decoration: BoxDecoration(
+                                      decoration: const BoxDecoration(
                                           shape: BoxShape.circle,
                                           color: Colors.red),
                                     ),
-                                    SizedBox(
+                                    const SizedBox(
                                       width: 10,
                                     ),
                                     Text('Inactive'),
@@ -156,12 +129,10 @@ class TeamPage extends StatelessWidget {
                             ),
                           ),
                         ),
-                        Container(
-                          child: CircleAvatar(
-                            backgroundImage: NetworkImage(
-                                'https://static.wikia.nocookie.net/pediaofinterest/images/2/26/MV5BMTQxODMxMjAzNl5BMl5BanBnXkFtZTcwMTczODc3OQ%40%40._V1_SY317_CR33%2C0%2C214%2C317_.jpg/revision/latest/scale-to-width-down/290?cb=20131011202426'),
-                            maxRadius: 30,
-                          ),
+                        const CircleAvatar(
+                          backgroundImage: NetworkImage(
+                              'https://static.wikia.nocookie.net/pediaofinterest/images/2/26/MV5BMTQxODMxMjAzNl5BMl5BanBnXkFtZTcwMTczODc3OQ%40%40._V1_SY317_CR33%2C0%2C214%2C317_.jpg/revision/latest/scale-to-width-down/290?cb=20131011202426'),
+                          maxRadius: 30,
                         ),
                       ],
                     ),
