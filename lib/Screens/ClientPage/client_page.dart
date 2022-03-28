@@ -3,6 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:rpm_provider/Screens/ClientPage/components/add_client.dart';
 
+import 'components/add_client.dart';
+
 class ClientPage extends StatefulWidget {
   @override
   State<ClientPage> createState() => _ClientPageState();
@@ -129,9 +131,9 @@ class _ClientPageState extends State<ClientPage> {
       ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {
-          Navigator.push(
-              context, MaterialPageRoute(builder: (context) => AddClient()));
-          // Add your onPressed code here!
+
+          Navigator.push(context, MaterialPageRoute(builder: (context)=>AddClient()));
+
         },
         backgroundColor: Color(0xffF47D3A),
         child: Icon(Icons.add),

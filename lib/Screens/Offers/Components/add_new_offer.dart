@@ -167,28 +167,25 @@ class _Add_offersState extends State<Add_offers> {
               ),
               Center(
                 child: Container(
-                    margin: EdgeInsets.only(top: 60),
+                    margin: EdgeInsets.only(top: 340),
                     height: 50,
-                    width: 220,
-                    decoration: BoxDecoration(boxShadow: <BoxShadow>[
+                    width: 330,decoration: BoxDecoration(
+                    boxShadow: <BoxShadow>[
                       BoxShadow(
                         color: Colors.black.withOpacity(0.1),
                         blurRadius: 3,
                         offset: Offset(0, 3),
-                      ),
-                    ]),
+                      ),]),
                     child: ElevatedButton(
                         onPressed: () {},
                         style: ElevatedButton.styleFrom(
                           primary: Color(0xffF47D3A),
                           shape: new RoundedRectangleBorder(
                             borderRadius: new BorderRadius.circular(5.0),
+
                           ),
                         ),
-                        child: Text(
-                          'Save',
-                          style: TextStyle(fontSize: 20),
-                        ))),
+                        child: Text('Save',style: TextStyle(fontSize: 20),))),
               ),
             ],
           ),

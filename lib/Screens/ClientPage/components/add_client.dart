@@ -3,6 +3,8 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
 
+import '../client_page.dart';
+
 class AddClient extends StatelessWidget {
   const AddClient({Key? key}) : super(key: key);
 
@@ -12,8 +14,16 @@ class AddClient extends StatelessWidget {
       appBar: AppBar(
 
         centerTitle: true,
-        leading: const BackButton(color: Colors.black,),
-        elevation: 0,
+        leading: GestureDetector(onTap: (){
+          Navigator.pop(context, MaterialPageRoute(builder: (context)=>ClientPage()));
+        },
+          child: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black,
+            size: 25.0,
+          ),
+        ),elevation: 0,
+
         title: Text(
           'Add Client',
           style: TextStyle(
@@ -105,9 +115,9 @@ class AddClient extends StatelessWidget {
                 ),
               ),
               Container(
-                  margin: EdgeInsets.only(top: 60),
+                  margin: EdgeInsets.only(top: 340),
                   height: 50,
-                  width: 220,decoration: BoxDecoration(
+                  width: 330,decoration: BoxDecoration(
                   boxShadow: <BoxShadow>[
               BoxShadow(
               color: Colors.black.withOpacity(0.1),

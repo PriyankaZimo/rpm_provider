@@ -118,7 +118,7 @@ class _CreatePinState extends State<CreatePin> {
                           ),
                          GestureDetector(
                               onTap: () {
-                               Navigator.push(context, MaterialPageRoute(builder: (context)=>HomePage()));
+
                               },
                               child: Container(
                                 height: 50,

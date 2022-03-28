@@ -94,6 +94,9 @@ class _AddMembersState extends State<AddMembers>
     _tabController.dispose();
   }
 
+  var val;
+  bool isSwitched = false;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -102,6 +105,8 @@ class _AddMembersState extends State<AddMembers>
         centerTitle: true,
         leading: BackButton(
           color: Colors.black,
+
+
         ),
         elevation: 0,
         title: Text(
@@ -317,55 +322,70 @@ class _AddMembersState extends State<AddMembers>
                                               fontSize: 15.0,
                                               color: Colors.black),
                                         ),
+                                        SizedBox(
+                                          width: 20,
+                                        ),
                                         Expanded(
-                                          child: TextFormField(
-                                            decoration: InputDecoration(
-                                              /*hintText: "Enter your Contact No",*/
-                                              /*        labelText: 'Description',*/
-                                              hintStyle: TextStyle(
-                                                  fontSize: 20.0,
-                                                  color: Colors.black),
-                                              fillColor: Color(0xffe5e5e5),
-                                              enabledBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                    style: BorderStyle.solid,
-                                                    color: Color(0xffB9B9B9)),
-                                              ),
-                                            ),
+                                          child: DropdownButton<String>(
+                                            hint: Text(''),
+                                            isExpanded: true,
+                                            underline: SizedBox(),
+                                            value: val,
+                                            items: <String>[
+                                              'Active',
+                                              'Non-Active',
+                                            ].map((String value) {
+                                              return DropdownMenuItem<String>(
+                                                value: value,
+                                                child: Text(value),
+                                              );
+                                            }).toList(),
+                                            onChanged: (v) {
+                                              setState(() {
+                                                val = v.toString();
+                                              });
+                                            },
+
                                           ),
                                         ),
                                         SizedBox(
-                                          width: 5,
+                                          width: 10,
                                         ),
                                         Text(
-                                          'To',
+
+                                          'Allow Login',
+                                          style: TextStyle(
+                                              fontSize: 15.0,
+                                              color: Colors.black),
+                                        ),
+                                        Text(
+                                          'Off',
+
                                           style: TextStyle(
                                               fontSize: 15.0,
                                               color: Colors.black),
                                         ),
                                         Expanded(
-                                          child: TextFormField(
-                                            decoration: InputDecoration(
-                                              /*hintText: "Enter your Contact No",*/
-                                              /*        labelText: 'Description',*/
-                                              hintStyle: TextStyle(
-                                                  fontSize: 20.0,
-                                                  color: Colors.black),
-                                              fillColor: Color(0xffe5e5e5),
-                                              enabledBorder:
-                                                  UnderlineInputBorder(
-                                                borderSide: BorderSide(
-                                                    style: BorderStyle.solid,
-                                                    color: Color(0xffB9B9B9)),
-                                              ),
-                                            ),
+
+                                          child: Switch(
+                                            value: isSwitched,
+                                            onChanged: (value) {
+                                              setState(() {
+                                                isSwitched = value;
+                                                print(isSwitched);
+                                              });
+                                            },
+                                            activeTrackColor:
+                                                Colors.lightGreenAccent,
+                                            activeColor: Colors.green,
+
                                           ),
                                         ),
-                                        Icon(
-                                          Icons.calendar_today,
-                                          color: Colors.black,
-                                          size: 24.0,
+                                        Text(
+                                          'On',
+                                          style: TextStyle(
+                                              fontSize: 15.0,
+                                              color: Colors.black),
                                         ),
                                       ],
                                     ),

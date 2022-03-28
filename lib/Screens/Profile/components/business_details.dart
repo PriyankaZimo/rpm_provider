@@ -223,28 +223,26 @@ class BusinessDetail extends StatelessWidget {
           ),
         ),
         Container(
-         margin: EdgeInsets.only(left: 10,right: 10),
+            margin: EdgeInsets.only(top: 340),
             height: 50,
-            width: MediaQuery.of(context).size.width,
-            decoration: BoxDecoration(
-
-                boxShadow: [
-              BoxShadow(color: Colors.black12,blurRadius: 3,offset: Offset(3,3),
-              ),
-            ]),
+            width: 330,decoration: BoxDecoration(
+            boxShadow: <BoxShadow>[
+              BoxShadow(
+                color: Colors.black.withOpacity(0.1),
+                blurRadius: 3,
+                offset: Offset(0, 3),
+              ),]),
             child: ElevatedButton(
-              onPressed: () {
+                onPressed: () {},
+                style: ElevatedButton.styleFrom(
+                  primary: Color(0xffF47D3A),
+                  shape: new RoundedRectangleBorder(
+                    borderRadius: new BorderRadius.circular(5.0),
 
-              },
-              child: Text(
-                "Save",
-                style: TextStyle(color: Colors.white, fontSize: 20,fontWeight: FontWeight.bold),
-              ),
-              style: ElevatedButton.styleFrom(
-                primary: Colors.orange[700], // background
-                // foreground
-              ),
-            ))
+                  ),
+                ),
+                child: Text('Save',style: TextStyle(fontSize: 20),))),
+
       ],
     );
   }
