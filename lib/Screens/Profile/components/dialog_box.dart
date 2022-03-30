@@ -38,7 +38,7 @@ class AlertDialogBox extends StatelessWidget {
             Container(
               height: 30,
               child: TextFormField(
-                decoration: const InputDecoration(
+                decoration:  InputDecoration(
                     hintText: "Branch",
                     hintStyle: TextStyle(color: Colors.black54),
                     enabledBorder: UnderlineInputBorder(
