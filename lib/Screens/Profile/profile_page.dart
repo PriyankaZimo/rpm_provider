@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:provider/src/provider.dart';
 import 'package:rpm_provider/Screens/Profile/Provider/profile_provider.dart';
 import 'package:rpm_provider/Screens/Profile/components/business_details.dart';
-
 import 'components/my_clipper.dart';
-import 'components/scanqr_page.dart';
 
 class ProfilePage extends StatelessWidget {
   List text = ['   Basic Details', 'Business Details'];
@@ -260,13 +257,13 @@ class ProfilePage extends StatelessWidget {
                             ),
                           ],
                         )
-                      : Container(),
+                      : BusinessDetail()
                 ],
               ),
               SizedBox(
                 height: 10,
               ),
-              _profileProvider.selectCate(),
+              _profileProvider.selectCate()
             ],
           ),
         ));

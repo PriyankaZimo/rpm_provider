@@ -50,18 +50,19 @@ class SplashPage extends StatelessWidget {
                   },
                 ),
               ),
-              Positioned(
-                  bottom: 130,
-                  top: 220,
-                  child: Center(
-                    child: Text(
-                      'Iskedo',
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontWeight: FontWeight.w700,
-                          fontSize: 50),
-                    ),
-                  ))
+              const Positioned(
+                bottom: 130,
+                top: 220,
+                child: Center(
+                  child: Text(
+                    'Iskedo',
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w700,
+                        fontSize: 50),
+                  ),
+                ),
+              )
             ]),
           ),
         ],

@@ -86,6 +86,12 @@ class AvailabilityPage extends StatelessWidget {
             ],
           ),
           availabilityProvider.selectContain()
+          /// Cupertino Switch
+          // CupertinoSwitch(activeColor: Colors.green,
+          //     trackColor: CupertinoColors.systemBlue,
+          //     value:true, onChanged: (val){
+          //
+          // })
         ],
       ),
     );

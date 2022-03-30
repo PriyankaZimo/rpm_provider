@@ -9,6 +9,7 @@ import 'package:rpm_provider/Screens/Home/home_page.dart';
 import 'package:rpm_provider/Screens/Offers/Components/add_new_offer.dart';
 import 'package:rpm_provider/Screens/Profile/Provider/profile_provider.dart';
 import 'package:rpm_provider/Screens/Settings/Provider/change_pass_provider.dart';
+import 'package:rpm_provider/Screens/SplashScreen/splash%20page.dart';
 
 import 'package:rpm_provider/Screens/Team/team_page.dart';
 import 'package:rpm_provider/Screens/Verify_otp/Provider/verify_otp_provider.dart';

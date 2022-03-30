@@ -1,7 +1,6 @@
 // ignore_for_file: avoid_unnecessary_containers, use_full_hex_values_for_flutter_colors, prefer_is_empty, curly_braces_in_flow_control_structures
 
 import 'package:flutter/material.dart';
-import 'package:rpm_provider/Screens/Home/home_page.dart';
 
 class CreatePin extends StatefulWidget {
   @override
@@ -67,7 +66,7 @@ class _CreatePinState extends State<CreatePin> {
                         children: [
                           TextFormField(
                             style: TextStyle(color: Colors.white),
-                         keyboardType: TextInputType.emailAddress,
+                            keyboardType: TextInputType.emailAddress,
                             autovalidateMode:
                                 AutovalidateMode.onUserInteraction,
                             obscureText: false,
@@ -91,7 +90,6 @@ class _CreatePinState extends State<CreatePin> {
                             height: 10,
                           ),
                           TextFormField(
-
                             style: TextStyle(color: Colors.white),
                             keyboardType: TextInputType.emailAddress,
                             autovalidateMode:
@@ -116,10 +114,8 @@ class _CreatePinState extends State<CreatePin> {
                           SizedBox(
                             height: 100,
                           ),
-                         GestureDetector(
-                              onTap: () {
-
-                              },
+                          GestureDetector(
+                              onTap: () {},
                               child: Container(
                                 height: 50,
                                 width: 220.0,

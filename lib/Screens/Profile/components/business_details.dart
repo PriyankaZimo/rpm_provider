@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:rpm_provider/Screens/Profile/components/dialog_box.dart';
 
 class BusinessDetail extends StatelessWidget {
   var addressController = TextEditingController();
@@ -13,17 +13,30 @@ class BusinessDetail extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
+        SizedBox(
+          height: 180,
+        ),
+
+        /// Content Container
         Container(
           margin: EdgeInsets.all(20),
           decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.circular(10),
               border:
-                  Border.all(color: Colors.deepOrangeAccent.withOpacity(0.2))),
+                  Border.all(color: Colors.deepOrangeAccent.withOpacity(0.4))),
           child: Container(
             padding: EdgeInsets.all(20),
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text('BusinessName'),
+                SizedBox(
+                  height: 20,
+                ),
+                Text(
+                  'BusinessName',
+                  style: TextStyle(fontSize: 17),
+                ),
                 Text(
                   'Cooper',
                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
@@ -35,214 +48,107 @@ class BusinessDetail extends StatelessWidget {
                 SizedBox(
                   height: 6,
                 ),
-                Row(
-                  children: [
-                    Text(
-                      'Salon',
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
-                    ),
-                    Spacer(),
-                    Icon(Icons.keyboard_arrow_down)
-                  ],
+                Text(
+                  'Salon',
+                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                 ),
                 SizedBox(
                   height: 10,
                 ),
-                Text('About the Company',style: TextStyle(fontSize: 16),),
-                Text('Lorem ipsum dolor sit amet,consectetur'),
-                SizedBox(
-                  height: 20,
+                Text(
+                  'About the Company',
+                  style: TextStyle(fontSize: 16),
                 ),
-                /// Address
-                Container(
-                  height: 30,
-                  child: TextFormField(
-                    textInputAction: TextInputAction.next,
-                    autovalidateMode: AutovalidateMode.onUserInteraction,
-                    controller: addressController,
-                    decoration: InputDecoration(
-                        hintText: "Address",
-                        hintStyle: TextStyle(
-                            color: Colors.black,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18),
-                        suffixIcon: Padding(
-                          padding: EdgeInsets.only(bottom: 10),
-                          child: Icon(
-                            Icons.border_color_outlined,
-                            size: 20,
-                            color: Colors.black,
-                          ),
-                        ),
-                        enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black12))),
-                    validator: (val) {
-                      if (val.toString().isEmpty) return "*Enter your address";
-                    },
-                  ),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                ///Select Country
-                Row(
-                  children: [
-                    Text(
-                      'Select Country',
-                      style: TextStyle(
-                          fontSize: 18, fontWeight: FontWeight.normal),
-                    ),
-                    Spacer(),
-                    Icon(
-                      Icons.keyboard_arrow_down,
-                      color: Colors.black,
-                      size: 30,
-                    )
-                  ],
-                ),
-                SizedBox(
-                  height: 15,
-                ),
-                Container(
-                  height: 30,
-                  child: TextFormField(
-                    controller: countryController,
-                    autovalidateMode: AutovalidateMode.onUserInteraction,
-                    decoration: InputDecoration(
-                        hintText: "Flat,House No.Apartement",
-                        hintStyle:
-                            TextStyle(color: Colors.black12, fontSize: 16),
-                        enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black12))),
-                    validator: (val) {
-                      if (val.toString().isEmpty) return "*Select Country";
-                    },
-                  ),
+                Text(
+                  'Lorem ipsum dolor sit amet,consectetur\nelit sed do eiusmod tempor incididunt\nut labore et dolore m',
+                  style: TextStyle(fontSize: 17),
                 ),
                 SizedBox(
                   height: 30,
-                ),
-                /// Sector
-                Container(
-                  height: 30,
-                  child: TextFormField(
-                    autovalidateMode: AutovalidateMode.onUserInteraction,
-                    controller: sectorController,
-                    decoration: InputDecoration(
-                        hintText: "Sector,Street",
-                        hintStyle:
-                            TextStyle(color: Colors.black12, fontSize: 16),
-                        enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black12))),
-                    validator: (val) {
-                      if (val.toString().isEmpty) return "*Select your Street";
-                    },
-                  ),
                 ),
 
-                Row(
-                  children: [
-                    Text(
-                      'City',
-                      style: TextStyle(color: Colors.black12),
-                    ), SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                      child: TextFormField(
-                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                        controller: cityController,
-                        decoration: InputDecoration(
-                            hintText: "",
-                            hintStyle:
-                                TextStyle(color: Colors.black12, fontSize: 16),
-                            enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.black12))),
-                        validator: (val) {
-                          if (val.toString().isEmpty) return "*Enter your city";
-                        },
-                      ),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Text(
-                      'State',
-                      style: TextStyle(color: Colors.black12),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    Expanded(
-                      child: TextFormField(
-                        autovalidateMode: AutovalidateMode.onUserInteraction,
-                        controller: stateController,
-                        decoration: InputDecoration(
-                            suffixIcon: IconButton(onPressed: (){}, icon: Icon(Icons.keyboard_arrow_down)),
-                            enabledBorder: UnderlineInputBorder(
-                                borderSide: BorderSide(color: Colors.black12))),
-                        validator: (val) {
-                          if (val.toString().isEmpty)
-                            return "*Enter your state";
-                        },
-                      ),
-                    )
-                  ],
+                /// Address
+                Text(
+                  'Address1',
+                  style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                ),
+                Divider(
+                  color: Colors.black12,
+                  thickness: 1,
                 ),
                 SizedBox(
-                  height: 30,
+                  height: 10,
                 ),
-                Container(
-                  height: 30,
-                  child: TextFormField(
-                    maxLength: 6,
-                    controller: zipController,
-                    autovalidateMode: AutovalidateMode.onUserInteraction,
-                    decoration: InputDecoration(
-                        counterText: "",
-                        hintText: "ZipCode",
-                        hintStyle:
-                            TextStyle(color: Colors.black12, fontSize: 16),
-                        enabledBorder: UnderlineInputBorder(
-                            borderSide: BorderSide(color: Colors.black12))),
-                    validator: (val) {
-                      if (val.toString().isEmpty)
-                        return "*Enter your ZipCode";
-                      // else if(val.toString().length<6)
-                      //   return "*Enter length max 6 ";
-                      else if (val!.isEmpty ||
-                          RegExp("[a-z/A-Z/@]").hasMatch(val)) {
-                        return '* Enter correct ZipCode';
-                      }
-                    },
+                Text(
+                  'Chd',
+                  style: TextStyle(fontWeight: FontWeight.normal, fontSize: 18),
+                ),
+                Text('SCO 25,',
+                    style:
+                        TextStyle(fontWeight: FontWeight.normal, fontSize: 18)),
+                Text('Sector 8',
+                    style:
+                        TextStyle(fontWeight: FontWeight.normal, fontSize: 18)),
+                Text('Chandigarh',
+                    style:
+                        TextStyle(fontWeight: FontWeight.normal, fontSize: 18)),
+                Text('160008',
+                    style:
+                        TextStyle(fontWeight: FontWeight.normal, fontSize: 18)),
+
+                /// Dialog Box
+                GestureDetector(
+                  onTap: () {
+                    showDialog(
+                        context: context,
+                        builder: (context) => AlertDialogBox());
+                  },
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Icon(
+                        Icons.add,
+                        color: Colors.grey,
+                        size: 17,
+                      ),
+                      Text(
+                        'Add location',
+                        style: TextStyle(color: Colors.grey, fontSize: 16),
+                      )
+                    ],
                   ),
-                ),
+                )
               ],
             ),
           ),
         ),
+
+        /// Elevated Button
+        SizedBox(
+          height: 70,
+        ),
         Container(
-            margin: EdgeInsets.only(top: 340),
             height: 50,
-            width: 330,decoration: BoxDecoration(
-            boxShadow: <BoxShadow>[
+            width: 330,
+            decoration: BoxDecoration(boxShadow: [
               BoxShadow(
                 color: Colors.black.withOpacity(0.1),
                 blurRadius: 3,
                 offset: Offset(0, 3),
-              ),]),
+              ),
+            ]),
             child: ElevatedButton(
                 onPressed: () {},
                 style: ElevatedButton.styleFrom(
                   primary: Color(0xffF47D3A),
-                  shape: new RoundedRectangleBorder(
-                    borderRadius: new BorderRadius.circular(5.0),
-
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(5.0),
                   ),
                 ),
-                child: Text('Save',style: TextStyle(fontSize: 20),))),
-
+                child: Text(
+                  'Save',
+                  style: TextStyle(fontSize: 20),
+                ))),
       ],
     );
   }

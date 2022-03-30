@@ -18,8 +18,8 @@ class SignInPage extends StatelessWidget {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                 Color(0xFFee3d7e).withOpacity(0.8),
-                 Color(0xFFf99d1c).withOpacity(0.9)
+                Color(0xFFee3d7e).withOpacity(0.8),
+                Color(0xFFf99d1c).withOpacity(0.9)
               ]),
         ),
         child: SingleChildScrollView(
@@ -28,47 +28,47 @@ class SignInPage extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                 SizedBox(
+                SizedBox(
                   height: 250,
                 ),
-             Text(
+                Text(
                   'Sign In',
-                  style:  TextStyle(
+                  style: TextStyle(
                       color: Colors.white,
                       fontSize: 50,
                       fontWeight: FontWeight.bold),
                 ),
-                 SizedBox(
+                SizedBox(
                   height: 80,
                 ),
                 Padding(
-                  padding:  EdgeInsets.all(30.0),
+                  padding: EdgeInsets.all(30.0),
                   child: TextFormField(
                     maxLength: 10,
                     keyboardType: TextInputType.emailAddress,
                     autovalidateMode: AutovalidateMode.onUserInteraction,
-                    style:  TextStyle(
+                    style: TextStyle(
                       color: Colors.white,
                       fontFamily: 'OpenSans',
                     ),
                     decoration: InputDecoration(
                       counterText: "",
                       prefixIcon: CountryCodePicker(
-                        favorite: ["+91","india"],
-                        textStyle:  TextStyle(color: Colors.white),
+                        favorite: ["+91", "india"],
+                        textStyle: TextStyle(color: Colors.white),
                         initialSelection: 'IN',
                         showCountryOnly: false,
                       ),
-                      suffixIcon:  Icon(
+                      suffixIcon: Icon(
                         Icons.call_outlined,
                         color: Colors.white,
                       ),
-                      enabledBorder:  UnderlineInputBorder(
+                      enabledBorder: UnderlineInputBorder(
                         borderSide: BorderSide(
                           color: Colors.white,
                         ),
                       ),
-                      hintStyle:  TextStyle(color: Colors.white),
+                      hintStyle: TextStyle(color: Colors.white),
                     ),
                     validator: (val) {
                       if (val.toString().isEmpty) {
@@ -80,7 +80,8 @@ class SignInPage extends StatelessWidget {
                     },
                   ),
                 ),
-                 SizedBox(height: 100),
+                SizedBox(height: 100),
+
                 /// Navigate EnterPIN Page
                 GestureDetector(
                   onTap: () {
@@ -103,16 +104,17 @@ class SignInPage extends StatelessWidget {
                     )),
                   ),
                 ),
-                 SizedBox(
+                SizedBox(
                   height: 50,
                 ),
-                 Text(
+                Text(
                   'OR',
-                  style:  TextStyle(color: Colors.white, fontSize: 20),
+                  style: TextStyle(color: Colors.white, fontSize: 20),
                 ),
-                 SizedBox(
+                SizedBox(
                   height: 20,
                 ),
+
                 /// Navigate VerifyOtp page
                 GestureDetector(
                   onTap: () {
@@ -121,14 +123,14 @@ class SignInPage extends StatelessWidget {
                         MaterialPageRoute(
                             builder: (context) => VerifyOtpPage()));
                   },
-                  child:  Padding(
-                    padding:  EdgeInsets.only(top: 30),
+                  child: const Padding(
+                    padding: EdgeInsets.only(top: 30),
                     child: Text(
                       'Forgot PIN?',
-                      style:  TextStyle(color: Colors.white, fontSize: 20),
+                      style: TextStyle(color: Colors.white, fontSize: 20),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
