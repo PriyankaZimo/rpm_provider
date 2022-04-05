@@ -38,7 +38,7 @@ class AlertDialogBox extends StatelessWidget {
             Container(
               height: 30,
               child: TextFormField(
-                decoration:  InputDecoration(
+                decoration: const InputDecoration(
                     hintText: "Branch",
                     hintStyle: TextStyle(color: Colors.black54),
                     enabledBorder: UnderlineInputBorder(
@@ -71,7 +71,7 @@ class AlertDialogBox extends StatelessWidget {
                 ),
                 Expanded(
                     child: TextFormField(
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                       enabledBorder: UnderlineInputBorder(
                           borderSide: BorderSide(color: Colors.black12))),
                   validator: (val) {},
@@ -107,10 +107,11 @@ class AlertDialogBox extends StatelessWidget {
                   enabledBorder: UnderlineInputBorder(
                       borderSide: BorderSide(color: Colors.black12))),
               validator: (val) {
-                if (val.toString().isEmpty) return ('Please Enter ZipCode');
+                if (val.toString().isEmpty)
+                  return ('Please Enter ZipCode');
               },
             ),
-            const SizedBox(
+            SizedBox(
               height: 20,
             ),
             Center(
@@ -120,14 +121,16 @@ class AlertDialogBox extends StatelessWidget {
                 height: 40,
                 width: 150,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.pop(context);
+                  },
                   style: ElevatedButton.styleFrom(
                     primary: Color(0xffF47D3A),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(5.0),
                     ),
                   ),
-                  child: const Text(
+                  child: Text(
                     'Save',
                     style: TextStyle(fontSize: 17),
                   ),

@@ -6,10 +6,38 @@ class UnAvailability extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SizedBox(height: 20,),
-       Text('Unavailability')
+        SizedBox(
+          height: 20,
+        ),
+        Container(
+          height: MediaQuery.of(context).size.height,
+          child: ListView.builder(
+              physics: NeverScrollableScrollPhysics(),
+              itemCount: 1,
+              itemBuilder: (context, index) => Container(
+                    margin: EdgeInsets.all(10),
+                    height: 70,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Colors.deepOrange.shade200)),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 10,
+                        ),
+                        Text('Sunday'),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Text('start:09:30PM'),
+                            Text('end:11:30PM')
+                          ],
+                        )
+                      ],
+                    ),
+                  )),
+        )
       ],
     );
   }

@@ -24,60 +24,65 @@ class SettingPage extends StatelessWidget {
         /// Setting List
         body: ListView.builder(
             itemCount: settext.length,
-            itemBuilder: (context, index) => Container(
-                  padding: EdgeInsets.only(
-                    left: 20,
-                  ),
-                  margin: EdgeInsets.all(10),
-                  height: 60,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(10),
-                      border: Border.all(color: Color(0xFFFFCCBC))),
-                  child: Row(
-                    children: [
-                      Text(
-                        settext[index]['txt'],
-                        style: TextStyle(
-                            fontSize: 20, fontWeight: FontWeight.bold),
-                      ),
+            itemBuilder: (context, index) => GestureDetector(
+              onTap: (){
 
-                      /// Page Call
-                      Spacer(),
-                      IconButton(
-                          onPressed: () {
-                            print(index);
-                            switch (index) {
+              },
+              child: Container(
+                    padding: EdgeInsets.only(
+                      left: 20,
+                    ),
+                    margin: EdgeInsets.all(10),
+                    height: 60,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(10),
+                        border: Border.all(color: Color(0xFFFFCCBC))),
+                    child: Row(
+                      children: [
+                        Text(
+                          settext[index]['txt'],
+                          style: TextStyle(
+                              fontSize: 20, fontWeight: FontWeight.bold),
+                        ),
 
-                              case 0:
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => PoliciesPage()));
-                                break;
-                              case 1:
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) =>
-                                            ChangePassword()));
-                                break;
-                              case 2:
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => CurrencyPage()));
-                                break;
-                              case 3:
-                                Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                        builder: (context) => HelpPage()));
-                                break;
-                            }
-                          },
-                          icon: Icon(Icons.arrow_forward_ios_outlined,size: 20,))
-                    ],
+                        /// Page Call
+                        Spacer(),
+                        IconButton(
+                            onPressed: () {
+                              print(index);
+                              switch (index) {
+
+                                case 0:
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => PoliciesPage()));
+                                  break;
+                                case 1:
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              ChangePassword()));
+                                  break;
+                                case 2:
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => CurrencyPage()));
+                                  break;
+                                case 3:
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) => HelpPage()));
+                                  break;
+                              }
+                            },
+                            icon: Icon(Icons.arrow_forward_ios_outlined,size: 20,))
+                      ],
+                    ),
                   ),
-                )));
+            )));
   }
 }

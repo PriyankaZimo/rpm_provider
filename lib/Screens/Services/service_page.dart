@@ -95,7 +95,7 @@ class ServicePage extends StatelessWidget {
                           top: 10, bottom: 5, left: 5, right: 5),
                       decoration: BoxDecoration(
                         color: Colors.white,
-                        borderRadius: BorderRadius.circular(10),
+                        borderRadius: BorderRadius.circular(5),
                         boxShadow: [
                           BoxShadow(color: Color(0xffF47D3A), blurRadius: 1)
                         ],

@@ -8,6 +8,7 @@ class VerifyOtpPage extends StatelessWidget {
   int pinLength = 4;
 
   late VerifyOtpProvider _verifyOtpProvider;
+  var select = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -86,11 +87,10 @@ class VerifyOtpPage extends StatelessWidget {
                                 value: val, focusNode: (view.pin1FocusNode));
                           },
                           decoration: InputDecoration(
-                              enabled: true,
-                              enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.white)),
-                              border: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.white))),
+                            enabled: true,
+                            enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(color: Colors.red)),
+                          ),
                         ),
                       ),
                       SizedBox(
@@ -109,13 +109,10 @@ class VerifyOtpPage extends StatelessWidget {
                                   value: val, focusNode: (view.pin2FocusNode));
                             },
                             decoration: InputDecoration(
-                                enabled: true,
-                                enabledBorder: OutlineInputBorder(
-                                    borderSide:
-                                        BorderSide(color: Colors.white)),
-                                border: OutlineInputBorder(
-                                    borderSide:
-                                        BorderSide(color: Colors.white))),
+                              enabled: true,
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(color: Colors.red)),
+                            ),
                           ),
                         ),
                       ),
@@ -126,20 +123,18 @@ class VerifyOtpPage extends StatelessWidget {
                         width: 40,
                         height: 50,
                         child: TextFormField(
-                          style: TextStyle(color: Colors.white),
-                          obscureText: true,
-                          focusNode: view.pin2FocusNode,
-                          onChanged: (val) {
-                            view.nextField(
-                                value: val, focusNode: (view.pin3FocusNode));
-                          },
-                          decoration: InputDecoration(
+                            style: TextStyle(color: Colors.white),
+                            obscureText: true,
+                            focusNode: view.pin2FocusNode,
+                            onChanged: (val) {
+                              view.nextField(
+                                  value: val, focusNode: (view.pin3FocusNode));
+                            },
+                            decoration: InputDecoration(
                               enabled: true,
                               enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.white)),
-                              border: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.white))),
-                        ),
+                                  borderSide: BorderSide(color: Colors.red)),
+                            )),
                       ),
                       SizedBox(
                         width: 10,
@@ -154,13 +149,12 @@ class VerifyOtpPage extends StatelessWidget {
                           obscureText: true,
                           textInputAction: TextInputAction.next,
                           decoration: InputDecoration(
-                              counterText: "",
-                              enabled: true,
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(color: Colors.white),
-                              ),
-                              border: OutlineInputBorder(
-                                  borderSide: BorderSide(color: Colors.white))),
+                            counterText: "",
+                            enabled: true,
+                            enabledBorder: OutlineInputBorder(
+                              borderSide: BorderSide(color: Colors.red),
+                            ),
+                          ),
                         ),
                       ),
                     ],

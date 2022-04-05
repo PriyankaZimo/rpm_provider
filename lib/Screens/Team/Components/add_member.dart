@@ -71,6 +71,7 @@
 
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:flutter/material.dart';
+import '../team_page.dart';
 import 'availability_page.dart';
 
 class AddMembers extends StatefulWidget {
@@ -103,9 +104,17 @@ class _AddMembersState extends State<AddMembers>
       backgroundColor: Colors.white,
       appBar: AppBar(
         centerTitle: true,
-        leading: BackButton(
-          color: Colors.black,
 
+        leading: GestureDetector(
+          onTap: () {
+            Navigator.pop(
+                context, MaterialPageRoute(builder: (context) => TeamPage()));
+          },
+          child: Icon(
+            Icons.arrow_back_ios,
+            color: Colors.black,
+            size: 25.0,
+          ),
 
         ),
         elevation: 0,
@@ -171,7 +180,7 @@ class _AddMembersState extends State<AddMembers>
                         children: [
                           Container(
                             width: MediaQuery.of(context).size.width,
-                            decoration: new BoxDecoration(
+                            decoration:BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(30),
                               border: Border.all(
@@ -185,7 +194,7 @@ class _AddMembersState extends State<AddMembers>
                                     height: 100,
                                     width: 100,
                                     clipBehavior: Clip.antiAlias,
-                                    decoration: new BoxDecoration(
+                                    decoration:BoxDecoration(
                                       color: Colors.white,
                                       shape: BoxShape.circle,
                                       border: Border.all(
@@ -203,11 +212,11 @@ class _AddMembersState extends State<AddMembers>
                                         fontWeight: FontWeight.bold),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(top: 8),
+                                    padding: EdgeInsets.only(top: 8),
                                     child: TextFormField(
-                                      decoration: InputDecoration(
+                                      decoration: const InputDecoration(
                                         hintText: "",
-                                        labelText: 'First Name',
+                                        labelText: "First Name",
                                         hintStyle: TextStyle(
                                             fontSize: 20.0,
                                             color: Color(0xffB9B9B9)),
@@ -221,9 +230,9 @@ class _AddMembersState extends State<AddMembers>
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(top: 8),
+                                    padding:  EdgeInsets.only(top: 8),
                                     child: TextFormField(
-                                      decoration: InputDecoration(
+                                      decoration: const InputDecoration(
                                         hintText: "",
                                         labelText: 'Last Name',
                                         hintStyle: TextStyle(
@@ -239,9 +248,9 @@ class _AddMembersState extends State<AddMembers>
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(top: 8),
+                                    padding:  EdgeInsets.only(top: 8),
                                     child: TextFormField(
-                                      decoration: InputDecoration(
+                                      decoration: const InputDecoration(
                                         hintText: "",
                                         labelText: 'Email',
                                         hintStyle: TextStyle(
@@ -291,7 +300,7 @@ class _AddMembersState extends State<AddMembers>
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(top: 8),
+                                    padding:EdgeInsets.only(top: 8),
                                     child: TextFormField(
                                       decoration: InputDecoration(
                                         hintText: "",
@@ -333,8 +342,7 @@ class _AddMembersState extends State<AddMembers>
                                             value: val,
                                             items: <String>[
                                               'Active',
-                                              'Non-Active',
-                                            ].map((String value) {
+                                              'Non-Active',].map((String value) {
                                               return DropdownMenuItem<String>(
                                                 value: value,
                                                 child: Text(value),
@@ -352,7 +360,6 @@ class _AddMembersState extends State<AddMembers>
                                           width: 10,
                                         ),
                                         Text(
-
                                           'Allow Login',
                                           style: TextStyle(
                                               fontSize: 15.0,
@@ -360,7 +367,6 @@ class _AddMembersState extends State<AddMembers>
                                         ),
                                         Text(
                                           'Off',
-
                                           style: TextStyle(
                                               fontSize: 15.0,
                                               color: Colors.black),
@@ -372,7 +378,42 @@ class _AddMembersState extends State<AddMembers>
                                             onChanged: (value) {
                                               setState(() {
                                                 isSwitched = value;
-                                                print(isSwitched);
+                                                isSwitched==true?showGeneralDialog(
+                                                  context: context,
+                                                  barrierLabel: "Barrier",
+                                                  barrierDismissible: true,
+                                                  barrierColor: Colors.black.withOpacity(0.5),
+                                                  transitionDuration: Duration(
+                                                      milliseconds: 700),
+                                                  pageBuilder: (_, __, ___) {
+                                                    return Center(
+                                                      child: Container(
+                                                        height : 240,
+
+                                                    ),
+                                                    );
+                                                  },
+                                                  transitionBuilder:
+                                                      (_, anim, __, child) {
+                                                    Tween<Offset> tween;
+                                                    if (anim.status == AnimationStatus.reverse) {
+                                                      tween = Tween(
+                                                          begin: Offset(-1, 0),
+                                                          end: Offset.zero);
+                                                    } else {
+                                                      tween = Tween(begin: Offset(1, 0), end: Offset.zero);
+                                                    }
+
+                                                    return SlideTransition(
+                                                      position:
+                                                          tween.animate(anim),
+                                                      child: FadeTransition(
+                                                        opacity: anim,
+                                                        child: child,
+                                                      ),
+                                                    );
+                                                  },
+                                                ):SizedBox();
                                               });
                                             },
                                             activeTrackColor:

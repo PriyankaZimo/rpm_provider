@@ -90,7 +90,7 @@ class ChangePassword extends StatelessWidget {
                             ),
                             validator: (val) {
                               if (val.toString().isEmpty)
-                                return '*Please Enter your Password';
+                                return 'Please Enter your Password';
                             },
                           ),
                           SizedBox(

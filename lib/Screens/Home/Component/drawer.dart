@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:rpm_provider/Screens/Availability/availability_page.dart';
+import 'package:rpm_provider/Screens/Availability/availability_home.dart';
 import 'package:rpm_provider/Screens/ClientPage/client_page.dart';
 import 'package:rpm_provider/Screens/Offers/offer.dart';
 import 'package:rpm_provider/Screens/Profile/profile_page.dart';
@@ -54,7 +54,7 @@ class DrawerPage extends StatelessWidget {
                     break;
                   case 2:
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => AvailabilityPage()));
+                        MaterialPageRoute(builder: (context) => AvailabilityHome()));
                     break;
                   case 3:
                     Navigator.push(context,

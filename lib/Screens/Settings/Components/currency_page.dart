@@ -32,7 +32,8 @@ class CurrencyPage extends StatelessWidget {
                         size: 30,
                       )),
                   enabledBorder: UnderlineInputBorder(
-                      borderSide: BorderSide(color: Colors.black12))),
+                      borderSide: BorderSide(color: Colors.black12)),
+              ),
             ),
           ),
           Spacer(),
